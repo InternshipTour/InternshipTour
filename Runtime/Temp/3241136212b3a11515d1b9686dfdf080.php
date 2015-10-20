@@ -1,0 +1,3 @@
+<?php
+//000000000300a:1:{i:0;a:3:{s:3:"uid";s:3:"100";s:9:"con_check";s:1:"1";s:4:"user";a:6:{s:8:"avatar32";s:55:"/internship-tour/Public/images/default_avatar_32_32.jpg";s:8:"avatar64";s:55:"/internship-tour/Public/images/default_avatar_64_64.jpg";s:9:"space_url";s:62:"/internship-tour/index.php?s=/ucenter/index/index/uid/100.html";s:8:"nickname";s:7:"lm01097";s:3:"uid";s:3:"100";s:13:"real_nickname";s:7:"lm01097";}}}
+?>
