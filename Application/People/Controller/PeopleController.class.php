@@ -1,8 +1,5 @@
 <?php
-
-
 namespace Admin\Controller;
-
 use Admin\Builder\AdminConfigBuilder;
 
 class PeopleController extends AdminController
@@ -59,8 +56,6 @@ class PeopleController extends AdminController
         $builder->keyRadio('USER_SHOW_ORDER_FIELD2', L('sort_number'), L('show_sort_style'), $order);
         $builder->keyRadio('USER_SHOW_ORDER_TYPE2', L('sort_style'), L('show_sort_style'), array('desc' => L('counter'), 'asc' => L('direct')));
         $builder->keyText('USER_SHOW_CACHE_TIME2', L('cache_time'), L('tip_cache_time'));
-
-
 
         $builder->group(L('home_show_left'), 'USER_SHOW_TITLE1,USER_SHOW_COUNT1,USER_SHOW_ORDER_FIELD1,USER_SHOW_ORDER_TYPE1,USER_SHOW_CACHE_TIME1');
         $builder->group(L('home_show_right'), 'USER_SHOW_TITLE2,USER_SHOW_COUNT2,USER_SHOW_ORDER_FIELD2,USER_SHOW_ORDER_TYPE2,USER_SHOW_CACHE_TIME2');

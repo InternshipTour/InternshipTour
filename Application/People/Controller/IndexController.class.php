@@ -1,10 +1,6 @@
 <?php
-
-
 namespace People\Controller;
-
 use Think\Controller;
-
 
 class IndexController extends Controller
 {
