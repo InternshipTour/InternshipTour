@@ -1,13 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Administrator
- * Date: 15-3-2
- * Time: 上午10:54
- * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
- */
-
-
 error_reporting(0);
 set_magic_quotes_runtime(0);
 $db_config = require('./oc_config.php');
@@ -61,7 +52,6 @@ class ocNode
     /**
      * synLogin  同步登陆
      * @param $get
-     * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
      */
     function synLogin($get)
     {
@@ -97,7 +87,6 @@ class ocNode
     /**
      * synLogout  同步登出
      * @param $get
-     * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
      */
     function synLogout($get)
     {
@@ -118,7 +107,6 @@ class ocNode
  * 数据签名认证
  * @param  array $data 被认证的数据
  * @return string       签名
- * @author 麦当苗儿 <zuojiazi@vip.qq.com>
  */
 function data_auth_sign($data)
 {

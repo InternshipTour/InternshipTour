@@ -1,13 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Administrator
- * Date: 15-3-3
- * Time: 下午3:23
- * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
- */
-
-
 error_reporting(0);
 define('OC_ROOT', substr(__FILE__, 0, -11));
 
@@ -20,7 +11,6 @@ class OCApi
      * @param $action
      * @param array $args
      * @return mixed
-     * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
      */
     function ocPost($model, $action, $args = array())
     {
@@ -38,7 +28,6 @@ class OCApi
      * @param $username
      * @param $password
      * @return mixed
-     * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
      */
     function ocUserLogin($username, $password)
     {
@@ -51,7 +40,6 @@ class OCApi
      * ocGetUserInfo 获取用户信息
      * @param string $where
      * @return mixed|string
-     * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
      */
     function ocGetUserInfo($where = '')
     {
@@ -66,7 +54,6 @@ class OCApi
      * ocSynLogin  同步登录
      * @param $uid
      * @return mixed
-     * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
      */
     function ocSynLogin($uid)
     {
@@ -77,7 +64,6 @@ class OCApi
     /**
      * ocSynLogout 同步登出
      * @return mixed
-     * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
      */
     function ocSynLogout()
     {

@@ -1,17 +1,7 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Administrator
- * Date: 15-3-3
- * Time: 下午5:10
- * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
- */
-
-
 require_once(OC_ROOT.'Model/Base.php');
 /**
  * Class User  用户操作类
- * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
  */
 class User extends base{
 
@@ -19,7 +9,6 @@ class User extends base{
      * doLogin  执行登录操作
      * @param $args
      * @return bool|int|string
-     * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
      */
     function doLogin($args){
         $username = $args['username'];
@@ -79,7 +68,6 @@ class User extends base{
      * doGetUserInfo  获取用户信息
      * @param string $where
      * @return array
-     * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
      */
     function doGetUserInfo($where=''){
         $ucenter_member = $this->db->getOne("SELECT * FROM `".$this->tablePre."ucenter_member` WHERE ".$where);
@@ -93,7 +81,6 @@ class User extends base{
      * doSynLogin  执行同步登录
      * @param $uid
      * @return string
-     * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
      */
     function doSynLogin($uid){
         $time =time();
@@ -112,7 +99,6 @@ class User extends base{
     /**
      * doSynLogout  执行同步登出
      * @return string
-     * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
      */
     function doSynLogout(){
         $time =time();

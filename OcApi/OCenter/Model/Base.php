@@ -4,7 +4,6 @@
  * User: Administrator
  * Date: 15-3-3
  * Time: 下午5:08
- * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
  */
 
 require_once(OC_ROOT . 'Lib/Mysql.php');

@@ -4,7 +4,6 @@
  * User: Administrator
  * Date: 15-3-3
  * Time: 下午3:15
- * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
  */
 
 class Think {
@@ -32,7 +31,6 @@ class Think {
      * @param string $key 加密密钥
      * @param int    $expire 过期时间 单位 秒
      * @return string
-     * @author 麦当苗儿 <zuojiazi@vip.qq.com>
      */
     function thinkEncrypt($data, $key = '', $expire = 0)
     {
@@ -62,7 +60,6 @@ class Think {
      * @param  string $data 要解密的字符串 （必须是think_encrypt方法加密的字符串）
      * @param  string $key 加密密钥
      * @return string
-     * @author 麦当苗儿 <zuojiazi@vip.qq.com>
      */
     function thinkDecrypt($data, $key = '')
     {
@@ -104,7 +101,6 @@ class Think {
      * 数据签名认证
      * @param  array $data 被认证的数据
      * @return string       签名
-     * @author 麦当苗儿 <zuojiazi@vip.qq.com>
      */
     function dataAuthSign($data)
     {
