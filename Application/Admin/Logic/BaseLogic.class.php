@@ -2,10 +2,6 @@
 // +----------------------------------------------------------------------
 // | OneThink [ WE CAN DO IT JUST THINK IT ]
 // +----------------------------------------------------------------------
-// | Copyright (c) 2013 http://www.onethink.cn All rights reserved.
-// +----------------------------------------------------------------------
-// | Author: 麦当苗儿 <zuojiazi@vip.qq.com> <http://www.zjzit.cn>
-// +----------------------------------------------------------------------
 
 namespace Admin\Logic;
 use Think\Model;
@@ -66,13 +62,11 @@ abstract class BaseLogic extends Model{
 
 	/**
 	 * 新增或者更新数据
-	 * @author huajie <banhuajie@163.com>
 	 */
 	abstract public function update($id = 0);
 
 	/**
 	 * 保存为草稿
-	 * @author huajie <banhuajie@163.com>
 	 */
 	abstract public function autoSave($id = 0);
 }

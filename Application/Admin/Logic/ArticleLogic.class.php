@@ -2,10 +2,6 @@
 // +----------------------------------------------------------------------
 // | OneThink [ WE CAN DO IT JUST THINK IT ]
 // +----------------------------------------------------------------------
-// | Copyright (c) 2013 http://www.onethink.cn All rights reserved.
-// +----------------------------------------------------------------------
-// | Author: 麦当苗儿 <zuojiazi@vip.qq.com> <http://www.zjzit.cn>
-// +----------------------------------------------------------------------
 
 namespace Admin\Logic;
 
@@ -25,7 +21,6 @@ class ArticleLogic extends BaseLogic{
 	 * 新增或添加一条文章详情
 	 * @param  number $id 文章ID
 	 * @return boolean    true-操作成功，false-操作失败
-	 * @author 麦当苗儿 <zuojiazi@vip.qq.com>
 	 */
 	public function update($id = 0){
 		/* 获取文章数据 */
@@ -56,7 +51,6 @@ class ArticleLogic extends BaseLogic{
 	/**
 	 * 获取文章的详细内容
 	 * @return boolean
-	 * @author huajie <banhuajie@163.com>
 	 */
 	protected function getContent(){
 		$type = I('post.type');
@@ -76,7 +70,6 @@ class ArticleLogic extends BaseLogic{
 	/**
 	 * 保存为草稿
 	 * @return true 成功， false 保存出错
-	 * @author huajie <banhuajie@163.com>
 	 */
 	public function autoSave($id = 0){
 		$this->_validate = array();

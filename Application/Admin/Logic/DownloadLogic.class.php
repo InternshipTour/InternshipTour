@@ -2,10 +2,6 @@
 // +----------------------------------------------------------------------
 // | OneThink [ WE CAN DO IT JUST THINK IT ]
 // +----------------------------------------------------------------------
-// | Copyright (c) 2013 http://www.onethink.cn All rights reserved.
-// +----------------------------------------------------------------------
-// | Author: huajie <banhuajie@163.com>
-// +----------------------------------------------------------------------
 
 namespace Admin\Logic;
 
@@ -28,7 +24,6 @@ class DownloadLogic extends BaseLogic{
 	 * 获取模型详细信息
 	 * @param  integer $id 文档ID
 	 * @return array       当前模型详细信息
-	 * @author huajie <banhuajie@163.com>
 	 */
 	public function detail($id){
 		$data = $this->field(true)->find($id);
@@ -43,7 +38,6 @@ class DownloadLogic extends BaseLogic{
 	/**
 	 * 更新数据
 	 * @param intger $id
-	 * @author huajie <banhuajie@163.com>
 	 */
 	public function update($id = 0){
 		/* 获取下载数据 */ //TODO: 根据不同用户获取允许更改或添加的字段
