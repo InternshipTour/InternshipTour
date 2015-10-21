@@ -29,7 +29,7 @@ return array(
     'subject_count'=>'主题总数',
     'post_count'=>'帖子总数',
     'colon'=>'：',
-
+	'post_hot'=>'热门帖子',
 
     'search_result_keyword'=>'查找结果 —— 关键词',
     'post_no_now'=>'暂时没有帖子～',

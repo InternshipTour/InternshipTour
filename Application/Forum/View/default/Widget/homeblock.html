@@ -5,11 +5,10 @@
                 <div style="margin:0 -10px;">
                     <div class="col-xs-9">
                         <div>
-                            <h2>
-                                {:modC('FORUM_POST_SHOW_TITLE', L('post_hot'), 'Forum')}
-                            </h2>
+							<h2>{:modC('FORUM_POST_SHOW_TITLE', '热门帖子', 'Forum')}
+							</h2>
 
-                            <div>
+							<div>
                                 <volist name="forum_post_list" id="vo">
                                     <php>
                                         $user = query_user(array('avatar128','avatar64','nickname','uid','space_url'),$vo['uid']);
@@ -59,7 +58,7 @@
                     </div>
                     <div class="col-xs-3">
                         <div>
-                            <h2>{:modC('FORUM_SHOW_TITLE', L('forum_block'), 'Forum')}</h2>
+                            <h2>{:modC('FORUM_SHOW_TITLE', '贴吧', 'Forum')}</h2>
 
                             <div class="clearfix position-forums">
                                 <volist name="forum_show" id="vo">

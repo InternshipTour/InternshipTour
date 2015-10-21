@@ -12,7 +12,7 @@ return array(
     'report_detail' => '举报详情',
     'cancel' => '取消',
     'ok' => '确定',
-
+	'read'=>'阅读',
 
     /*签到*/
     'nobody_checked' => '虚位以待，赶紧签到吧。',
