@@ -2,15 +2,9 @@
 // +----------------------------------------------------------------------
 // | OneThink [ WE CAN DO IT JUST THINK IT ]
 // +----------------------------------------------------------------------
-// | Copyright (c) 2013 http://www.onethink.cn All rights reserved.
-// +----------------------------------------------------------------------
-// | Author: 麦当苗儿 <zuojiazi@vip.qq.com> <http://www.zjzit.cn>
-// +----------------------------------------------------------------------
 
 namespace Home\Controller;
-
 use Think\Controller;
-
 
 /**
  * 前台首页控制器
@@ -31,25 +25,15 @@ class IndexController extends Controller
         }
 
         $show_blocks = get_kanban_config('BLOCK', 'enable', array(), 'Home');
-
         $this->assign('showBlocks', $show_blocks);
-
 
         $enter = modC('ENTER_URL', '', 'Home');
         $this->assign('enter', get_nav_url($enter));
-
-
-
-
-            $sub_menu['left']= array(array('tab' => 'home', 'title' => L('square'), 'href' =>  U('index'))//,array('tab'=>'rank','title'=>'排行','href'=>U('rank'))
-
-            );
-
+        $sub_menu['left']= array(array('tab' => 'home', 'title' => L('square'), 'href' =>  U('index'))//,array('tab'=>'rank','title'=>'排行','href'=>U('rank'))
+        );
 
         $this->assign('sub_menu', $sub_menu);
         $this->assign('current', 'home');
-
-
 
         $this->display();
     }
