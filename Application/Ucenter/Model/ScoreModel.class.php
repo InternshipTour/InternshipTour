@@ -6,7 +6,6 @@ use Think\Model;
 /**
  * Class ScoreModel   用户积分模型
  * @package Ucenter\Model
- * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
  */
 class ScoreModel extends Model
 {
@@ -23,7 +22,6 @@ class ScoreModel extends Model
      * getTypeList  获取类型列表
      * @param string $map
      * @return mixed
-     * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
      */
     public function getTypeList($map = '')
     {
@@ -36,7 +34,6 @@ class ScoreModel extends Model
      * getType  获取单个类型
      * @param string $map
      * @return mixed
-     * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
      */
     public function getType($map = '')
     {
@@ -48,7 +45,6 @@ class ScoreModel extends Model
      * addType 增加积分类型
      * @param $data
      * @return mixed
-     * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
      */
     public function addType($data)
     {
@@ -63,7 +59,6 @@ class ScoreModel extends Model
      * delType  删除分类
      * @param $ids
      * @return mixed
-     * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
      */
     public function delType($ids)
     {
@@ -82,7 +77,6 @@ class ScoreModel extends Model
      * editType  修改积分类型
      * @param $data
      * @return mixed
-     * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
      */
     public function editType($data)
     {
@@ -99,7 +93,6 @@ class ScoreModel extends Model
      * @param int $uid
      * @param int $type
      * @return mixed
-     * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
      */
     public function getUserScore($uid, $type)
     {
@@ -114,7 +107,6 @@ class ScoreModel extends Model
      * @param $score
      * @param $type
      * @param string $action
-     * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
      */
     public function setUserScore($uids, $score, $type, $action = 'inc',$action_model ='',$record_id=0,$remark='')
     {

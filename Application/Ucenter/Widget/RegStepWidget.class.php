@@ -1,20 +1,10 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Administrator
- * Date: 14-6-9
- * Time: 上午8:59
- * @author 郑钟良<zzl@ourstu.com>
- */
-
 namespace Ucenter\Widget;
-
 use Think\Action;
 
 /**
  * Class RegStepWidget  注册步骤
  * @package Usercenter\Widget
- * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
  */
 class RegStepWidget extends Action
 {
@@ -93,7 +83,6 @@ class RegStepWidget extends Action
 
     /**获取用户扩展信息
      * @param null $uid
-     * @author 郑钟良<zzl@ourstu.com>
      */
     private function getExpandInfo($uid = null)
     {
@@ -109,7 +98,6 @@ class RegStepWidget extends Action
 
     /**扩展信息分组列表获取
      * @return mixed
-     * @author 郑钟良<zzl@ourstu.com>
      */
     private function _profile_group_list($uid = null)
     {
@@ -144,7 +132,6 @@ class RegStepWidget extends Action
     /**分组下的字段信息及相应内容
      * @param null $id 扩展分组id
      * @param null $uid
-     * @author 郑钟良<zzl@ourstu.com>
      */
     private function _info_list($id = null, $uid = null)
     {
@@ -160,7 +147,6 @@ class RegStepWidget extends Action
     /**input类型验证
      * @param $data
      * @return mixed
-     * @author 郑钟良<zzl@ourstu.com>
      */
     private function _checkInput($data)
     {
@@ -220,7 +206,6 @@ class RegStepWidget extends Action
     /**处理$validation
      * @param $validation
      * @return mixed
-     * @author 郑钟良<zzl@ourstu.com>
      */
     private function _getValidation($validation)
     {
@@ -240,7 +225,6 @@ class RegStepWidget extends Action
         return $data;
     }
     /**修改用户扩展信息
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function edit_expandinfo()
     {

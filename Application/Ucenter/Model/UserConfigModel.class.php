@@ -1,15 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Administrator
- * Date: 15-4-9
- * Time: 下午3:56
- * @author 郑钟良<zzl@ourstu.com>
- */
-
 namespace Ucenter\Model;
-
-
 use Think\Model;
 
 class UserConfigModel extends Model

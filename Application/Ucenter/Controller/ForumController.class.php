@@ -1,11 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: caipeichao
- * Date: 14-3-11
- * Time: PM3:34
- */
-
 namespace Ucenter\Controller;
 use Think\Controller;
 

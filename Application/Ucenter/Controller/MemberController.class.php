@@ -3,8 +3,6 @@
  * 放置用户登陆注册
  */
 namespace Ucenter\Controller;
-
-
 use Common\Model\FollowModel;
 use Think\Controller;
 use User\Api\UserApi;
@@ -20,7 +18,6 @@ class MemberController extends Controller
 
     /**
      * register  注册页面
-     * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
      */
     public function register()
     {
@@ -299,8 +296,8 @@ class MemberController extends Controller
 
             //发送验证邮箱
             $url = 'http://' . $_SERVER['HTTP_HOST'] . U('Ucenter/member/reset?uid=' . $uid . '&verify=' . $verify);
-            $content = C('USER_RESPASS') . "<br/>" . $url . "<br/>" . modC('WEB_SITE_NAME', 'OpenSNS开源社交系统', 'Config') . "系统自动发送--请勿直接回复<br/>" . date('Y-m-d H:i:s', TIME()) . "</p>";
-            send_mail($email, modC('WEB_SITE_NAME', 'OpenSNS开源社交系统', 'Config') . "密码找回", $content);
+            $content = C('USER_RESPASS') . "<br/>" . $url . "<br/>" . modC('WEB_SITE_NAME', '英腾世途', 'Config') . "系统自动发送--请勿直接回复<br/>" . date('Y-m-d H:i:s', TIME()) . "</p>";
+            send_mail($email, modC('WEB_SITE_NAME', '英腾世途', 'Config') . "密码找回", $content);
             $this->success('密码找回邮件发送成功', U('Member/login'));
         } else {
             if (is_login()) {
@@ -443,7 +440,6 @@ class MemberController extends Controller
 
     /**
      * 修改密码提交
-     * @author huajie <banhuajie@163.com>
      */
     public function profile()
     {
@@ -482,7 +478,6 @@ class MemberController extends Controller
      * @param $verify
      * @param $type
      * @return bool|string
-     * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
      */
     public function doSendVerify($account, $verify, $type)
     {
@@ -508,7 +503,6 @@ class MemberController extends Controller
 
     /**
      * activate  提示激活页面
-     * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
      */
     public function activate()
     {
@@ -526,7 +520,6 @@ class MemberController extends Controller
 
     /**
      * reSend  重发邮件
-     * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
      */
     public function reSend()
     {
@@ -541,7 +534,6 @@ class MemberController extends Controller
 
     /**
      * changeEmail  更改邮箱
-     * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
      */
     public function changeEmail()
     {
@@ -561,7 +553,6 @@ class MemberController extends Controller
     /**
      * activateVerify 添加激活验证
      * @return bool|string
-     * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
      */
     private function activateVerify()
     {
@@ -577,7 +568,6 @@ class MemberController extends Controller
      * @param $account
      * @param $verify
      * @return bool|string
-     * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
      */
     private function sendActivateEmail($account, $verify, $uid)
     {
@@ -594,7 +584,6 @@ class MemberController extends Controller
 
     /**
      * saveAvatar  保存头像
-     * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
      */
     public function saveAvatar()
     {
@@ -622,7 +611,6 @@ class MemberController extends Controller
 
     /**
      * doActivate  激活步骤
-     * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
      */
     public function doActivate()
     {
@@ -643,7 +631,6 @@ class MemberController extends Controller
 
     /**
      * checkAccount  ajax验证用户帐号是否符合要求
-     * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
      */
     public function checkAccount()
     {
@@ -697,7 +684,6 @@ class MemberController extends Controller
 
     /**
      * checkNickname  ajax验证昵称是否符合要求
-     * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
      */
     public function checkNickname()
     {
@@ -727,7 +713,6 @@ class MemberController extends Controller
 
     /**
      * 切换登录身份
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function changeLoginRole()
     {
@@ -753,7 +738,6 @@ class MemberController extends Controller
 
     /**
      * 持有新身份
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function registerRole()
     {
@@ -780,7 +764,6 @@ class MemberController extends Controller
 
 
     /**修改用户扩展信息
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function edit_expandinfo()
     {
@@ -795,7 +778,6 @@ class MemberController extends Controller
 
     /**
      * 设置用户标签
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function set_tag()
     {
@@ -811,7 +793,6 @@ class MemberController extends Controller
     /**
      * 判断注册类型
      * @return bool
-     * @author 郑钟良<zzl@ourstu.com>
      */
     private function checkRegisterType()
     {
@@ -882,7 +863,6 @@ class MemberController extends Controller
      * 判断邀请码是否可用
      * @param string $code
      * @return bool
-     * @author 郑钟良<zzl@ourstu.com>
      */
     private function checkInviteCode($code = '')
     {

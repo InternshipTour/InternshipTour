@@ -1,15 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Administrator
- * Date: 15-3-27
- * Time: 下午4:45
- * @author 郑钟良<zzl@ourstu.com>
- */
-
 namespace Ucenter\Model;
-
-
 use Think\Model;
 
 class InviteLogModel extends Model
@@ -20,7 +10,6 @@ class InviteLogModel extends Model
      * @param array $data
      * @param int $role
      * @return mixed
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function addData($data=array(),$role=0)
     {
@@ -39,7 +28,6 @@ class InviteLogModel extends Model
      * @param int $page
      * @param int $r
      * @return array
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function getList($page=1,$r=20)
     {
@@ -55,7 +43,6 @@ class InviteLogModel extends Model
      * 初始化查询数据
      * @param array $list
      * @return array
-     * @author 郑钟良<zzl@ourstu.com>
      */
     private function _initSelectData($list=array())
     {

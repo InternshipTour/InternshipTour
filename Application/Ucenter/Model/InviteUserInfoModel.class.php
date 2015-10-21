@@ -1,15 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Administrator
- * Date: 15-3-25
- * Time: 下午6:55
- * @author 郑钟良<zzl@ourstu.com>
- */
-
 namespace Ucenter\Model;
-
-
 use Think\Model;
 
 class InviteUserInfoModel extends Model
@@ -20,7 +10,6 @@ class InviteUserInfoModel extends Model
      * @param int $type_id
      * @param int $num
      * @return bool|mixed
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function addNum($type_id=0,$num=0)
     {
@@ -44,7 +33,6 @@ class InviteUserInfoModel extends Model
      * @param int $type_id
      * @param int $num
      * @return bool
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function decNum($type_id=0,$num=0){
         $map['uid']=is_login();
@@ -59,7 +47,6 @@ class InviteUserInfoModel extends Model
      * @param array $data
      * @param int $id
      * @return bool
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function saveData($data=array(),$id=0)
     {
@@ -72,7 +59,6 @@ class InviteUserInfoModel extends Model
      * @param int $type_id
      * @param int $uid
      * @return bool
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function addSuccessNum($type_id=0,$uid=0){
         $map['uid']=$uid;
@@ -85,7 +71,6 @@ class InviteUserInfoModel extends Model
      * 获取用户邀请信息
      * @param string $map
      * @return mixed
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function getInfo($map='')
     {
@@ -100,7 +85,6 @@ class InviteUserInfoModel extends Model
      * @param int $r
      * @param string $order
      * @return array
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function getList($map=array(),$page=1,$r=20,$order='uid asc,invite_type asc')
     {
@@ -123,7 +107,6 @@ class InviteUserInfoModel extends Model
      * 初始化查询数据
      * @param array $list
      * @return array
-     * @author 郑钟良<zzl@ourstu.com>
      */
     private function _initSelectData($list=array())
     {

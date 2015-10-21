@@ -1,16 +1,5 @@
 <?php
-/**
- * 邀请注册类型
- * Created by PhpStorm.
- * User: Administrator
- * Date: 15-3-24
- * Time: 上午11:02
- * @author 郑钟良<zzl@ourstu.com>
- */
-
 namespace Ucenter\Model;
-
-
 use Think\Model;
 
 class InviteTypeModel extends Model
@@ -33,7 +22,6 @@ class InviteTypeModel extends Model
      * 保存邀请码类型信息
      * @param array $data
      * @return bool
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function saveData($data = array())
     {
@@ -48,7 +36,6 @@ class InviteTypeModel extends Model
      * 添加邀请码类型信息
      * @param array $data
      * @return bool|mixed
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function addData($data = array())
     {
@@ -63,7 +50,6 @@ class InviteTypeModel extends Model
      * 获取邀请码类型
      * @param array $map
      * @return array|mixed
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function getData($map = array())
     {
@@ -78,7 +64,6 @@ class InviteTypeModel extends Model
      * 获取简易结构邀请码类型
      * @param array $map
      * @return mixed
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function getSimpleData($map=array())
     {
@@ -99,7 +84,6 @@ class InviteTypeModel extends Model
      * 获取邀请码类型列表
      * @param array $map
      * @return mixed
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function getList($map = array())
     {
@@ -119,7 +103,6 @@ class InviteTypeModel extends Model
      * @param array $map
      * @param string $field
      * @return mixed
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function getSimpleList($map = array(), $field = 'id,title')
     {
@@ -135,7 +118,6 @@ class InviteTypeModel extends Model
      * 真删除邀请码
      * @param array $ids id列表
      * @return bool
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function deleteIds($ids=array())
     {
@@ -163,7 +145,6 @@ class InviteTypeModel extends Model
     /**
      * 获取用户可兑换邀请码类型
      * @return mixed
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function getUserTypeList()
     {
@@ -219,7 +200,6 @@ class InviteTypeModel extends Model
      * 初始化查询邀请码类型
      * @param array $data
      * @return array
-     * @author 郑钟良<zzl@ourstu.com>
      */
     private function _initSelectData($data = array())
     {
@@ -267,7 +247,6 @@ class InviteTypeModel extends Model
      * 初始化保存邀请码类型
      * @param array $data
      * @return array
-     * @author 郑钟良<zzl@ourstu.com>
      */
     private function _initSaveData($data = array())
     {

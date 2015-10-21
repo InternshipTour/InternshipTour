@@ -1,22 +1,11 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: caipeichao
- * Date: 14-3-11
- * Time: PM3:40
- */
-
 namespace Ucenter\Controller;
-
 use Think\Controller;
 
 class VerifyController extends Controller
 {
-
-
     /**
      * sendVerify 发送验证码
-     * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
      */
     public function sendVerify()
     {

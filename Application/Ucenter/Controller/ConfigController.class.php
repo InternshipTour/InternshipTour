@@ -1,7 +1,5 @@
 <?php
-
 namespace Ucenter\Controller;
-
 use Think\Controller;
 
 class ConfigController extends BaseController
@@ -28,7 +26,6 @@ class ConfigController extends BaseController
 
     /**
      * 是否拥有其他角色或可拥有角色
-     * @author 郑钟良<zzl@ourstu.com>
      */
     private function _haveOtherRole()
     {
@@ -314,7 +311,6 @@ class ConfigController extends BaseController
 
     /**验证用户名
      * @param $nickname
-     * @auth 陈一枭
      */
     private function checkNickname($nickname)
     {
@@ -351,7 +347,6 @@ class ConfigController extends BaseController
 
     /**验证签名
      * @param $signature
-     * @auth 陈一枭
      */
     private function checkSignature($signature)
     {
@@ -364,7 +359,6 @@ class ConfigController extends BaseController
 
     /**获取用户扩展信息
      * @param null $uid
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function getExpandInfo($uid = null)
     {
@@ -386,7 +380,6 @@ class ConfigController extends BaseController
     /**显示某一扩展分组信息
      * @param null $profile_group_id
      * @param null $uid
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function _getExpandInfo($profile_group_id = null)
     {
@@ -404,7 +397,6 @@ class ConfigController extends BaseController
     }
 
     /**修改用户扩展信息
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function edit_expandinfo($profile_group_id)
     {
@@ -517,7 +509,6 @@ class ConfigController extends BaseController
     /**input类型验证
      * @param $data
      * @return mixed
-     * @author 郑钟良<zzl@ourstu.com>
      */
     function _checkInput($data)
     {
@@ -577,7 +568,6 @@ class ConfigController extends BaseController
     /**处理$validation
      * @param $validation
      * @return mixed
-     * @author 郑钟良<zzl@ourstu.com>
      */
     function _getValidation($validation)
     {
@@ -600,7 +590,6 @@ class ConfigController extends BaseController
     /**分组下的字段信息及相应内容
      * @param null $id 扩展分组id
      * @param null $uid
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function _info_list($id = null, $uid = null)
     {
@@ -656,7 +645,6 @@ class ConfigController extends BaseController
 
     /**扩展信息分组列表获取
      * @return mixed
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function _profile_group_list($uid = null)
     {
@@ -712,7 +700,6 @@ class ConfigController extends BaseController
     /**
      * @param $sex
      * @return int
-     * @auth 陈一枭
      */
     private function checkSex($sex)
     {
@@ -727,7 +714,6 @@ class ConfigController extends BaseController
     /**
      * @param $email
      * @param $email
-     * @auth 陈一枭
      */
     private function checkEmail($email)
     {
@@ -746,7 +732,6 @@ class ConfigController extends BaseController
 
     /**
      * accountInfo   账户信息
-     * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
      */
     private function accountInfo()
     {
@@ -756,7 +741,6 @@ class ConfigController extends BaseController
 
     /**
      * saveUsername  修改用户名
-     * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
      */
     public function saveUsername()
     {
@@ -811,7 +795,6 @@ class ConfigController extends BaseController
 
     /**
      * changeaccount  修改帐号信息
-     * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
      */
     public function changeAccount()
     {
@@ -849,7 +832,6 @@ class ConfigController extends BaseController
 
     /**
      * checkVerify  验证验证码
-     * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
      */
     public function checkVerify()
     {

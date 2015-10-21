@@ -1,15 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Administrator
- * Date: 15-3-25
- * Time: 上午10:19
- * @author 郑钟良<zzl@ourstu.com>
- */
-
 namespace Ucenter\Controller;
-
-
 use Think\Controller;
 
 class InviteController extends BaseController
@@ -64,7 +54,6 @@ class InviteController extends BaseController
 
     /**
      * 兑换邀请名额
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function exchange()
     {
@@ -95,7 +84,6 @@ class InviteController extends BaseController
 
     /**
      * 生成邀请码
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function createCode()
     {
@@ -139,7 +127,6 @@ class InviteController extends BaseController
 
     /**
      * 退还邀请码
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function backCode()
     {
@@ -158,7 +145,6 @@ class InviteController extends BaseController
      * 获取用户邀请码
      * @param int $type_id 邀请码类型
      * @return mixed
-     * @author 郑钟良<zzl@ourstu.com>
      */
     private function _getUserCode($type_id=0)
     {
@@ -180,7 +166,6 @@ class InviteController extends BaseController
      * @param int $inviteType
      * @param int $num
      * @return bool
-     * @author 郑钟良<zzl@ourstu.com>
      */
     private function _checkCanBuy($inviteType=0,$num=0)
     {
@@ -218,7 +203,6 @@ class InviteController extends BaseController
      * 获取可兑换最大值
      * @param int $inviteType
      * @return int
-     * @author 郑钟良<zzl@ourstu.com>
      */
     private function _getCanBuyNum($inviteType=0)
     {

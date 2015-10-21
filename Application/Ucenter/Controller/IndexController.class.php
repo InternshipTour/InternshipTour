@@ -1,15 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Administrator
- * Date: 14-6-27
- * Time: 下午1:54
- * @author 郑钟良<zzl@ourstu.com>
- */
-
 namespace Ucenter\Controller;
-
-
 use Think\Controller;
 
 class IndexController extends BaseController
@@ -95,7 +85,6 @@ class IndexController extends BaseController
 
     /**获取用户扩展信息
      * @param null $uid
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function getExpandInfo($uid = null, $profile_group_id = null)
     {
@@ -109,7 +98,6 @@ class IndexController extends BaseController
     /**扩展信息分组列表获取
      * @param null $uid
      * @return mixed
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function _profile_group_list($uid = null)
     {
@@ -149,7 +137,6 @@ class IndexController extends BaseController
      * @param null $id
      * @param null $uid
      * @return null
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function _info_list($id = null, $uid = null)
     {
@@ -522,7 +509,6 @@ class IndexController extends BaseController
      * @param $apps
      * @param $vals
      * @return mixed
-     * @auth 陈一枭
      */
     private function sortApps($apps)
     {

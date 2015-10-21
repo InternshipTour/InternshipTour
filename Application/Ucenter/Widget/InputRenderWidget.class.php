@@ -1,20 +1,10 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Administrator
- * Date: 14-6-9
- * Time: 上午8:59
- * @author 郑钟良<zzl@ourstu.com>
- */
-
 namespace Ucenter\Widget;
-
 use Think\Action;
 
 /**input类型输入渲染
  * Class InputWidget
  * @package Usercenter\Widget
- * @郑钟良
  */
 class InputRenderWidget extends Action
 {
@@ -70,7 +60,6 @@ class InputRenderWidget extends Action
              * 改造用户扩展资料下拉菜单、多选默认值提交数据为键值、原有字符串格式不受影响
              * 改造后当checkbox和select类型时，默认值可按照“1:男|2:女”这样的数组格式以及“字段名|表名”，
              * 用户提交资料只提交数组键值和数据表ID字段值
-             * @MingYang <xint5288@126.com>
              */
             case 'checkbox':
                 $this->assign('field_name', $data['field_name']);
@@ -101,7 +90,6 @@ class InputRenderWidget extends Action
                         } else {
                                 /*
                                  * 添加用户扩展资料可添加默认值添加默认值数组选项，用户直接提交键值而不是字符串、原有字符串提交功能不受影响（多选支持）
-                                 * @MingYang <xint5288@126.com>
                                  */
                                 $vlaa = explode('|', $data['form_default_value']);
                                 $checked = explode('|', $data['field_content']['field_data']);
@@ -151,7 +139,6 @@ class InputRenderWidget extends Action
                     /*
                      * 添加用户扩展资料可添加关联字段功能（多选支持）
                      * 给原有多选扩展字段做一个join判断
-                     * @MingYang <xint5288@126.com>
                      */
                     //join判断,对关联扩展资料信息处理
                     if($data['child_form_type'] == "join"){
@@ -167,7 +154,6 @@ class InputRenderWidget extends Action
                         if ($data['form_default_value'] != '' && $data['form_default_value'] != null) {
                             /*
                              * 添加用户扩展资料可添加默认值添加默认值数组选项，用户直接提交键值而不是字符串、原有字符串提交功能不受影响（下拉支持）
-                             * @MingYang <xint5288@126.com>
                              */
                             $canSelected = explode('|', $data['form_default_value']);
                             $checked = explode('|', $data['field_content']['field_data']);

@@ -1,13 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: caipeichao
- * Date: 14-3-11
- * Time: PM3:40
- */
-
 namespace Ucenter\Controller;
-
 use Think\Controller;
 
 class BaseController extends Controller

@@ -1,14 +1,5 @@
 <?php
-/**
- * 所属项目 110.
- * 开发者: 陈一枭
- * 创建日期: 2014-11-28
- * 创建时间: 11:37
- * 版权所有 想天软件工作室(www.ourstu.com)
- */
-
 namespace Ucenter\Controller;
-
 
 class CollectionController extends BaseController{
     public function index($type='forum',$page=1)

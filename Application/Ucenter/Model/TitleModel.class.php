@@ -1,13 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: caipeichao
- * Date: 1/17/14
- * Time: 7:51 PM
- */
-
 namespace Ucenter\Model;
-
 use Think\Model;
 
 class TitleModel
@@ -71,7 +63,6 @@ class TitleModel
 
     /**获取等级配置
      * @return array
-     * @auth 陈一枭
      */
     public function getTitleConfig()
     {

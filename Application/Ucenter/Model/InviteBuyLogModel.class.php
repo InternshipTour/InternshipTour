@@ -1,15 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Administrator
- * Date: 15-3-25
- * Time: 下午5:23
- * @author 郑钟良<zzl@ourstu.com>
- */
-
 namespace Ucenter\Model;
-
-
 use Think\Model;
 
 class InviteBuyLogModel extends Model
@@ -19,7 +9,6 @@ class InviteBuyLogModel extends Model
      * @param int $type_id
      * @param int $num
      * @return mixed
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function buy($type_id = 0, $num = 0)
     {
@@ -43,7 +32,6 @@ class InviteBuyLogModel extends Model
      * @param string $order
      * @param int $r
      * @return array
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function getList($map=array(),$page=1,$order='create_time desc',$r=20)
     {
@@ -66,7 +54,6 @@ class InviteBuyLogModel extends Model
      * 初始化查询出的数据
      * @param array $list
      * @return array
-     * @author 郑钟良<zzl@ourstu.com>
      */
     private function _initSelectData($list=array())
     {

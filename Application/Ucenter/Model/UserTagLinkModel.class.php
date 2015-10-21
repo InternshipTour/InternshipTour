@@ -1,15 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Administrator
- * Date: 15-4-14
- * Time: 上午10:00
- * @author 郑钟良<zzl@ourstu.com>
- */
-
 namespace Ucenter\Model;
-
-
 use Think\Model;
 
 class UserTagLinkModel extends Model
@@ -24,7 +14,6 @@ class UserTagLinkModel extends Model
      * 获取用户标签列表
      * @param int $uid
      * @return null
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function getUserTag($uid=0)
     {
@@ -46,7 +35,6 @@ class UserTagLinkModel extends Model
      * 编辑用户标签链接
      * @param string $tags
      * @return bool|mixed|null
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function editData($tags='')
     {

@@ -1,15 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Administrator
- * Date: 15-3-24
- * Time: 下午5:04
- * @author 郑钟良<zzl@ourstu.com>
- */
-
 namespace Ucenter\Model;
-
-
 use Think\Model;
 
 class InviteModel extends Model
@@ -25,7 +15,6 @@ class InviteModel extends Model
      * @param array $data
      * @param int $num
      * @return bool|string
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function createCodeAdmin($data = array(), $num = 1)
     {
@@ -55,7 +44,6 @@ class InviteModel extends Model
      * @param array $data
      * @param int $num
      * @return mixed
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function createCodeUser($data = array(), $num = 1)
     {
@@ -84,7 +72,6 @@ class InviteModel extends Model
      * 获取简易结构的邀请码列表
      * @param array $ids
      * @return mixed
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function getSimpleListByIds($ids = array())
     {
@@ -104,7 +91,6 @@ class InviteModel extends Model
      * @param int $r
      * @param string $order
      * @return array|null
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function getList($map = array(), $page = 1, $r = 20, $order = 'id desc')
     {
@@ -121,7 +107,6 @@ class InviteModel extends Model
      * @param array $map
      * @param string $order
      * @return array|null
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function getListAll($map = array(), $order = 'id desc')
     {
@@ -133,7 +118,6 @@ class InviteModel extends Model
      * 退还邀请码
      * @param int $id
      * @return bool
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function backCode($id = 0)
     {
@@ -155,7 +139,6 @@ class InviteModel extends Model
      * 根据邀请码获取邀请码信息
      * @param string $code
      * @return mixed|null
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function getByCode($code = '')
     {
@@ -173,7 +156,6 @@ class InviteModel extends Model
      * 初始化查询信息
      * @param array $dataList
      * @return array
-     * @author 郑钟良<zzl@ourstu.com>
      */
     private function _initSelectData($dataList = array())
     {
@@ -200,7 +182,6 @@ class InviteModel extends Model
      * @param array $data
      * @param $length
      * @return array|mixed
-     * @author 郑钟良<zzl@ourstu.com>
      */
     private function createOneCode($data = array(), $length)
     {

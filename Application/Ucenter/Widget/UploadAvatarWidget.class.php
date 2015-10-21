@@ -1,14 +1,5 @@
 <?php
-/**
- * 所属项目 商业版.
- * 开发者: 陈一枭
- * 创建日期: 14-9-11
- * 创建时间: 下午1:09
- * 版权所有 想天软件工作室(www.ourstu.com)
- */
-
 namespace Ucenter\Widget;
-
 require_once('ThinkPHP/Library/Vendor/PHPImageWorkshop/ImageWorkshop.php');
 use Think\Controller;
 use PHPImageWorkshop\Core\ImageWorkshopLayer;
@@ -69,7 +60,6 @@ class UploadAvatarWidget extends Controller
      * @param $role_id
      * @param $size
      * @return mixed|string
-     * @author 郑钟良<zzl@ourstu.com>
      */
     private function getImageUrlByRoleId($role_id, $size)
     {

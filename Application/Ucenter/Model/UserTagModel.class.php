@@ -1,14 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Administrator
- * Date: 15-4-13
- * Time: 下午4:03
- * @author 郑钟良<zzl@ourstu.com>
- */
-
 namespace Ucenter\Model;
-
 use Think\Model;
 
 class UserTagModel extends Model {
@@ -42,7 +33,6 @@ class UserTagModel extends Model {
      * @param int $id
      * @param bool $field
      * @return array
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function getTree($id = 0, $field = true){
         /* 获取当前分类信息 */
@@ -72,7 +62,6 @@ class UserTagModel extends Model {
      * @param int $id
      * @param bool $field
      * @return array
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function getTreeList($id = 0, $field = true){
         /* 获取当前分类信息 */
@@ -102,7 +91,6 @@ class UserTagModel extends Model {
      * @param string $ids
      * @param bool $field
      * @return array|null
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function getTreeListByIds($ids='',$field = true)
     {
@@ -128,7 +116,6 @@ class UserTagModel extends Model {
      * @param $id
      * @param bool $field
      * @return mixed
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function info($id, $field = true){
         /* 获取分类信息 */

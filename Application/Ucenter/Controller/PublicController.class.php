@@ -1,21 +1,10 @@
 <?php
-/**
- * 所属项目 OnePlus.
- * 开发者: 想天
- * 创建日期: 3/12/14
- * 创建时间: 12:49 PM
- * 版权所有 想天工作室(www.ourstu.com)
- */
-
 namespace Ucenter\Controller;
-
-
 use Think\Controller;
 
 class PublicController extends Controller
 {
     /**获取个人资料，用以支持小名片
-     * @auth 陈一枭
      */
     private function getProfile($uid)
     {
@@ -118,7 +107,6 @@ class PublicController extends Controller
 
     /**检测消息
      * 返回新聊天状态和系统的消息
-     * @auth 陈一枭
      */
     public function getInformation()
     {
@@ -145,7 +133,6 @@ class PublicController extends Controller
     }
 
     /**设置全部的系统消息为已读
-     * @auth 陈一枭
      */
     public function setAllMessageReaded()
     {
@@ -154,7 +141,6 @@ class PublicController extends Controller
 
     /**设置某条系统消息为已读
      * @param $message_id
-     * @auth 陈一枭
      */
     public function readMessage($message_id)
     {
@@ -164,7 +150,6 @@ class PublicController extends Controller
 
     /**
      * 用户修改封面
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function changeCover()
     {
