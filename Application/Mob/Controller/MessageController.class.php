@@ -1,14 +1,9 @@
 <?php
-
-
 namespace Mob\Controller;
-
 use Think\Controller;
 
 class  MessageController extends BaseController
 {
-
-
     public function index($tab='unread')
     {
         $aPage = I('post.page', 1, 'op_t');

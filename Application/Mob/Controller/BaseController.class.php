@@ -1,20 +1,10 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Administrator
- * Date: 15-6-10
- * Time: 下午1:10
- * @author 郑钟良<zzl@ourstu.com>
- */
-
 namespace Mob\Controller;
-
-
 use Think\Controller;
 
 class BaseController extends Controller
 {
-    /**seo参数  郑钟良  ThinkOX
+    /**seo参数  郑
      * @var array
      */
     public $_mob_seo = array();

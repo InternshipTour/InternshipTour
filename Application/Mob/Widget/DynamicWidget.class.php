@@ -2,19 +2,13 @@
 // +----------------------------------------------------------------------
 // | OneThink [ WE CAN DO IT JUST THINK IT ]
 // +----------------------------------------------------------------------
-// | Copyright (c) 2013 http://www.onethink.cn All rights reserved.
-// +----------------------------------------------------------------------
-// | Author: 麦当苗儿 <zuojiazi@vip.qq.com> <http://www.zjzit.cn>
-// +----------------------------------------------------------------------
 
 namespace Mob\Widget;
-
 use Think\Controller;
 
 /**
  * Class DynamicWidget  群组动态
  * @package Group\Widget
- * @author:xjw129xjt xjt@ourstu.com
  */
 class DynamicWidget extends Controller
 {

@@ -2,13 +2,7 @@
 // +----------------------------------------------------------------------
 // | OneThink [ WE CAN DO IT JUST THINK IT ]
 // +----------------------------------------------------------------------
-// | Copyright (c) 2013 http://www.onethink.cn All rights reserved.
-// +----------------------------------------------------------------------
-// | Author: 麦当苗儿 <zuojiazi@vip.qq.com> <http://www.zjzit.cn>
-// +----------------------------------------------------------------------
-
 namespace Admin\Controller;
-
 use Admin\Builder\AdminConfigBuilder;
 /**
  * 前台公共控制器
@@ -141,7 +135,6 @@ class MobController extends AdminController
 
     /**
      * 频道列表
-     * @author 麦当苗儿 <zuojiazi@vip.qq.com>
      */
     public function index1()
     {
@@ -159,7 +152,6 @@ class MobController extends AdminController
 
     /**
      * 添加频道
-     * @author 麦当苗儿 <zuojiazi@vip.qq.com>
      */
     public function add()
     {
@@ -196,7 +188,6 @@ class MobController extends AdminController
 
     /**
      * 编辑频道
-     * @author 麦当苗儿 <zuojiazi@vip.qq.com>
      */
     public function edit($id = 0)
     {
@@ -242,7 +233,6 @@ class MobController extends AdminController
 
     /**
      * 删除频道
-     * @author 麦当苗儿 <zuojiazi@vip.qq.com>
      */
     public function del()
     {
@@ -264,7 +254,6 @@ class MobController extends AdminController
 
     /**
      * 导航排序
-     * @author huajie <banhuajie@163.com>
      */
     public function sort()
     {

@@ -1,10 +1,6 @@
 <?php
-
-
 namespace Mob\Controller;
-
 use Think\Controller;
-
 
 class UserController extends BaseController
 {
@@ -531,7 +527,6 @@ class UserController extends BaseController
     /**扩展信息分组列表获取
      * @param null $uid
      * @return mixed
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function _profile_group_list($uid = null)
     {

@@ -1,13 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: caipeichao
- * Date: 14-3-10
- * Time: PM9:01
- */
-
 namespace Mob\Model;
-
 use Think\Model;
 
 class WeiboCommentModel extends Model

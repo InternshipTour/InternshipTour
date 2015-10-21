@@ -1,10 +1,6 @@
 <?php
-
-
 namespace Mob\Controller;
-
 use Think\Controller;
-
 
 class IssueController extends BaseController
 {

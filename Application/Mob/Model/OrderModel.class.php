@@ -63,7 +63,6 @@ class OrderModel extends Model
     /**获取订单状态文本
      * @param $condition
      * @return string
-     * @auth 陈一枭
      */
     public function getConditionText($condition)
     {
@@ -128,7 +127,6 @@ class OrderModel extends Model
     }
 
     /**用账户余额来支付订单
-     * @auth 陈一枭
      */
     function pay($order_id)
     {
@@ -169,7 +167,6 @@ class OrderModel extends Model
 
     /**完成订单，给卖家加钱
      * @param $order_id
-     * @auth 陈一枭
      */
     function done($order_id)
     {
@@ -220,7 +217,6 @@ class OrderModel extends Model
     /**关闭订单
      * @param $aOrderId  订单编号
      * @return bool 成功返回true.失败返回false
-     * @auth 陈一枭
      */
     function closeOrder($aOrderId)
     {
@@ -263,7 +259,6 @@ class OrderModel extends Model
      * @param $response 评论，good,normal,bad
      * @param $content
      * @return bool
-     * @auth 陈一枭
      */
     function response($order_id, $response, $content)
     {
@@ -322,7 +317,6 @@ class OrderModel extends Model
      * @param int    $num
      * @param string $order
      * @return mixed
-     * @auth 陈一枭
      */
     function getList($map = array(), $num = 10, $order = 'create_time desc')
     {

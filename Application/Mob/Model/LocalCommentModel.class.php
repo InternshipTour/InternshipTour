@@ -1,8 +1,5 @@
 <?php
-
-
 namespace Mob\Model;
-
 use Think\Model;
 
 class LocalCommentModel extends Model

@@ -8,7 +8,6 @@ class WeiboTypeController extends Controller
 {
     /**
      * imageBox
-     * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
      */
     public function imageBox()
     {
@@ -30,7 +29,6 @@ class WeiboTypeController extends Controller
      * fetchImage  渲染图片微博
      * @param $weibo
      * @return string
-     * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
      */
     public function fetchImage($weibo)
     {
@@ -52,7 +50,6 @@ class WeiboTypeController extends Controller
      * fetchRepost   渲染转发微博
      * @param $weibo
      * @return string
-     * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
      */
     public function fetchRepost($weibo)
     {

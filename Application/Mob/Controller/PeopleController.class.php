@@ -1,6 +1,4 @@
 <?php
-
-
 namespace Mob\Controller;
 
 class  PeopleController extends BaseController

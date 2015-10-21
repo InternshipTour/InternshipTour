@@ -1,6 +1,5 @@
 <?php
 namespace Mob\Widget;
-
 use Think\Controller;
 
 class PayWidget extends Controller

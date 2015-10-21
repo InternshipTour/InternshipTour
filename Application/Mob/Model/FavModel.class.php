@@ -1,6 +1,5 @@
 <?php
 namespace Mob\Model;
-
 use Think\Model;
 
 class FavModel extends Model

@@ -1,6 +1,5 @@
 <?php
 namespace Mob\Model;
-
 use Think\Model;
 
 /**字段数据模型，通过该模型可以方便地对字段信息实现读和取

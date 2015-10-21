@@ -1,10 +1,6 @@
 <?php
-
-
 namespace Mob\Widget;
-
 use Think\Action;
-
 
 class MessageWidget extends Action
 {

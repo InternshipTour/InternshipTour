@@ -1,14 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Administrator
- * Date: 15-3-4
- * Time: 下午6:57
- * @author 郑钟良<zzl@ourstu.com>
- */
-
 namespace Mob\Widget;
-
 use Think\Action;
 
 class LoginWidget extends Action

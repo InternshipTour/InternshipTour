@@ -1,8 +1,5 @@
 <?php
-
-
 namespace Mob\Controller;
-
 use Think\Controller;
 use Think\Hook;
 

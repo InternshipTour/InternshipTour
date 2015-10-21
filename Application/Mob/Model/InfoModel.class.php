@@ -1,6 +1,5 @@
 <?php
 namespace mob\Model;
-
 use Think\Model;
 
 /**信息模型

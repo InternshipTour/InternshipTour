@@ -1,15 +1,5 @@
 <?php
-
-/**
- * Created by JetBrains PhpStorm.
- * User: 95
- * Date: 13-7-7
- * Time: 下午7:30
- * To change this template use File | Settings | File Templates.
- */
-
 namespace Mob\Widget;
-
 use Think\Controller;
 
 class SearchInputRenderWidget extends Controller

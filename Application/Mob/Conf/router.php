@@ -1,11 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Administrator
- * Date: 14-8-27
- * Time: 下午4:54
- * @author 嘉兴想天信息科技有限公司-郑钟良<zzl@ourstu.com>
- */
 return array(
 
     /**
@@ -20,11 +13,7 @@ return array(
         /*专辑*/
         'Issue/Index/issueContentDetail'        =>'/mob/issue/issuedetail',
 
-
-
         //入口
-
-
         /*专辑*/
         'Issue/index/index'                 =>'mob/issue/index',
 

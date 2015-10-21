@@ -1,21 +1,11 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: Administrator
- * Date: 15-3-26
- * Time: 上午10:43
- * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
- */
-
-
-/**
  * send_weibo  发布微博
  * @param $content
  * @param $type
  * @param string $feed_data
  * @param string $from
  * @return bool
- * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
  */
 function send_mob_weibo($content,$type,$feed_data = '', $from=''){
 
@@ -38,7 +28,6 @@ function send_mob_weibo($content,$type,$feed_data = '', $from=''){
  * @param $content
  * @param int $comment_id
  * @return bool
- * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
  */
 function send_comment($weibo_id, $content, $comment_id = 0){
     $uid = is_login();
@@ -100,7 +89,6 @@ function send_comment($weibo_id, $content, $comment_id = 0){
  * @param $uids
  * @param $weibo_id
  * @param $content
- * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
  */
 function send_at_message($uids, $weibo_id, $content)
 {
@@ -113,14 +101,6 @@ function send_at_message($uids, $weibo_id, $content)
         D('Common/Message')->sendMessage($uid, $title, $message, 'Weibo/Index/weiboDetail',array('id' => $weibo_id), $fromUid, $messageType);
     }
 }
-
-
-
-
-
-
-
-
 
 function parse_topic($content){
     //找出话题
@@ -371,7 +351,6 @@ function CheckCanPostEntity($uid, $entity_id)
 /**解析选项
  * @param $option_str
  * @return array
- * @auth 陈一枭
  */
 function parseOption($option_str)
 {

@@ -2,10 +2,6 @@
 // +----------------------------------------------------------------------
 // | OneThink [ WE CAN DO IT JUST THINK IT ]
 // +----------------------------------------------------------------------
-// | Copyright (c) 2013 http://www.onethink.cn All rights reserved.
-// +----------------------------------------------------------------------
-// | Author: yangweijie <yangweijiester@gmail.com> <code-tech.diandian.com>
-// +----------------------------------------------------------------------
 
 namespace Mob\Model;
 use Think\Model;
@@ -13,7 +9,6 @@ use Think\Model;
 /**
  * Class IssueModel 专辑模型
  * @package Issue\Model
- * @auth 陈一枭
  */
 class IssueModel extends Model {
 
@@ -32,7 +27,6 @@ class IssueModel extends Model {
      * @param int  $id
      * @param bool $field
      * @return array
-     * @auth 陈一枭
      */
     public function getTree($id = 0, $field = true){
         /* 获取当前分类信息 */
@@ -63,7 +57,6 @@ class IssueModel extends Model {
      * @param  milit   $id 分类ID或标识
      * @param  boolean $field 查询字段
      * @return array     分类信息
-     * @author 麦当苗儿 <zuojiazi@vip.qq.com>
      */
     public function info($id, $field = true){
         /* 获取分类信息 */

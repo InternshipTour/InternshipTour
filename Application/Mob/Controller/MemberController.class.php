@@ -3,8 +3,6 @@
  * 放置用户登陆注册
  */
 namespace Mob\Controller;
-
-
 use Common\Model\FollowModel;
 use Think\Controller;
 use User\Api\UserApi;
@@ -561,7 +559,6 @@ class MemberController extends BaseController
      * @param $verify
      * @param $type
      * @return bool|string
-     * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
      */
     public function doSendVerify($account, $verify, $type)
     {
@@ -587,7 +584,6 @@ class MemberController extends BaseController
 
     /**
      * activate  提示激活页面
-     * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
      */
     public function activate()
     {
@@ -605,7 +601,6 @@ class MemberController extends BaseController
 
     /**
      * reSend  重发邮件
-     * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
      */
     public function reSend()
     {
@@ -620,7 +615,6 @@ class MemberController extends BaseController
 
     /**
      * changeEmail  更改邮箱
-     * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
      */
     public function changeEmail()
     {
@@ -640,7 +634,6 @@ class MemberController extends BaseController
     /**
      * activateVerify 添加激活验证
      * @return bool|string
-     * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
      */
     private function activateVerify()
     {
@@ -656,7 +649,6 @@ class MemberController extends BaseController
      * @param $account
      * @param $verify
      * @return bool|string
-     * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
      */
     private function sendActivateEmail($account, $verify, $uid)
     {
@@ -673,7 +665,6 @@ class MemberController extends BaseController
 
     /**
      * saveAvatar  保存头像
-     * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
      */
     public function saveAvatar()
     {
@@ -709,7 +700,6 @@ class MemberController extends BaseController
 
     /**
      * doActivate  激活步骤
-     * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
      */
     public function doActivate()
     {
@@ -730,7 +720,6 @@ class MemberController extends BaseController
 
     /**
      * checkAccount  ajax验证用户帐号是否符合要求
-     * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
      */
     public function checkAccount()
     {
@@ -784,7 +773,6 @@ class MemberController extends BaseController
 
     /**
      * checkNickname  ajax验证昵称是否符合要求
-     * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
      */
     public function checkNickname()
     {
@@ -814,7 +802,6 @@ class MemberController extends BaseController
 
     /**
      * 切换登录身份
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function changeLoginRole()
     {
@@ -840,7 +827,6 @@ class MemberController extends BaseController
 
     /**
      * 持有新身份
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function registerRole()
     {
@@ -870,7 +856,6 @@ class MemberController extends BaseController
      * @param $role_id
      * @param $uid
      * @return bool
-     * @author 郑钟良<zzl@ourstu.com>
      */
     private function initRoleUser($role_id = 0, $uid)
     {
@@ -892,7 +877,6 @@ class MemberController extends BaseController
     }
 
     /**修改用户扩展信息
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function edit_expandinfo()
     {
@@ -908,7 +892,6 @@ class MemberController extends BaseController
     /**
      * 判断注册类型
      * @return bool
-     * @author 郑钟良<zzl@ourstu.com>
      */
     private function checkRegisterType()
     {
@@ -977,7 +960,6 @@ class MemberController extends BaseController
      * 判断邀请码是否可用
      * @param string $code
      * @return bool
-     * @author 郑钟良<zzl@ourstu.com>
      */
     private function checkInviteCode($code = '')
     {
