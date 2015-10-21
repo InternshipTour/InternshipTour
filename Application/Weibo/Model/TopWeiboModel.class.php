@@ -1,14 +1,5 @@
 <?php
-/**
- * 所属项目 OnePlus.
- * 开发者: 奕潇
- * 创建日期: 4/9/14
- * 创建时间: 12:15 PM
- * 版权所有 嘉兴想天信息科技有限公司(www.ourstu.com)
- */
-
 namespace Weibo\Model;
-
 use Think\Model;
 
 class TopWeiboModel extends Model

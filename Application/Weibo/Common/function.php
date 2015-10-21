@@ -1,21 +1,11 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: Administrator
- * Date: 15-3-26
- * Time: 上午10:43
- * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
- */
-
-
-/**
  * send_weibo  发布微博
  * @param $content
  * @param $type
  * @param string $feed_data
  * @param string $from
  * @return bool
- * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
  */
 function send_weibo($content,$type,$feed_data = '', $from = ''){
 
@@ -40,7 +30,6 @@ function send_weibo($content,$type,$feed_data = '', $from = ''){
  * @param $content
  * @param int $comment_id
  * @return bool
- * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
  */
 function send_comment($weibo_id, $content, $comment_id = 0){
     $uid = is_login();
@@ -72,7 +61,6 @@ function send_comment($weibo_id, $content, $comment_id = 0){
  * @param $uid
  * @param $weibo_id
  * @param $message
- * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
  */
 function send_comment_message($uid, $weibo_id, $message){
     $title = '评论消息';
@@ -87,7 +75,6 @@ function send_comment_message($uid, $weibo_id, $message){
  * @param $uids
  * @param $weibo_id
  * @param $content
- * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
  */
 function send_at_message($uids, $weibo_id, $content)
 {

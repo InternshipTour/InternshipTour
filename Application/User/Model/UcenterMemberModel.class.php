@@ -2,10 +2,6 @@
 // +----------------------------------------------------------------------
 // | OneThink [ WE CAN DO IT JUST THINK IT ]
 // +----------------------------------------------------------------------
-// | Copyright (c) 2013 http://www.onethink.cn All rights reserved.
-// +----------------------------------------------------------------------
-// | Author: 麦当苗儿 <zuojiazi@vip.qq.com> <http://www.zjzit.cn>
-// +----------------------------------------------------------------------
 namespace User\Model;
 
 use Think\Model;
@@ -111,7 +107,6 @@ class UcenterMemberModel extends Model
      * 验证用户名长度
      * @param $username
      * @return bool
-     * @author 郑钟良<zzl@ourstu.com>
      */
     protected function checkUsernameLength($username)
     {
@@ -310,7 +305,6 @@ class UcenterMemberModel extends Model
      * @param $role_id
      * @param $uid
      * @return bool
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public  function initRoleUser($role_id = 0, $uid)
     {
@@ -506,7 +500,6 @@ class UcenterMemberModel extends Model
      * @param string $password 密码，用来验证
      * @param array  $data 修改的字段数组
      * @return true 修改成功，false 修改失败
-     * @author huajie <banhuajie@163.com>
      */
     public function updateUserFields($uid, $password, $data)
     {
@@ -535,7 +528,6 @@ class UcenterMemberModel extends Model
      * @param string $password 密码，用来验证
      * @param array  $data 修改的字段数组
      * @return true 修改成功，false 修改失败
-     * @author huajie <banhuajie@163.com>
      */
     public function updateUserFieldss($uid, $data)
     {
@@ -556,7 +548,6 @@ class UcenterMemberModel extends Model
      * @param int    $uid 用户id
      * @param string $password_in 密码
      * @return true 验证成功，false 验证失败
-     * @author huajie <banhuajie@163.com>
      */
     public function verifyUser($uid, $password_in)
     {
@@ -574,7 +565,6 @@ class UcenterMemberModel extends Model
      * @param $old_password
      * @param $new_password
      * @return bool
-     * @auth 陈一枭
      */
     public function changePassword($old_password, $new_password)
     {
@@ -665,7 +655,6 @@ class UcenterMemberModel extends Model
     /**
      * addSyncData
      * @return mixed
-     * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
      */
     public function addSyncData()
     {

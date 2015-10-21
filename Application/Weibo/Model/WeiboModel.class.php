@@ -1,6 +1,5 @@
 <?php
 namespace Weibo\Model;
-
 use Think\Model;
 use Think\Hook;
 

@@ -1,7 +1,5 @@
 <?php
-
 namespace Admin\Controller;
-
 use Admin\Builder\AdminListBuilder;
 use Admin\Builder\AdminConfigBuilder;
 

@@ -1,10 +1,5 @@
 <?php
-/**
- *
- */
 namespace Weibo\Controller;
-
-
 use Think\Controller;
 
 class ShareController extends  Controller{

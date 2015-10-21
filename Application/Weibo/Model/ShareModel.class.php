@@ -1,6 +1,5 @@
 <?php
 namespace Weibo\Model;
-
 use Think\Model;
 
 class ShareModel extends Model

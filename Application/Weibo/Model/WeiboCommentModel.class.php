@@ -1,15 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: caipeichao
- * Date: 14-3-10
- * Time: PM9:01
- */
-
 namespace Weibo\Model;
-
 use Think\Model;
-
 require_once('./Application/Weibo/Common/function.php');
 
 class WeiboCommentModel extends Model

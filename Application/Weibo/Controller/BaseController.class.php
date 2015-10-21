@@ -1,14 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Yixiao Chen
- * Date: 2015/5/5 0005
- * Time: 上午 9:47
- */
-
 namespace Weibo\Controller;
-
-
 use Think\Controller;
 
 class BaseController extends  Controller{

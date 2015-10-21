@@ -1,6 +1,5 @@
 <?php
 namespace Weibo\Controller;
-
 use Think\Controller;
 use Think\Hook;
 
@@ -8,7 +7,6 @@ class IndexController extends BaseController
 {
     /**
      * index   微博首页
-     * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
      */
     public function index()
     {
@@ -90,7 +88,6 @@ class IndexController extends BaseController
 
     /**
      * loadweibo   滚动载入
-     * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
      */
     public function loadweibo()
     {

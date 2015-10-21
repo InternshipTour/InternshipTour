@@ -1,18 +1,8 @@
 <?php
-/**
- *
- */
-
 namespace Weibo\Model;
-
 use Think\Model;
 use Weibo\Api\WeiboApi;
 
-/**
- * Class WeiboProtocolModel
- * @package Weibo\Model
- * @郑钟良
- */
 class WeiboProtocolModel extends Model
 {
     private $weiboApi;
