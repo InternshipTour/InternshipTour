@@ -40,7 +40,6 @@ class NewsCategoryModel extends Model{
      * @param $id
      * @param bool $field
      * @return mixed
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function info($id, $field = true){
         /* 获取分类信息 */

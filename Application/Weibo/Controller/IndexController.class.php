@@ -127,7 +127,6 @@ class IndexController extends BaseController
 
     /**
      * doSend   发布微博
-     * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
      */
     public function doSend()
     {
@@ -188,7 +187,6 @@ class IndexController extends BaseController
 
     /**
      * sendrepost  发布转发页面
-     * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
      */
     public function sendrepost()
     {
@@ -214,7 +212,6 @@ class IndexController extends BaseController
 
     /**
      * doSendRepost   执行转发
-     * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
      */
     public function doSendRepost()
     {
@@ -280,7 +277,6 @@ class IndexController extends BaseController
 
     /**
      * doComment  发布评论
-     * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
      */
     public function doComment()
     {
@@ -312,7 +308,6 @@ class IndexController extends BaseController
 
     /**
      * checkIsLogin  判断是否登录
-     * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
      */
     private function  checkIsLogin()
     {
@@ -323,7 +318,6 @@ class IndexController extends BaseController
 
     /**
      * commentlist  评论列表
-     * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
      */
     public function commentlist()
     {
@@ -344,7 +338,6 @@ class IndexController extends BaseController
 
     /**
      * doDelComment  删除评论
-     * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
      */
     public function doDelComment()
     {
@@ -371,7 +364,6 @@ class IndexController extends BaseController
 
     /**
      * doDelWeibo  删除微博
-     * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
      */
     public function doDelWeibo()
     {
@@ -398,7 +390,6 @@ class IndexController extends BaseController
 
     /**
      * setTop  置顶
-     * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
      */
     public function setTop()
     {
@@ -432,7 +423,6 @@ class IndexController extends BaseController
 
     /**
      * assignSelf  输出当前登录用户信息
-     * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
      */
     private function assignSelf()
     {
@@ -451,7 +441,6 @@ class IndexController extends BaseController
     /**
      * weiboDetail  微博详情页
      * @param $id
-     * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
      */
     public function weiboDetail($id)
     {

@@ -36,7 +36,6 @@ class NewsController extends AdminController{
     /**分类添加
      * @param int $id
      * @param int $pid
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function add($id = 0, $pid = 0)
     {
@@ -84,7 +83,6 @@ class NewsController extends AdminController{
      * 设置资讯分类状态：删除=-1，禁用=0，启用=1
      * @param $ids
      * @param $status
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function setStatus($ids, $status)
     {
