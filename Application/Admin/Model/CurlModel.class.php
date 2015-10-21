@@ -1,16 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Yixiao Chen
- * Date: 2015/6/27 0027
- * Time: 下午 2:08
- */
-
 namespace Admin\Model;
-
-
 use Think\Model;
-
 class CurlModel extends Model
 {
     public function curl($url)

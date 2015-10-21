@@ -1,12 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Administrator
- * Date: 15-3-10
- * Time: 下午3:27
- * @author 郑钟良<zzl@ourstu.com>
- */
-
 namespace Admin\Model;
 
 use Think\Model;

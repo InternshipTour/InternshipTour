@@ -1,21 +1,10 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Administrator
- * Date: 15-3-7
- * Time: 下午1:57
- * @author 郑钟良<zzl@ourstu.com>
- */
-
 namespace Admin\Model;
-
 use Think\Model;
-
 /**
  * 身份模型
  * Class RoleModel
  * @package Admin\Model
- * @郑钟良
  */
 class RoleModel extends Model
 {
@@ -40,7 +29,6 @@ class RoleModel extends Model
      * 插入数据
      * @param $data
      * @return mixed
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function insert($data=array()){
         $data=$this->create($data);
@@ -56,7 +44,6 @@ class RoleModel extends Model
      * 修改数据
      * @param $data
      * @return mixed
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function update($data=array()){
         $data=$this->create($data);
@@ -76,7 +63,6 @@ class RoleModel extends Model
      * @param null $fields 查询字段，null表示全部字段
      * @param int $r 每页条数
      * @return mixed 一页结果列表
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function selectPageByMap($map=array(),$page=1,$r=20,$order,$fields=null){
         $order=$order?$order:"id asc";
@@ -95,7 +81,6 @@ class RoleModel extends Model
      * @param $order 排序
      * @param null $fields 查询字段，null表示全部字段
      * @return mixed 结果列表
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function selectByMap($map=array(),$order=null,$fields=null){
         $order=$order?$order:"id asc";
@@ -113,7 +98,6 @@ class RoleModel extends Model
      * @param string $order 排序
      * @param null $fields 查询字段，null表示全部字段
      * @return mixed 结果
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function getByMap($map=array(),$order,$fields=null){
         $order=$order?$order:"id asc";
@@ -129,7 +113,6 @@ class RoleModel extends Model
      * 验证身份名(只能有字母和下划线组成)
      * @param $name
      * @return bool
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function checkName($name){
         if(!preg_match('/^[_a-z]*$/i',$name)){

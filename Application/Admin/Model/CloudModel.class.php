@@ -1,9 +1,6 @@
 <?php
 /**
  * 云市场的本地操作Model
- * User: Yixiao Chen
- * Date: 2015/6/30 0030
- * Time: 下午 3:00
  */
 
 namespace Admin\Model;

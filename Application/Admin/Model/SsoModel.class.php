@@ -2,10 +2,6 @@
 // +----------------------------------------------------------------------
 // | OneThink [ WE CAN DO IT JUST THINK IT ]
 // +----------------------------------------------------------------------
-// | Copyright (c) 2013 http://www.onethink.cn All rights reserved.
-// +----------------------------------------------------------------------
-// | Author: huajie <banhuajie@163.com>
-// +----------------------------------------------------------------------
 
 namespace Admin\Model;
 use Think\Model;
@@ -13,7 +9,6 @@ use Think\Model;
 /**
  * Class SsoModel  单点登录模型
  * @package Admin\Model
- * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
  */
 class SsoModel extends Model{
     /**
