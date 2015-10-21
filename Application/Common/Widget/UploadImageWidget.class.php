@@ -5,7 +5,6 @@ use Think\Controller;
 /**
  * Class UploadImageWidget  上传图片组件
  * @package Common\Widget
- * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
  */
 class UploadImageWidget extends Controller
 {

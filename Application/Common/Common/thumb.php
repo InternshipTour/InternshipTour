@@ -1,20 +1,11 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: caipeichao
- * Date: 14-3-10
- * Time: PM7:40
- */
-
-
-/** 不兼容sae 只兼容本地 --駿濤
+/** 不兼容sae 只兼容本地
  * @param        $filename
  * @param int $width
  * @param string $height
  * @param int $type
  * @param bool $replace
  * @return mixed|string
- * @auth 陈一枭
  */
 function getThumbImage($filename, $width = 100, $height = 'auto', $type = 0, $replace = false)
 {
@@ -83,7 +74,6 @@ function getThumbImage($filename, $width = 100, $height = 'auto', $type = 0, $re
 
 /**获取网站的根Url
  * @return string
- * @auth 陈一枭
  */
 function getRootUrl()
 {
@@ -102,7 +92,6 @@ function getRootUrl()
  * @param int $type 图片的类型，qiniu 七牛，local 本地, sae SAE
  * @param bool $replace 是否强制替换
  * @return string
- * @auth 陈一枭
  */
 function getThumbImageById($cover_id, $width = 100, $height = 'auto', $type = 0, $replace = false)
 {
@@ -165,7 +154,6 @@ function get_pic($str_img)
  * get_pic_src   渲染图片链接
  * @param $path
  * @return mixed
- * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
  */
 function get_pic_src($path)
 {

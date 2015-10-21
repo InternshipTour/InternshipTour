@@ -1,20 +1,10 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Administrator
- * Date: 14-7-2
- * Time: 上午11:18
- * @author 郑钟良<zzl@ourstu.com>
- */
-
 namespace Common\Widget;
-
 use Think\Controller;
 
 /**通用二级子菜单组件
  * Class SubMenuWidget
  * @package Common\Widget
- * @auth 陈一枭
  */
 class SubMenuWidget extends Controller
 {

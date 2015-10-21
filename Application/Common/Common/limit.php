@@ -1,10 +1,6 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: Administrator
- * Date: 15-3-10
- * Time: 下午4:39
- * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
+ *系统限制
  */
 
 
@@ -82,7 +78,6 @@ class ActionLimit
     /**
      * logout_account 注销已登录帐号
      * @param $item
-     * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
      */
     function logout_account($item)
     {
@@ -92,7 +87,6 @@ class ActionLimit
     /**
      * ban_account  封停帐号
      * @param $item
-     * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
      */
     function ban_account($item)
     {
@@ -174,7 +168,6 @@ function get_time_unit($key = null){
  * @param string $type +:生成的是之后的时间撮，-:生成的是之前的时间撮
  * @param null $time 基准时间点
  * @return array|int|null
- * @author 郑钟良<zzl@ourstu.com>
  */
 function unitTime_to_time($str='1 day',$type='-',$time=null)
 {
@@ -225,7 +218,6 @@ function unitTime_to_time($str='1 day',$type='-',$time=null)
  * 单位格式时间转换成可显示的中文单位格式时间
  * @param string $str
  * @return string
- * @author 郑钟良<zzl@ourstu.com>
  */
 function unitTime_to_showUnitTime($str='1 day')
 {

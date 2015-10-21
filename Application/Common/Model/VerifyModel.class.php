@@ -1,22 +1,10 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Administrator
- * Date: 15-1-26
- * Time: 下午4:29
- * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
- */
-
 namespace Common\Model;
-
 use Think\Model;
-
 class VerifyModel extends Model
 {
     protected $tableName = 'verify';
     protected $_auto = array(array('create_time', NOW_TIME, self::MODEL_INSERT));
-
-
 
     public function addVerify($account,$type,$uid=0)
     {

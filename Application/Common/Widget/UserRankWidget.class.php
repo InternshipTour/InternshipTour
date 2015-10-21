@@ -1,11 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Yixiao Chen
- * Date: 2015/6/29 0029
- * Time: 下午 2:17
- */
-
+//用户等级组件
 namespace Common\Widget;
 
 

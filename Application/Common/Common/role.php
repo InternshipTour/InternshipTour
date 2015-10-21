@@ -1,19 +1,7 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: Administrator
- * Date: 15-3-13
- * Time: 下午5:28
- * @author 郑钟良<zzl@ourstu.com>
- */
-
-
-
-
-/**
  * 获取当前用户登录的角色的标识
  * @return int 角色id
- * @author 郑钟良<zzl@ourstu.com>
  */
 function get_login_role()
 {
@@ -28,7 +16,6 @@ function get_login_role()
 /**
  * 获取当前用户登录的角色是否审核通过
  * @return status 用户角色审核状态  1：通过，2：待审核，0：审核失败
- * @author 郑钟良<zzl@ourstu.com>
  */
 function get_login_role_audit()
 {
@@ -44,7 +31,6 @@ function get_login_role_audit()
  * 根据用户uid获取角色id
  * @param int $uid
  * @return int
- * @author 郑钟良<zzl@ourstu.com>
  */
 function get_role_id($uid=0)
 {
@@ -63,7 +49,6 @@ function get_role_id($uid=0)
  * @param $type 类型
  * @param int $role_id 角色id
  * @return mixed 查询条件 $map
- * @author 郑钟良<zzl@ourstu.com>
  */
 function getRoleConfigMap($type,$role_id=0){
     $map['role_id']=$role_id;
@@ -89,7 +74,6 @@ function getRoleConfigMap($type,$role_id=0){
  * @param int $role_id 角色id
  * @param $type 要清除的缓存，空：清除所有；字符串（Role_Expend_Info_）：清除一个缓存；数组array('Role_Expend_Info_','Role_Avatar_Id_','Role_Register_Expend_Info_')：清除多个缓存
  * @return bool
- * @author 郑钟良<zzl@ourstu.com>
  */
 function clear_role_cache($role_id=0,$type){
     if(isset($type)){

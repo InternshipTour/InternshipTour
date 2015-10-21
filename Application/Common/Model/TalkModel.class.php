@@ -1,16 +1,6 @@
 <?php
-/**
- * 所属项目 OnePlus.
- * 开发者: 想天
- * 创建日期: 3/13/14
- * 创建时间: 7:41 PM
- * 版权所有 想天工作室(www.ourstu.com)
- */
-
 namespace Common\Model;
-
 use Think\Model;
-
 class TalkModel extends Model
 {
     protected $_auto = array(
@@ -22,7 +12,6 @@ class TalkModel extends Model
     /**自动匹配出用户
      * @param $uids
      * @return mixed
-     * @auth 陈一枭
      */
     public function getUids($uids)
     {
@@ -32,7 +21,6 @@ class TalkModel extends Model
 
     /**获取当前存在的消息
      * @return mixed
-     * @auth 陈一枭
      */
     public function getCurrentSessions()
     {
@@ -70,7 +58,6 @@ class TalkModel extends Model
     /**获取最后一条消息
      * @param $talk_id
      * @return mixed
-     * @auth 陈一枭
      */
     public function getLastMessage($talk_id)
     {
@@ -83,7 +70,6 @@ class TalkModel extends Model
     /**检测是不是双人会话
      * @param $talk
      * @return bool
-     * @auth 陈一枭
      */
     public function isP2P($talk)
     {
@@ -95,7 +81,6 @@ class TalkModel extends Model
      * @param        $members
      * @param string $message
      * @return array
-     * @auth 陈一枭
      */
     public function createTalk($members)
     {
@@ -165,7 +150,6 @@ class TalkModel extends Model
     /**
      * @param $li
      * @return mixed
-     * @auth 陈一枭
      */
     private function getFirstUserAndLastMessage($li)
     {
@@ -183,7 +167,6 @@ class TalkModel extends Model
     /**获取第一个非自己的用户
      * @param $members
      * @return array|null
-     * @auth 陈一枭
      */
     public function getFirstOtherUser($members)
     {

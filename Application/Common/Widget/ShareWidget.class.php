@@ -1,10 +1,6 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: Administrator
- * Date: 15-7-8
- * Time: 上午9:06
- * @author 郑钟良<zzl@ourstu.com>
+ * 分享
  */
 
 namespace Common\Widget;

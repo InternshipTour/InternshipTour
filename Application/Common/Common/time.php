@@ -1,12 +1,5 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: caipeichao
- * Date: 14-3-14
- * Time: AM9:28
- */
-
-/**
  * 友好的时间显示
  *
  * @param int    $sTime 待显示的时间

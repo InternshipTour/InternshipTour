@@ -2,10 +2,6 @@
 // +----------------------------------------------------------------------
 // | OneThink [ WE CAN DO IT JUST THINK IT ]
 // +----------------------------------------------------------------------
-// | Copyright (c) 2013 http://www.onethink.cn All rights reserved.
-// +----------------------------------------------------------------------
-// | Author: 麦当苗儿 <zuojiazi@vip.qq.com> <http://www.zjzit.cn>
-// +----------------------------------------------------------------------
 
 namespace Core\Controller;
 use Think\Controller;
@@ -62,7 +58,6 @@ class FileController extends Controller
 
 
     /**用于表单自动上传图片的通用方法
-     * @auth 陈一枭
      */
     public function uploadFile()
     {
@@ -95,7 +90,6 @@ class FileController extends Controller
 
     /**
      * 上传图片
-     * @author huajie <banhuajie@163.com>
      */
     public function uploadPicture()
     {
@@ -152,7 +146,6 @@ class FileController extends Controller
 
 
     /**用于兼容UM编辑器的图片上传方法
-     * @auth 陈一枭
      */
     public function uploadPictureUM()
     {

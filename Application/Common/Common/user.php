@@ -1,21 +1,11 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: Administrator
- * Date: 15-1-23
- * Time: 上午11:26
- * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
- */
-
-
-/**
  * check_username  根据type或用户名来判断注册使用的是用户名、邮箱或者手机
  * @param $username
  * @param $email
  * @param $mobile
  * @param int $type
  * @return bool
- * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
  */
 function check_username(&$username, &$email, &$mobile, &$type = 0)
 {
@@ -66,7 +56,6 @@ function check_username(&$username, &$email, &$mobile, &$type = 0)
  * check_reg_type  验证注册格式是否开启
  * @param $type
  * @return bool
- * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
  */
 function check_reg_type($type){
     $t[1] = $t['username'] ='username';
@@ -89,7 +78,6 @@ function check_reg_type($type){
  * check_login_type  验证登录提示信息是否开启
  * @param $type
  * @return bool
- * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
  */
 function check_login_type($type){
     $t[1] = $t['username'] ='username';
@@ -111,7 +99,6 @@ function check_login_type($type){
  * get_next_step  获取注册流程下一步
  * @param string $now_step
  * @return string
- * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
  */
 function get_next_step($now_step =''){
 
@@ -132,7 +119,6 @@ function get_next_step($now_step =''){
  * check_step
  * @param string $now_step
  * @return string
- * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
  */
 function check_step($now_step=''){
     $step = get_kanban_config('REG_STEP', 'enable','', 'USERCONFIG');
@@ -151,7 +137,6 @@ function check_step($now_step=''){
  * @param $uid
  * @param $status
  * @return bool
- * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
  */
 function set_user_status($uid,$status){
     D('Member')->where(array('uid'=>$uid))->setField('status',$status);
@@ -164,7 +149,6 @@ function set_user_status($uid,$status){
  * @param $map
  * @param $status
  * @return bool
- * @author 郑钟良<zzl@ourstu.com>
  */
 function set_users_status($map,$status){
     D('Member')->where($map)->setField('status',$status);
@@ -174,7 +158,6 @@ function set_users_status($map,$status){
 
 /**
  * check_step_can_skip  判断注册步骤是否可跳过
- * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
  */
 function check_step_can_skip($step){
     $skip = modC('REG_CAN_SKIP','', 'USERCONFIG');

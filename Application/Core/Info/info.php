@@ -1,10 +1,6 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: Administrator
- * Date: 15-6-24
- * Time: 下午3:09
- * @author 郑钟良<zzl@ourstu.com>
+ * 模块信息
  */
 return array(
     //模块名
@@ -20,9 +16,9 @@ return array(
     //模块描述
     'summary' => '系统核心模块，必不可少，负责核心的处理。',
     //开发者
-    'developer' => '嘉兴想天信息科技有限公司',
+    'developer' => '英腾世途',
 
     'icon' => 'globe',
     //开发者网站
-    'website' => 'http://www.ourstu.com'
+    'website' => '/'
 );

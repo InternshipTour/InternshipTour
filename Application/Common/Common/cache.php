@@ -1,9 +1,6 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: caipeichao
- * Date: 4/3/14
- * Time: 5:15 PM
+ * author：邓君
  */
 
 /**
@@ -24,7 +21,7 @@ function op_cache($key, $func, $interval)
 }
 
 /**清理全部缓存
- * @auth 陈一枭
+ * @auth 邓君
  */
 function clean_all_cache()
 {
@@ -64,7 +61,7 @@ function rmdirr($dirname)
 /**
  * 清理指定位置缓存
  * @param $dirname
- * @author 郑钟良<zzl@ourstu.com>
+ * @author 邓君
  */
 function clean_cache($dirname='./Runtime/')
 {

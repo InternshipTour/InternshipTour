@@ -27,7 +27,7 @@ function parse_at_users($content, $disabel_hight = false)
  * get_at_usernames  获取@用户的用户名
  * @param $content
  * @return array
- * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
+ * @author:邓君
  */
 function get_at_users($content)
 {
@@ -43,7 +43,7 @@ function get_at_users($content)
  * get_at_uids  获取@的用户的uid
  * @param $content
  * @return array
- * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
+ * @author:邓君
  */
 function get_at_uids($content)
 {

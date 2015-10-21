@@ -2,16 +2,9 @@
 // +----------------------------------------------------------------------
 // | OneThink [ WE CAN DO IT JUST THINK IT ]
 // +----------------------------------------------------------------------
-// | Copyright (c) 2013 http://www.onethink.cn All rights reserved.
-// +----------------------------------------------------------------------
-// | Author: 麦当苗儿 <zuojiazi@vip.qq.com> <http://www.zjzit.cn>
-// +----------------------------------------------------------------------
-
 namespace Common\Model;
-
 use Think\Model;
 use User\Api\UserApi;
-
 
 /**
  * 文档基础模型
@@ -345,7 +338,6 @@ class MemberModel extends Model
      * 设置角色用户默认基本信息
      * @param $role_id
      * @param $uid
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function initUserRoleInfo($role_id, $uid)
     {
@@ -452,7 +444,6 @@ class MemberModel extends Model
      * @param $uid 初始化用户
      * @param $value 初始化角色积分配置值
      * @return array
-     * @author 郑钟良<zzl@ourstu.com>
      */
     private function getUserScore($role_id, $uid, $value)
     {
@@ -529,7 +520,6 @@ class MemberModel extends Model
      * @param $uid
      * @param $info
      * @return mixed
-     * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
      */
     public function addSyncData($uid, $info)
     {

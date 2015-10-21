@@ -2,7 +2,6 @@
 
 function callApi($apiName, $args = array())
 {
-    //
     $paths = explode('/', $apiName);
     $controllerName = "Api\\Controller\\$paths[0]Controller";
     $controller = new $controllerName();

@@ -1,17 +1,6 @@
 <?php
-/**
- * 所属项目 OnePlus.
- * 开发者: 想天
- * 创建日期: 3/18/14
- * 创建时间: 9:12 PM
- * 版权所有 想天工作室(www.ourstu.com)
- */
-
 namespace Common\Model;
-
-
 use Think\Model;
-
 class TalkMessageModel extends Model
 {
     protected $_auto = array(
@@ -24,7 +13,6 @@ class TalkMessageModel extends Model
      * @param $uid 用户ID
      * @param $talk_id 聊天ID
      * @return bool|mixed
-     * @auth 陈一枭
      */
     public function addMessage($content, $uid, $talk_id)
     {
@@ -58,7 +46,6 @@ class TalkMessageModel extends Model
     /**
      * @param $talk
      * @param $message
-     * @auth 陈一枭
      */
     private function sendMessagePush($talk, $message)
     {

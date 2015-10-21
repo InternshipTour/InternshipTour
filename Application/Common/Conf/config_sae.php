@@ -1,11 +1,4 @@
 <?php
-/**
- * 所属项目 OnePlus.
- * 开发者: 陈一枭
- * 创建日期: 6/20/14
- * 创建时间: 2:55 PM
- * 版权所有 嘉兴想天信息科技有限公司(www.ourstu.com)
- */
 return array(
     'DB_HOST' => SAE_MYSQL_HOST_M . ',' . SAE_MYSQL_HOST_S, // 服务器地址
     'DB_NAME' => SAE_MYSQL_DB, // 数据库名

@@ -1,13 +1,4 @@
 <?php
-// +----------------------------------------------------------------------
-// | OneThink [ WE CAN DO IT JUST THINK IT ]
-// +----------------------------------------------------------------------
-// | Copyright (c) 2013 http://www.onethink.cn All rights reserved.
-// +----------------------------------------------------------------------
-// | Author: 茉莉清茶 <57143976@qq.com> <http://www.3spp.cn>
-// +----------------------------------------------------------------------
-
-
 /**
  * 系统公共库文件扩展
  * 主要定义系统公共函数库扩展
@@ -45,7 +36,6 @@ function get_city_by_ip($ip)
  * @param string $subject 邮件主题
  * @param string $body 邮件内容
  * @param string $attachment 附件列表
- * @茉莉清茶 57143976@qq.com
  */
 function send_mail($to = '', $subject = '', $body = '', $name = '', $attachment = null)
 {
@@ -70,7 +60,6 @@ function send_mail($to = '', $subject = '', $body = '', $name = '', $attachment 
  * @param string $subject 邮件主题
  * @param string $body 邮件内容
  * @param string $attachment 附件列表
- * @茉莉清茶 57143976@qq.com
  */
 function sae_mail($to = '', $subject = '', $body = '', $name = '')
 {
@@ -119,7 +108,7 @@ function is_local()
 function send_mail_local($to = '', $subject = '', $body = '', $name = '', $attachment = null)
 {
     $from_email = C('MAIL_SMTP_USER');
-    $from_name = modC('WEB_SITE_NAME', 'OpenSNS开源社交系统', 'Config');
+    $from_name = modC('WEB_SITE_NAME', '英腾世途实习之旅', 'Config');
     $reply_email = '';
     $reply_name = '';
 
@@ -165,7 +154,7 @@ function send_mail_local($to = '', $subject = '', $body = '', $name = '', $attac
     return $mail->Send() ? true : $mail->ErrorInfo; //返回错误信息
 }
 
-function thinkox_hash($message, $salt = "OpenSNS")
+function thinkox_hash($message, $salt = "Internship Tour")
 {
     $s01 = $message . $salt;
     $s02 = md5($s01) . $salt;
@@ -180,7 +169,6 @@ function thinkox_hash($message, $salt = "OpenSNS")
  * @param string $default 默认值
  * @param string $module 模块名，不设置用当前模块名
  * @return string
- * @auth 陈一枭
  */
 function modC($key, $default = '', $module = '')
 {
@@ -205,7 +193,6 @@ function modC($key, $default = '', $module = '')
  * @param        $mobile 手机号码
  * @param        $content 内容
  * @return string
- * @auth 肖骏涛
  */
 function sendSMS($mobile, $content)
 {
@@ -230,7 +217,6 @@ function sendSMS($mobile, $content)
  * @param string $default
  * @param string $module
  * @return array|bool
- * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
  */
 function get_kanban_config($key, $kanban, $default = '', $module = '')
 {

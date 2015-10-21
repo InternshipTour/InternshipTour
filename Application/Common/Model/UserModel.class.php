@@ -149,7 +149,6 @@ class UserModel
     /**清理用户数据缓存，即时更新query_user返回结果。
      * @param $uid
      * @param $field
-     * @auth 陈一枭
      */
     function clean_query_user_cache($uid, $field)
     {

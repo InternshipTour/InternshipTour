@@ -1,11 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: caipeichao
- * Date: 4/2/14
- * Time: 11:59 AM
- */
-
 namespace Common\Exception;
 
 use Think\Exception;

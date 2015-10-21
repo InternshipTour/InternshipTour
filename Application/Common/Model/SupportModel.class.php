@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Yixiao Chen
- * Date: 2015/4/30 0030
- * Time: 下午 3:39
- */
 
 namespace Common\Model;
 

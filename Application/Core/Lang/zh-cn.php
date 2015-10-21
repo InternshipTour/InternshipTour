@@ -1,11 +1,11 @@
 <?php
 return array(
-    'followers'=>'关注',
-    'success'=>'成功',
-    'fail'=>'失败',
-    'please'=>'请',
-    'log_in'=>'登录',
-    'cancel'=>'取消',
+    'followers'=>'鹿脴脳垄',
+    'success'=>'鎴愬姛',
+    'fail'=>'澶辫触',
+    'please'=>'脟毛',
+    'log_in'=>'碌脟脗录',
+    'cancel'=>'脠隆脧没',
 
 
 

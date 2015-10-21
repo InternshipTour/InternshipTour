@@ -2,10 +2,6 @@
 // +----------------------------------------------------------------------
 // | OneThink [ WE CAN DO IT JUST THINK IT ]
 // +----------------------------------------------------------------------
-// | Copyright (c) 2013 http://www.onethink.cn All rights reserved.
-// +----------------------------------------------------------------------
-// | Author: 麦当苗儿 <zuojiazi@vip.qq.com> <http://www.zjzit.cn>
-// +----------------------------------------------------------------------
 
 namespace Core\Controller;
 
@@ -14,14 +10,12 @@ use Think\Controller;
 /**
  * Class PublicController  公共控制器
  * @package Core\Controller
- * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
  */
 class PublicController extends Controller
 {
 
     /**关注某人
      * @param int $uid
-     * @auth 陈一枭
      */
     public function follow()
     {
@@ -39,7 +33,6 @@ class PublicController extends Controller
 
     /**取消对某人的关注
      * @param int $uid
-     * @auth 陈一枭
      */
     public function unfollow()
     {
@@ -58,7 +51,6 @@ class PublicController extends Controller
 
     /**
      * atWhoJson
-     * @author:陈一枭
      */
     public function atWhoJson()
     {
@@ -79,7 +71,6 @@ class PublicController extends Controller
     /**
      * getAtWhoUsers  获取@列表
      * @return array
-     * @author:陈一枭
      */
     private function getAtWhoUsers()
     {

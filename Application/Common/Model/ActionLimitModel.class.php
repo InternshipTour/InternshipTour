@@ -1,10 +1,6 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: Administrator
- * Date: 15-1-26
- * Time: 下午4:29
- * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
+ * 行为限制
  */
 
 namespace Common\Model;

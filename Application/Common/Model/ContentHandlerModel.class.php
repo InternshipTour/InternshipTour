@@ -1,11 +1,4 @@
 <?php
-/**
- * 所属项目 OnePlus.
- * 开发者: 陈一枭
- * 创建日期: 5/11/14
- * 创建时间: 9:44 PM
- * 版权所有 嘉兴想天信息科技有限公司(www.ourstu.com)
- */
 
 namespace Common\Model;
 
@@ -13,13 +6,11 @@ namespace Common\Model;
 /**内容处理模型，专门用于预处理各类文本
  * Class ContentHandlerModel
  * @package Common\Model
- * @auth 陈一枭
  */
 class ContentHandlerModel
 {
 
     /**处理@
-     * @auth 陈一枭
      */
     public function handleAtWho($content, $url = '' ,$args=array(), $app_name = '', $escap_first = false)
     {

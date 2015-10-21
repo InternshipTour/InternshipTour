@@ -1,15 +1,7 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: Administrator
- * Date: 15-5-5
- * Time: 上午10:20
- * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
+ * @author:邓君
  */
-
-
-
-
 
 //todo 扩展多种采集方式，以备一种方式采集不到页面
 

@@ -1,9 +1,6 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: caipeichao
- * Date: 14-3-10
- * Time: PM7:40
+ * 分页
  */
 
 function getPagination($totalCount, $countPerPage = 10,$rollPage=0)

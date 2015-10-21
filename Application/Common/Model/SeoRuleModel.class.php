@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: caipeichao
- * Date: 14-3-14
- * Time: PM1:36
- */
 
 namespace Common\Model;
 

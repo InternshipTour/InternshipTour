@@ -1,15 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: caipeichao
- * Date: 14-3-10
- * Time: PM9:01
- */
-
 namespace Core\Model;
-
 use Think\Model;
-
 class ExpressionModel extends Model
 {
     protected $ROOT_PATH = '';
@@ -59,7 +50,6 @@ class ExpressionModel extends Model
     /**
      * getAll 获取所有主题的所有表情
      * @return array
-     * @author:xjw129xjt xjt@ourstu.com
      */
     public function getAll()
     {
@@ -127,13 +117,6 @@ class ExpressionModel extends Model
         }
         return $pkg;
     }
-
-
-
-
-
-
-
 
 
     public function getPkgInfo($pkg ='miniblog'){

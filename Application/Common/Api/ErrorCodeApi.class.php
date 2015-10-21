@@ -1,9 +1,6 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: caipeichao
- * Date: 4/9/14
- * Time: 4:46 PM
+ * User:邓君
  */
 
 namespace Common\Api;

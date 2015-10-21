@@ -2,9 +2,7 @@
 // +----------------------------------------------------------------------
 // | OneThink [ WE CAN DO IT JUST THINK IT ]
 // +----------------------------------------------------------------------
-// | Copyright (c) 2013 http://www.onethink.cn All rights reserved.
-// +----------------------------------------------------------------------
-// | Author: 麦当苗儿 <zuojiazi@vip.qq.com> <http://www.zjzit.cn>
+// | Author: 邓君
 // +----------------------------------------------------------------------
 
 // OneThink常量定义
@@ -40,7 +38,7 @@ require_once(APP_PATH . '/Common/Common/collect.php');
 /**
  * 检测用户是否登录
  * @return integer 0-未登录，大于0-当前登录用户ID
- * @author 麦当苗儿 <zuojiazi@vip.qq.com>
+ * @author 邓君 louis294646549@qq.com
  */
 function is_login()
 {
@@ -60,7 +58,7 @@ function is_login()
  * @param int $uid 用户uid
  * @param int $role_id 登录的角色id
  * @return array 查询条件 $map
- * @author 郑钟良<zzl@ourstu.com>
+ * @author 邓君 louis294646549@qq.com
  */
 function getUserConfigMap($name = '', $model = '', $uid = 0, $role_id = 0)
 {
@@ -127,7 +125,7 @@ function check_auth($rule = '', $except_uid = -1, $type = AuthRuleModel::RULE_UR
 /**
  * 检测当前用户是否为管理员
  * @return boolean true-管理员，false-非管理员
- * @author 麦当苗儿 <zuojiazi@vip.qq.com>
+ * @author 邓君 louis294646549@qq.com
  */
 function is_administrator($uid = null)
 {
@@ -142,7 +140,7 @@ function is_administrator($uid = null)
  * @param  string $str 要分割的字符串
  * @param  string $glue 分割符
  * @return array
- * @author 麦当苗儿 <zuojiazi@vip.qq.com>
+ * @author 邓君 louis294646549@qq.com
  */
 function str2arr($str, $glue = ',')
 {
@@ -154,7 +152,7 @@ function str2arr($str, $glue = ',')
  * @param  array $arr 要连接的数组
  * @param  string $glue 分割符
  * @return string
- * @author 麦当苗儿 <zuojiazi@vip.qq.com>
+ * @author 邓君 louis294646549@qq.com
  */
 function arr2str($arr, $glue = ',')
 {
@@ -198,7 +196,7 @@ function msubstr($str, $start = 0, $length, $charset = "utf-8", $suffix = true)
  * @param string $key 加密密钥
  * @param int $expire 过期时间 单位 秒
  * @return string
- * @author 麦当苗儿 <zuojiazi@vip.qq.com>
+ * @author 邓君 louis294646549@qq.com
  */
 function think_encrypt($data, $key = '', $expire = 0)
 {
@@ -228,7 +226,7 @@ function think_encrypt($data, $key = '', $expire = 0)
  * @param  string $data 要解密的字符串 （必须是think_encrypt方法加密的字符串）
  * @param  string $key 加密密钥
  * @return string
- * @author 麦当苗儿 <zuojiazi@vip.qq.com>
+ * @author 邓君 louis294646549@qq.com
  */
 function think_decrypt($data, $key = '')
 {
@@ -270,7 +268,7 @@ function think_decrypt($data, $key = '')
  * 数据签名认证
  * @param  array $data 被认证的数据
  * @return string       签名
- * @author 麦当苗儿 <zuojiazi@vip.qq.com>
+ * @author 邓君 louis294646549@qq.com
  */
 function data_auth_sign($data)
 {
@@ -323,7 +321,6 @@ function list_sort_by($list, $field, $sortby = 'asc')
  * @param string $pid parent标记字段
  * @param string $level level标记字段
  * @return array
- * @author 麦当苗儿 <zuojiazi@vip.qq.com>
  */
 function list_to_tree($list, $pk = 'id', $pid = 'pid', $child = '_child', $root = 0)
 {
@@ -361,7 +358,6 @@ function list_to_tree($list, $pk = 'id', $pid = 'pid', $child = '_child', $root 
  * @param  string $order 排序显示的键，一般是主键 升序排列
  * @param  array $list 过渡用的中间数组，
  * @return array        返回排过序的列表数组
- * @author yangweijie <yangweijiester@gmail.com>
  */
 function tree_to_list($tree, $child = '_child', $order = 'id', &$list = array())
 {
@@ -385,7 +381,6 @@ function tree_to_list($tree, $child = '_child', $order = 'id', &$list = array())
  * @param  number $size 字节数
  * @param  string $delimiter 数字和单位分隔符
  * @return string            格式化后的带单位的大小
- * @author 麦当苗儿 <zuojiazi@vip.qq.com>
  */
 function format_bytes($size, $delimiter = '')
 {
@@ -397,7 +392,6 @@ function format_bytes($size, $delimiter = '')
 /**
  * 设置跳转页面URL
  * 使用函数再次封装，方便以后选择不同的存储方式（目前使用cookie存储）
- * @author 麦当苗儿 <zuojiazi@vip.qq.com>
  */
 function set_redirect_url($url)
 {
@@ -407,7 +401,6 @@ function set_redirect_url($url)
 /**
  * 获取跳转页面URL
  * @return string 跳转页URL
- * @author 麦当苗儿 <zuojiazi@vip.qq.com>
  */
 function get_redirect_url()
 {
@@ -455,7 +448,6 @@ function get_addon_config($name)
  * 插件显示内容里生成访问插件的url
  * @param string $url url
  * @param array $param 参数
- * @author 麦当苗儿 <zuojiazi@vip.qq.com>
  */
 function addons_url($url, $param = array(),$suffix = true, $domain = false)
 {
@@ -491,7 +483,6 @@ function addons_url($url, $param = array(),$suffix = true, $domain = false)
  * 时间戳格式化
  * @param int $time
  * @return string 完整的时间显示
- * @author huajie <banhuajie@163.com>
  */
 function time_format($time = NULL, $format = 'Y-m-d H:i')
 {
@@ -667,7 +658,6 @@ function get_document_model($id = null, $field = null)
  * 解析UBB数据
  * @param string $data UBB字符串
  * @return string 解析为HTML的数据
- * @author 麦当苗儿 <zuojiazi@vip.qq.com>
  */
 function ubb($data)
 {
@@ -682,7 +672,6 @@ function ubb($data)
  * @param int $record_id 触发行为的记录id
  * @param int $user_id 执行行为的用户id
  * @return boolean
- * @author huajie <banhuajie@163.com>
  */
 function action_log($action = null, $model = null, $record_id = null, $user_id = null)
 {
@@ -758,7 +747,6 @@ function action_log($action = null, $model = null, $record_id = null, $user_id =
  * @param string $action 行为id或者name
  * @param int $self 替换规则里的变量为执行用户的id
  * @return boolean|array: false解析出错 ， 成功返回规则数组
- * @author huajie <banhuajie@163.com>
  */
 function parse_action($action = null, $self)
 {
@@ -820,7 +808,6 @@ function parse_action($action = null, $self)
  * @param int $action_id 行为id
  * @param array $user_id 执行的用户id
  * @return boolean false 失败 ， true 成功
- * @author huajie <banhuajie@163.com>
  */
 function execute_action($rules = false, $action_id = null, $user_id = null, $log_id = null)
 {
@@ -924,7 +911,6 @@ if (!function_exists('array_column')) {
  * 获取表名（不含表前缀）
  * @param string $model_id
  * @return string 表名
- * @author huajie <banhuajie@163.com>
  */
 function get_table_name($model_id = null)
 {
@@ -1031,7 +1017,6 @@ function api($name, $vars = array())
  * @param string $condition 条件字段
  * @param string $field 需要返回的字段，不传则返回整个数据
  * @param string $table 需要查询的表
- * @author huajie <banhuajie@163.com>
  */
 function get_table_field($value = null, $condition = 'id', $field = null, $table = null)
 {
@@ -1055,7 +1040,6 @@ function get_table_field($value = null, $condition = 'id', $field = null, $table
  * @param int $link_id
  * @param string $field
  * @return 完整的链接信息或者某一字段
- * @author huajie <banhuajie@163.com>
  */
 function get_link($link_id = null, $field = 'url')
 {
@@ -1076,7 +1060,6 @@ function get_link($link_id = null, $field = 'url')
  * @param int $cover_id
  * @param string $field
  * @return 完整的数据  或者  指定的$field字段值
- * @author huajie <banhuajie@163.com>
  */
 function get_cover($cover_id, $field = null)
 {
@@ -1093,7 +1076,6 @@ function get_cover($cover_id, $field = null)
  * @param number $pos 推荐位的值
  * @param number $contain 指定推荐位
  * @return boolean true 包含 ， false 不包含
- * @author huajie <banhuajie@163.com>
  */
 function check_document_position($pos = 0, $contain = 0)
 {
@@ -1112,7 +1094,6 @@ function check_document_position($pos = 0, $contain = 0)
 
 /**
  * 获取数据的所有子孙数据的id值
- * @author 朱亚杰 <xcoolcc@gmail.com>
  */
 
 function get_stemma($pids, Model &$model, $field = 'id')
@@ -1142,7 +1123,6 @@ function get_stemma($pids, Model &$model, $field = 'id')
  * 获取导航URL
  * @param  string $url 导航URL
  * @return string      解析或的url
- * @author 麦当苗儿 <zuojiazi@vip.qq.com>
  */
 function get_nav_url($url)
 {
@@ -1160,7 +1140,6 @@ function get_nav_url($url)
 /**
  * @param $url 检测当前url是否被选中
  * @return bool|string
- * @auth 陈一枭
  */
 function get_nav_active($url)
 {
@@ -1193,7 +1172,6 @@ function get_nav_active($url)
  * 获取列表总行数
  * @param  string $category 分类ID
  * @param  integer $status 数据状态
- * @author 麦当苗儿 <zuojiazi@vip.qq.com>
  */
 function get_list_count($category, $status = 1)
 {
@@ -1221,7 +1199,6 @@ function op_t($text, $addslanshes = false)
 
 /**过滤函数，别名函数，op_t的别名
  * @param $text
- * @auth 陈一枭
  */
 function text($text, $addslanshes = false)
 {
@@ -1230,7 +1207,6 @@ function text($text, $addslanshes = false)
 
 /**过滤函数，别名函数，op_h的别名
  * @param $text
- * @auth 陈一枭
  */
 function html($text)
 {
@@ -1299,13 +1275,8 @@ function getLou($k)
 }
 
 /**获取当前的积分
- * @return mixed
- * @auth 陈一枭
- */
-/**获取当前的积分
  * @param string $score_name
  * @return mixed
- * @auth 陈一枭
  */
 function getMyScore($score_name = 'score1')
 {
@@ -1318,7 +1289,6 @@ function getMyScore($score_name = 'score1')
  * @param $before 变动前的积分
  * @param $after 变动后的积分
  * @return string
- * @auth 陈一枭
  */
 function getScoreTip($before, $after)
 {
@@ -1402,7 +1372,6 @@ function getSubByKey($pArray, $pKey = "", $pCondition = "")
  * @param int $length 字符串的长度
  * @param string $type 类型
  * @return string
- * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
  */
 function create_rand($length = 8, $type = 'all')
 {
@@ -1429,7 +1398,6 @@ function create_rand($length = 8, $type = 'all')
  * curl_get_headers 获取链接header
  * @param $url
  * @return array
- * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
  */
 function curl_get_headers($url)
 {
@@ -1454,7 +1422,6 @@ function curl_get_headers($url)
 
 /**
  * 生成系统AUTH_KEY
- * @author 麦当苗儿 <zuojiazi@vip.qq.com>
  */
 function build_auth_key()
 {
@@ -1472,7 +1439,6 @@ require_once('./api/config.php');
  * @param int $some n天
  * @param null $day 当前时间
  * @return int|null
- * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
  */
 function get_some_day($some = 30, $day = null)
 {
@@ -1489,7 +1455,6 @@ function get_some_day($some = 30, $day = null)
  * @param string $field 需要返回的字段内容
  * @param string $table 关联数据表
  * @return array string
- * @author MingYang <xint5288@126.com>
  */
 function get_userdata_join($id = null, $field = null, $table = null)
 {
@@ -1522,7 +1487,6 @@ function get_userdata_join($id = null, $field = null, $table = null)
  * @param string $table 查询表
  * @param string $yesnoid 是否返回ID(预留·)
  * @return  NULL, string, unknown, mixed, object>
- * @author MingYang<xint5288@126.com>
  */
 function get_data_field_id($map = null, $field = null, $table = null, $yesnoid = '')
 {
@@ -1605,7 +1569,6 @@ function check_is_in_config($key,$config){
  * convert_url_query  转换url参数为数组
  * @param $query
  * @return array|string
- * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
  */
 function convert_url_query($query)
 {
@@ -1628,7 +1591,6 @@ function convert_url_query($query)
  * get_ip_lookup  获取ip地址所在的区域
  * @param null $ip
  * @return bool|mixed
- * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
  */
 function get_ip_lookup($ip=null){
     if(empty($ip)){
@@ -1655,7 +1617,6 @@ function get_ip_lookup($ip=null){
  * @param $str
  * @param string $place
  * @return mixed
- * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
  */
 function cut_str($search,$str,$place=''){
     switch($place){
@@ -1678,7 +1639,6 @@ function cut_str($search,$str,$place=''){
  * @param $key
  * @param $value
  * @return bool
- * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
  */
 function array_search_key($array, $key, $value)
 {
@@ -1696,7 +1656,6 @@ function array_search_key($array, $key, $value)
  * @param $array
  * @param $value
  * @return mixed
- * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
  */
 function array_delete($array,$value){
     $key = array_search($value, $array);
@@ -1710,7 +1669,6 @@ function array_delete($array,$value){
  * get_upload_config  获取上传驱动配置
  * @param $driver
  * @return mixed
- * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
  */
 function get_upload_config($driver){
     if($driver == 'local'){
@@ -1727,7 +1685,6 @@ function get_upload_config($driver){
  * check_driver_is_exist 判断上传驱动插件是否存在
  * @param $driver
  * @return string
- * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
  */
 function check_driver_is_exist($driver){
     if($driver == 'local'){
@@ -1763,7 +1720,6 @@ function is_mobile()
  * check_sms_hook_is_exist  判断短信服务插件是否存在，不存在则返回none
  * @param $driver
  * @return string
- * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
  */
 function check_sms_hook_is_exist($driver){
     if($driver == 'none'){

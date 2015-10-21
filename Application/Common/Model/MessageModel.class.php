@@ -1,19 +1,8 @@
 <?php
-/**
- * 所属项目 OnePlus.
- * 开发者: 想天
- * 创建日期: 3/13/14
- * 创建时间: 7:41 PM
- * 版权所有 想天工作室(www.ourstu.com)
- */
-
 namespace Common\Model;
-
 use Think\Model;
-
 class MessageModel extends Model
 {
-
 
     /**
      * sendMessage   发送消息，屏蔽自己
@@ -25,7 +14,6 @@ class MessageModel extends Model
      * @param int $from_uid 发送消息的用户
      * @param int $type 消息类型，0系统，1用户，2应用
      * @return bool
-     * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
      */
     public function sendMessage($to_uids, $title = '您有新的消息', $content = '', $url = '', $url_args = array(), $from_uid = -1, $type = 0)
     {
@@ -53,7 +41,6 @@ class MessageModel extends Model
      * @param int $from_uid 发送消息的用户
      * @param int $type 消息类型，0系统，1用户，2应用
      * @return bool
-     * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
      */
     public function sendMessageWithoutCheckSelf($to_uids, $title = '您有新的消息', $content = '', $url = '', $url_args = array(), $from_uid = -1, $type = 0)
     {
@@ -81,7 +68,6 @@ class MessageModel extends Model
      * @param $url_args 消息链接的参数，U函数的第二个参数
      * @param $type 消息类型，0系统，1用户，2应用
      * @return mixed
-     * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
      */
     private function addMessageContent($from_uid, $title, $content, $url, $url_args, $type)
     {

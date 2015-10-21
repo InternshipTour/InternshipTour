@@ -6,14 +6,12 @@ use Think\Controller;
 /**
  * Class FollowWidget
  * @package Common\Widget
- * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
  */
 class FollowWidget extends Controller
 {
     /**
      * follow  关注按钮
      * @param int $follow_who
-     * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
      */
     public function follow($follow_who = 0, $before, $after)
     {
