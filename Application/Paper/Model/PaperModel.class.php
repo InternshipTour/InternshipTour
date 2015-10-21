@@ -1,15 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Administrator
- * Date: 15-5-28
- * Time: 下午3:11
- * @author 郑钟良<zzl@ourstu.com>
- */
-
 namespace Paper\Model;
-
-
 use Think\Model;
 
 class PaperModel extends Model{

@@ -1,15 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Administrator
- * Date: 15-5-28
- * Time: 下午01:33
- * @author 郑钟良<zzl@ourstu.com>
- */
-
 namespace Paper\Controller;
-
-
 use Think\Controller;
 
 class IndexController extends Controller{

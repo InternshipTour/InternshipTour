@@ -1,15 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Administrator
- * Date: 15-5-28
- * Time: 下午1:50
- * @author 郑钟良<zzl@ourstu.com>
- */
-
 namespace Paper\Model;
-
-
 use Think\Model;
 
 class PaperCategoryModel extends Model{
@@ -24,7 +14,6 @@ class PaperCategoryModel extends Model{
      * @param $id
      * @param bool $field
      * @return mixed
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function info($id, $field = true){
         /* 获取分类信息 */

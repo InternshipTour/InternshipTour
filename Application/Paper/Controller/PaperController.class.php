@@ -1,15 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Administrator
- * Date: 15-5-28
- * Time: 下午01:31
- * @author 郑钟良<zzl@ourstu.com>
- */
-
 namespace Admin\Controller;
-
-
 use Admin\Builder\AdminConfigBuilder;
 use Admin\Builder\AdminListBuilder;
 
@@ -27,7 +17,6 @@ class PaperController extends AdminController{
 
     /**
      * 单页分类
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function paperCategory()
     {
@@ -52,7 +41,6 @@ class PaperController extends AdminController{
 
     /**分类编辑
      * @param int $id
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function editCategory($id = 0)
     {
@@ -84,7 +72,6 @@ class PaperController extends AdminController{
      * 设置文章分类状态：删除=-1，禁用=0，启用=1
      * @param $ids
      * @param $status
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function setCategoryStatus($ids, $status)
     {
@@ -173,7 +160,6 @@ class PaperController extends AdminController{
 
     /**
      * 编辑单页文章
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function editPaper()
     {
