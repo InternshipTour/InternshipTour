@@ -4,7 +4,6 @@
  * User: Administrator
  * Date: 14-8-4
  * Time: 下午9:26
- * @author:xjw129xjt xjt@ourstu.com
  */
 
 define('UC_CONNECT', 'mysql');
