@@ -1,11 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Administrator
- * Date: 14-8-4
- * Time: 下午9:26
- */
-
 define('UC_CONNECT', 'mysql');
 define('UC_DBHOST', '127.0.0.1');
 define('UC_DBUSER', 'root');
