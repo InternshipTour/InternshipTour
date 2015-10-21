@@ -1,15 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: caipeichao
- * Date: 14-3-8
- * Time: PM4:14
- */
-
 namespace Forum\Model;
-
 use Think\Model;
-
 class ForumLzlReplyModel extends Model
 {
     protected $_validate = array(

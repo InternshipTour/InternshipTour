@@ -1,13 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: caipeichao
- * Date: 14-3-8
- * Time: PM4:30
- */
-
 namespace Forum\Controller;
-
 use Think\Controller;
 use Think\View;
 use Weibo\Api\WeiboApi;
@@ -209,7 +201,6 @@ class IndexController extends Controller
      * @param int $aId 版块ID
      * @param int $aPage 分页
      * @param string $aOrder 回复排序方式
-     * @auth 陈一枭
      */
     public function forum()
     {
@@ -315,7 +306,6 @@ class IndexController extends Controller
      * @param int $page
      * @param null $sr 楼中楼回复消息中某楼层的ID
      * @param int $sp 楼中楼回复消息中的分页ID
-     * @auth 陈一枭
      */
     public function detail($id, $page = 1, $sr = null, $sp = 1)
     {
@@ -378,7 +368,6 @@ class IndexController extends Controller
     /**
      * 删除贴子
      * @param $id
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function delPost($id)
     {
@@ -879,7 +868,6 @@ class IndexController extends Controller
     /**过滤输出，临时解决方案
      * @param $content
      * @return mixed|string
-     * @auth 陈一枭
      */
     private function filterPostContent($content)
     {

@@ -1,14 +1,5 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: Administrator
- * Date: 15-6-5
- * Time: 上午10:38
- * @author 郑钟良<zzl@ourstu.com>
- */
-
-
-/**
  * 获取要排除的uids(版主、自己)
  * @param int $lzl_reply_id
  * @param int $reply_id
@@ -16,7 +7,6 @@
  * @param int $forum_id
  * @param int $with_self 是否包含记录的uid
  * @return array|int|mixed
- * @author 郑钟良<zzl@ourstu.com>
  */
 function get_expect_ids($lzl_reply_id=0,$reply_id=0,$post_id=0,$forum_id=0,$with_self=1)
 {
@@ -63,7 +53,6 @@ function get_expect_ids($lzl_reply_id=0,$reply_id=0,$post_id=0,$forum_id=0,$with
  * 论坛板块是否允许发帖
  * @param $forum_id
  * @return bool
- * @author 郑钟良<zzl@ourstu.com>
  */
 function forumAllowCurrentUserGroup($forum_id)
 {

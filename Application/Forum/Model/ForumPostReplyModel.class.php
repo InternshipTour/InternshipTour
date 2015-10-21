@@ -1,13 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: caipeichao
- * Date: 14-3-8
- * Time: PM4:14
- */
-
 namespace Forum\Model;
-
 use Think\Model;
 
 class ForumPostReplyModel extends Model
@@ -63,7 +55,6 @@ class ForumPostReplyModel extends Model
      * @param $content
      * @param $reply_id
      * @return string
-     * @auth 陈一枭
      */
     private function sendReplyMessage($uid, $post_id, $content, $reply_id)
     {

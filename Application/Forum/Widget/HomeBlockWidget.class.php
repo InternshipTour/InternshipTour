@@ -1,15 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Administrator
- * Date: 15-6-8
- * Time: 下午4:37
- * @author 郑钟良<zzl@ourstu.com>
- */
-
 namespace Forum\Widget;
-
-
 use Forum\Model\ForumModel;
 use Think\Controller;
 

@@ -1,14 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: caipeichao
- * Date: 14-3-8
- * Time: PM4:14
- */
-
 namespace Forum\Model;
 use Think\Model;
-
 class ForumBookmarkModel extends Model {
     protected $_auto = array(
         array('create_time', NOW_TIME, self::MODEL_INSERT),

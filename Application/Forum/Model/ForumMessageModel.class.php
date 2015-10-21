@@ -1,17 +1,7 @@
 <?php
-/**
- * 所属项目 OnePlus.
- * 开发者: 想天
- * 创建日期: 3/16/14
- * 创建时间: 10:56 PM
- * 版权所有 想天工作室(www.ourstu.com)
- */
-
 namespace Forum\Model;
-
 use Common\Model\IMessage;
 use Think\Model;
-
 class ForumMessageModel extends Model implements IMessage
 {
     /**获取聊天源，一般用于创建聊天时对顶部来源进行赋值

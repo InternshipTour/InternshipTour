@@ -1,14 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Administrator
- * Date: 14-7-21
- * Time: 上午11:25
- * @author 郑钟良<zzl@ourstu.com>
- */
-
 namespace Forum\Model;
-
 use Think\Model;
 
 class ForumProtocolModel extends Model
@@ -105,7 +96,6 @@ class ForumProtocolModel extends Model
     }
 
     /**我参与的$map
-     * @author 郑钟良<zzl@ourstu.com>
      */
     private function _getInMap($map = array())
     {

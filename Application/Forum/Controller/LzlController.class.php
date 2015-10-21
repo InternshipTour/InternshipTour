@@ -1,22 +1,11 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: caipeichao
- * Date: 14-3-8
- * Time: PM4:30
- */
-
 namespace Forum\Controller;
-
 use Think\Controller;
-
 define('TOP_ALL', 1);
 define('TOP_FORUM', 2);
 
 class LzlController extends Controller
 {
-
-
     public function  lzllist($to_f_reply_id, $page = 1,$p=1)
     {
         $limit = 5;
