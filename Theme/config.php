@@ -1,10 +1,6 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: Administrator
- * Date: 15-5-14
- * Time: 上午10:11
- * @author 郑钟良<zzl@ourstu.com>
+ * @author 邓君
  */
 $now_theme = cookie('TO_LOOK_THEME','',array('prefix'=>'OSV2'));
 if(!$now_theme){
