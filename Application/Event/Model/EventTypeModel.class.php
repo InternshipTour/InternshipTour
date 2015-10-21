@@ -2,10 +2,6 @@
 // +----------------------------------------------------------------------
 // | OneThink [ WE CAN DO IT JUST THINK IT ]
 // +----------------------------------------------------------------------
-// | Copyright (c) 2013 http://www.onethink.cn All rights reserved.
-// +----------------------------------------------------------------------
-// | Author: 麦当苗儿 <zuojiazi@vip.qq.com> <http://www.zjzit.cn>
-// +----------------------------------------------------------------------
 
 namespace Event\Model;
 use Think\Model;
@@ -15,7 +11,6 @@ use Think\Page;
  * 活动类型模型
  * Class EventTypeModel
  * @package Event\Model
- * autor:xjw129xjt
  */
 class EventTypeModel extends Model{
     protected $tableName='event_type';
@@ -34,7 +29,6 @@ class EventTypeModel extends Model{
      * @param int $id
      * @param bool $field
      * @return array
-     * autor:陈一枭
      */
     public function getTree($id = 0, $field = true){
         /* 获取当前分类信息 */
@@ -64,7 +58,6 @@ class EventTypeModel extends Model{
      * @param  milit   $id 分类ID或标识
      * @param  boolean $field 查询字段
      * @return array     分类信息
-     * @author 麦当苗儿 <zuojiazi@vip.qq.com>
      */
     public function info($id, $field = true){
         /* 获取分类信息 */

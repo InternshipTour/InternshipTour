@@ -2,10 +2,6 @@
 // +----------------------------------------------------------------------
 // | OneThink [ WE CAN DO IT JUST THINK IT ]
 // +----------------------------------------------------------------------
-// | Copyright (c) 2013 http://www.onethink.cn All rights reserved.
-// +----------------------------------------------------------------------
-// | Author: 麦当苗儿 <zuojiazi@vip.qq.com> <http://www.zjzit.cn>
-// +----------------------------------------------------------------------
 
 namespace Event\Model;
 use Think\Model;
@@ -15,7 +11,6 @@ use Think\Page;
  * 活动模型
  * Class EventModel
  * @package Event\Model
- * autor:xjw129xjt
  */
 class EventModel extends Model{
     protected $_validate = array(

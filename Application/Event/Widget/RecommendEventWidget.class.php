@@ -2,10 +2,6 @@
 // +----------------------------------------------------------------------
 // | OneThink [ WE CAN DO IT JUST THINK IT ]
 // +----------------------------------------------------------------------
-// | Copyright (c) 2013 http://www.onethink.cn All rights reserved.
-// +----------------------------------------------------------------------
-// | Author: 麦当苗儿 <zuojiazi@vip.qq.com> <http://www.zjzit.cn>
-// +----------------------------------------------------------------------
 
 namespace Event\Widget;
 
@@ -36,7 +32,6 @@ class RecommendEventWidget extends Action
      * 获取活动类型
      * @param $type_id
      * @return mixed
-     * autor:xjw129xjt
      */
     private function getType($type_id)
     {

@@ -1,18 +1,9 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: caipeichao
- * Date: 14-3-11
- * Time: PM5:41
- */
-
 namespace Admin\Controller;
-
 use Admin\Builder\AdminConfigBuilder;
 use Admin\Builder\AdminListBuilder;
 use Admin\Builder\AdminTreeListBuilder;
-
-
+//活动控制器
 class EventController extends AdminController
 {
     protected $eventModel;
@@ -65,7 +56,6 @@ class EventController extends AdminController
      * 设置推荐or取消推荐
      * @param $ids
      * @param $tip
-     * autor:xjw129xjt
      */
     public function doRecommend($ids, $tip)
     {
@@ -77,7 +67,6 @@ class EventController extends AdminController
      * 审核页面
      * @param int $page
      * @param int $r
-     * autor:xjw129xjt
      */
     public function verify($page = 1, $r = 10)
     {
@@ -104,7 +93,6 @@ class EventController extends AdminController
      * 设置状态
      * @param $ids
      * @param $status
-     * autor:xjw129xjt
      */
     public function setEventContentStatus($ids, $status)
     {
@@ -236,9 +224,6 @@ class EventController extends AdminController
         //TODO 实现合并功能 issue
     }
 
-
-
-
     public function eventTypeTrash($page = 1, $r = 20)
     {
         $builder = new AdminListBuilder();
@@ -263,7 +248,6 @@ class EventController extends AdminController
      * 设置活动分类状态：删除=-1，禁用=0，启用=1
      * @param $ids
      * @param $status
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function setStatus($ids, $status)
     {

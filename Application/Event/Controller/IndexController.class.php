@@ -1,10 +1,6 @@
 <?php
-
-
 namespace Event\Controller;
-
 use Think\Controller;
-
 class IndexController extends Controller
 {
     public function _initialize()
@@ -29,7 +25,6 @@ class IndexController extends Controller
      * @param int $page
      * @param int $type_id
      * @param string $norh
-     * autor:xjw129xjt
      */
     public function index($page = 1, $type_id = 0, $norh = 'new')
     {
@@ -61,7 +56,6 @@ class IndexController extends Controller
 
     /**
      * 获取推荐活动数据
-     * autor:xjw129xjt
      */
     public function getRecommend()
     {
@@ -81,7 +75,6 @@ class IndexController extends Controller
      * @param int $page
      * @param int $type_id
      * @param string $norh
-     * autor:xjw129xjt
      */
     public function myevent($page = 1, $type_id = 0, $lora = '')
     {
@@ -124,7 +117,6 @@ class IndexController extends Controller
      * 获取活动类型
      * @param $type_id
      * @return mixed
-     * autor:xjw129xjt
      */
     private function getType($type_id)
     {
@@ -143,7 +135,6 @@ class IndexController extends Controller
      * @param string $address
      * @param int $limitCount
      * @param string $deadline
-     * autor:xjw129xjt
      */
     public function doPost($id = 0, $cover_id = 0, $title = '', $explain = '', $sTime = '', $eTime = '', $address = '', $limitCount = 0, $deadline = '', $type_id = 0)
     {
@@ -241,7 +232,6 @@ class IndexController extends Controller
     /**
      * 活动详情
      * @param int $id
-     * autor:xjw129xjt
      */
     public function detail($id = 0)
     {
@@ -277,7 +267,6 @@ class IndexController extends Controller
      * 活动成员
      * @param int $id
      * @param string $tip
-     * autor:xjw129xjt
      */
     public function member($id = 0, $tip = 'all')
     {
@@ -318,7 +307,6 @@ class IndexController extends Controller
     /**
      * 编辑活动
      * @param $id
-     * autor:xjw129xjt
      */
     public function edit($id)
     {
@@ -347,7 +335,6 @@ class IndexController extends Controller
      * @param $event_id
      * @param $name
      * @param $phone
-     * autor:xjw129xjt
      */
     public function doSign($event_id, $name, $phone)
     {
@@ -402,7 +389,6 @@ class IndexController extends Controller
      * @param $uid
      * @param $event_id
      * @param $tip
-     * autor:xjw129xjt
      */
     public function shenhe($uid, $event_id, $tip)
     {
@@ -435,7 +421,6 @@ class IndexController extends Controller
     /**
      * 取消报名
      * @param $event_id
-     * autor:xjw129xjt
      */
     public function unSign($event_id)
     {
@@ -465,7 +450,6 @@ class IndexController extends Controller
     /**
      * 报名弹出框页面
      * @param $event_id
-     * autor:xjw129xjt
      */
     public function ajax_sign($event_id)
     {
@@ -492,7 +476,6 @@ class IndexController extends Controller
     /**
      * ajax删除活动
      * @param $event_id
-     * autor:xjw129xjt
      */
     public function doDelEvent($event_id)
     {
@@ -513,7 +496,6 @@ class IndexController extends Controller
     /**
      * ajax提前结束活动
      * @param $event_id
-     * autor:xjw129xjt
      */
     public function doEndEvent($event_id)
     {
