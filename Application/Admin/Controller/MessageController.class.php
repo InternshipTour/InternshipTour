@@ -7,7 +7,6 @@ use Admin\Builder\AdminListBuilder;
 /**
  * Class MessageController  消息控制器
  * @package Admin\Controller
- * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
  */
 class MessageController extends AdminController
 {

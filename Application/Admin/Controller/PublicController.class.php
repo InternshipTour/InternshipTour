@@ -2,23 +2,17 @@
 // +----------------------------------------------------------------------
 // | OneThink [ WE CAN DO IT JUST THINK IT ]
 // +----------------------------------------------------------------------
-// | Copyright (c) 2013 http://www.onethink.cn All rights reserved.
-// +----------------------------------------------------------------------
-// | Author: 麦当苗儿 <zuojiazi@vip.qq.com> <http://www.zjzit.cn>
-// +----------------------------------------------------------------------
 
 namespace Admin\Controller;
 use User\Api\UserApi;
 
 /**
  * 后台首页控制器
- * @author 麦当苗儿 <zuojiazi@vip.qq.com>
  */
 class PublicController extends \Think\Controller {
 
     /**
      * 后台用户登录
-     * @author 麦当苗儿 <zuojiazi@vip.qq.com>
      */
     public function login($username = null, $password = null, $verify = null){
         if(IS_POST){
@@ -28,9 +22,6 @@ class PublicController extends \Think\Controller {
                     $this->error('验证码输入错误！');
                 }
             }
-
-
-
             /* 调用UC登录接口登录 */
             $User = new UserApi;
             $uid = $User->login($username, $password);

@@ -1,14 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Administrator
- * Date: 15-4-13
- * Time: 下午2:05
- * @author 郑钟良<zzl@ourstu.com>
- */
-
 namespace Admin\Controller;
-
 use Admin\Builder\AdminConfigBuilder;
 use Admin\Builder\AdminListBuilder;
 use Admin\Builder\AdminTreeListBuilder;
@@ -24,7 +15,6 @@ class UserTagController extends AdminController
     }
     /**
      * 标签分类
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function userTag()
     {
@@ -44,7 +34,6 @@ class UserTagController extends AdminController
 
     /**
      * 分类添加
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function add($id=0,$pid=0)
     {
@@ -103,7 +92,6 @@ class UserTagController extends AdminController
      * 分类回收站
      * @param int $page
      * @param int $r
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function tagTrash($page = 1, $r = 20)
     {
@@ -133,7 +121,6 @@ class UserTagController extends AdminController
      * 设置商品分类状态：删除=-1，禁用=0，启用=1
      * @param $ids
      * @param $status
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function setStatus($ids, $status)
     {

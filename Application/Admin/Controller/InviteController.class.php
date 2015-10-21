@@ -1,11 +1,6 @@
 <?php
 /**
  * 邀请注册
- * Created by PhpStorm.
- * User: Administrator
- * Date: 15-3-23
- * Time: 下午2:52
- * @author 郑钟良<zzl@ourstu.com>
  */
 
 namespace Admin\Controller;
@@ -34,7 +29,6 @@ class InviteController extends AdminController
 
     /**
      * 邀请注册基本配置
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function config()
     {
@@ -56,7 +50,6 @@ class InviteController extends AdminController
 
     /**
      * 邀请码类型列表
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function index()
     {
@@ -77,7 +70,6 @@ class InviteController extends AdminController
 
     /**
      * 编辑邀请码类型
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function edit()
     {
@@ -156,7 +148,6 @@ class InviteController extends AdminController
      * 真删除邀请码类型
      * @param mixed|string $ids
      * @param $status
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function setStatus($ids,$status=-1)
     {
@@ -173,7 +164,6 @@ class InviteController extends AdminController
 
     /**
      * 邀请码列表页
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function invite($page=1,$r=20)
     {
@@ -245,7 +235,6 @@ class InviteController extends AdminController
 
     /**
      * 生成邀请码
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function createCode()
     {
@@ -270,7 +259,6 @@ class InviteController extends AdminController
     /**
      * 伪删除邀请码
      * @param string $ids
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function delete($ids)
     {
@@ -285,7 +273,6 @@ class InviteController extends AdminController
 
     /**
      * 删除无用的邀请码
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function deleteTrue()
     {
@@ -304,7 +291,6 @@ class InviteController extends AdminController
      * 用户兑换名额记录
      * @param int $page
      * @param int $r
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function buyLog($page=1,$r=20)
     {
@@ -353,7 +339,6 @@ class InviteController extends AdminController
      * 用户邀请信息列表
      * @param int $page
      * @param int $r
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function userInfo($page=1,$r=20)
     {
@@ -388,7 +373,6 @@ class InviteController extends AdminController
 
     /**
      * 编辑用户邀请信息
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function editUserInfo()
     {
@@ -431,7 +415,6 @@ class InviteController extends AdminController
      * 邀请日志
      * @param int $page
      * @param int $r
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function inviteLog($page=1,$r=20)
     {
@@ -451,7 +434,6 @@ class InviteController extends AdminController
 
     /**
      * 导出cvs
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function cvs()
     {
@@ -513,7 +495,6 @@ class InviteController extends AdminController
     /**
      * 获取身份列表
      * @return mixed
-     * @author 郑钟良<zzl@ourstu.com>
      */
     private function _getRoleOption()
     {
@@ -524,7 +505,6 @@ class InviteController extends AdminController
     /**
      * 获取权限用户组列表
      * @return mixed
-     * @author 郑钟良<zzl@ourstu.com>
      */
     private function _getAuthGroupOption()
     {
@@ -535,7 +515,6 @@ class InviteController extends AdminController
     /**
      * 获取积分类型列表
      * @return array
-     * @author 郑钟良<zzl@ourstu.com>
      */
     private function _getMemberScoreType()
     {

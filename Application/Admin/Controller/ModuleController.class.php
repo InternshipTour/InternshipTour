@@ -1,15 +1,5 @@
 <?php
-/**
- * 所属项目 110.
- * 开发者: 陈一枭
- * 创建日期: 2014-11-18
- * 创建时间: 10:09
- * 版权所有 想天软件工作室(www.ourstu.com)
- */
-
 namespace Admin\Controller;
-
-
 use Admin\Builder\AdminConfigBuilder;
 use Admin\Builder\AdminListBuilder;
 use Common\Model\ModuleModel;
@@ -240,11 +230,5 @@ class ModuleController extends AdminController
             $builder->buttonBack();
             $builder->display();
         }
-
-
-        /*  */
-
-
     }
-
 } 

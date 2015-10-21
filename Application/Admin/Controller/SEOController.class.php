@@ -1,13 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: caipeichao
- * Date: 14-3-14
- * Time: AM10:59
- */
-
 namespace Admin\Controller;
-
 use Admin\Builder\AdminListBuilder;
 use Admin\Builder\AdminConfigBuilder;
 use Admin\Builder\AdminSortBuilder;

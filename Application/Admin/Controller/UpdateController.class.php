@@ -1,13 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: caipeichao
- * Date: 14-3-14
- * Time: AM10:59
- */
-
 namespace Admin\Controller;
-
 use Admin\Builder\AdminConfigBuilder;
 use Admin\Builder\AdminListBuilder;
 use Think\Db;
@@ -139,7 +131,6 @@ class UpdateController extends AdminController
 
     /**
      * 新增补丁
-     * @author 奕潇 <yixiao2020@qq.com>
      */
     public function addpack($title_old = '', $title = '', $sql = '', $des = '', $author = '')
     {
@@ -259,7 +250,6 @@ class UpdateController extends AdminController
      * @param $sql
      * @param $time
      * @return resource
-     * @auth 陈一枭
      */
     private function writeSql($sql, $time)
     {
@@ -279,7 +269,6 @@ class UpdateController extends AdminController
     /**
      * @param $aId
      * @return mixed
-     * @auth 陈一枭
      */
     private function getJsonFile($aId)
     {
@@ -308,7 +297,6 @@ class UpdateController extends AdminController
      * @param $time
      * @param $info
      * @return resource
-     * @auth 陈一枭
      */
     private function writeJsonFile($time, $info)
     {

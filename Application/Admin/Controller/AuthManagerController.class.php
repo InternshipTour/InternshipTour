@@ -2,10 +2,6 @@
 // +----------------------------------------------------------------------
 // | OneThink [ WE CAN DO IT JUST THINK IT ]
 // +----------------------------------------------------------------------
-// | Copyright (c) 2013 http://www.onethink.cn All rights reserved.
-// +----------------------------------------------------------------------
-// | Author: 朱亚杰 <zhuyajie@topthink.net>
-// +----------------------------------------------------------------------
 
 namespace Admin\Controller;
 
@@ -15,7 +11,6 @@ use Admin\Model\AuthGroupModel;
 /**
  * 权限管理控制器
  * Class AuthManagerController
- * @author 朱亚杰 <zhuyajie@topthink.net>
  */
 class AuthManagerController extends AdminController
 {
@@ -23,7 +18,6 @@ class AuthManagerController extends AdminController
     /**
      * 后台节点配置的url作为规则存入auth_rule
      * 执行新节点的插入,已有节点的更新,无效规则的删除三项任务
-     * @author 朱亚杰 <zhuyajie@topthink.net>
      */
     public function updateRules()
     {
@@ -90,7 +84,6 @@ class AuthManagerController extends AdminController
 
     /**
      * 权限管理首页
-     * @author 朱亚杰 <zhuyajie@topthink.net>
      */
     public function index()
     {
@@ -104,7 +97,6 @@ class AuthManagerController extends AdminController
 
     /**
      * 创建管理员用户组
-     * @author 朱亚杰 <zhuyajie@topthink.net>
      */
     public function createGroup()
     {
@@ -117,7 +109,6 @@ class AuthManagerController extends AdminController
 
     /**
      * 编辑管理员用户组
-     * @author 朱亚杰 <zhuyajie@topthink.net>
      */
     public function editGroup()
     {
@@ -133,7 +124,6 @@ class AuthManagerController extends AdminController
 
     /**
      * 管理员用户组数据写入/更新
-     * @author 朱亚杰 <zhuyajie@topthink.net>
      */
     public function writeGroup()
     {
@@ -165,7 +155,6 @@ class AuthManagerController extends AdminController
 
     /**
      * 状态修改
-     * @author 朱亚杰 <zhuyajie@topthink.net>
      */
     public function changeStatus($method = null)
     {
@@ -189,7 +178,6 @@ class AuthManagerController extends AdminController
 
     /**
      * 用户组授权用户列表
-     * @author 朱亚杰 <zhuyajie@topthink.net>
      */
     public function user($group_id)
     {
@@ -223,7 +211,6 @@ class AuthManagerController extends AdminController
 
     /**
      * 将用户添加到用户组的编辑页面
-     * @author 朱亚杰 <zhuyajie@topthink.net>
      */
     public function group()
     {
@@ -243,7 +230,6 @@ class AuthManagerController extends AdminController
 
     /**
      * 将用户添加到用户组,入参uid,group_id
-     * @author 朱亚杰 <zhuyajie@topthink.net>
      */
     public function addToGroup()
     {
@@ -274,7 +260,6 @@ class AuthManagerController extends AdminController
 
     /**
      * 将用户从用户组中移除  入参:uid,group_id
-     * @author 朱亚杰 <zhuyajie@topthink.net>
      */
     public function removeFromGroup()
     {
@@ -299,7 +284,6 @@ class AuthManagerController extends AdminController
 
     /**
      * 将分类添加到用户组  入参:cid,group_id
-     * @author 朱亚杰 <zhuyajie@topthink.net>
      */
     public function addToCategory()
     {
@@ -324,7 +308,6 @@ class AuthManagerController extends AdminController
 
     /**
      * 将模型添加到用户组  入参:mid,group_id
-     * @author 朱亚杰 <xcoolcc@gmail.com>
      */
     public function addToModel()
     {
@@ -406,7 +389,6 @@ class AuthManagerController extends AdminController
     }
     /**
      * 访问授权页面
-     * @author 朱亚杰 <zhuyajie@topthink.net>
      */
     public function access()
     {

@@ -1,14 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Administrator
- * Date: 15-3-7
- * Time: 下午1:25
- * @author 郑钟良<zzl@ourstu.com>
- */
-
 namespace Admin\Controller;
-
 use Admin\Builder\AdminListBuilder;
 use Admin\Builder\AdminSortBuilder;
 use Admin\Builder\AdminConfigBuilder;
@@ -17,7 +8,6 @@ use Admin\Builder\AdminConfigBuilder;
  * 后台身份控制器
  * Class RoleController
  * @package Admin\Controller
- * @郑钟良
  */
 class RoleController extends AdminController
 {
@@ -83,7 +73,6 @@ class RoleController extends AdminController
 
     /**
      * 编辑身份
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function editRole()
     {
@@ -154,7 +143,6 @@ class RoleController extends AdminController
 
     /**
      * 对身份进行排序
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function sort($ids = null)
     {
@@ -179,7 +167,6 @@ class RoleController extends AdminController
      * 身份状态设置
      * @param mixed|string $ids
      * @param $status
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function setStatus($ids, $status)
     {
@@ -223,7 +210,6 @@ class RoleController extends AdminController
      * 检测要删除的身份中是否存在单身份用户
      * @param $ids 要删除的身份ids
      * @return mixed
-     * @author 郑钟良<zzl@ourstu.com>
      */
     private function checkSingleRoleUser($ids)
     {
@@ -272,7 +258,6 @@ class RoleController extends AdminController
 
     /**
      * 身份基本信息配置
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function config()
     {
@@ -375,7 +360,6 @@ class RoleController extends AdminController
 
     /**
      * 移动用户
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function changeRole()
     {
@@ -445,7 +429,6 @@ class RoleController extends AdminController
      * @param $ids
      * @param int $status
      * @param int $role_id
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function setUserStatus($ids, $status = 1, $role_id = 0)
     {
@@ -502,7 +485,6 @@ class RoleController extends AdminController
      * @param $ids
      * @param int $status
      * @param int $role_id
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function setUserAudit($ids,$status=1,$role_id=0)
     {
@@ -537,7 +519,6 @@ class RoleController extends AdminController
      * @param $role_id
      * @param $uid
      * @return bool
-     * @author 郑钟良<zzl@ourstu.com>
      */
     private function setDefaultShowRole($role_id,$uid)
     {
@@ -568,7 +549,6 @@ class RoleController extends AdminController
 
     /**
      * 分组列表
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function group()
     {
@@ -594,7 +574,6 @@ class RoleController extends AdminController
 
     /**
      * 编辑分组
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function editGroup()
     {
@@ -652,7 +631,6 @@ class RoleController extends AdminController
 
     /**
      * 删除分组（真删除）
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function deleteGroup()
     {
@@ -675,7 +653,6 @@ class RoleController extends AdminController
 
     /**
      * 身份默认积分配置
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function configScore()
     {
@@ -736,7 +713,6 @@ class RoleController extends AdminController
 
     /**
      * 身份默认头像配置
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function configAvatar()
     {
@@ -784,7 +760,6 @@ class RoleController extends AdminController
 
     /**
      * 身份默认头衔配置
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function configRank()
     {
@@ -855,7 +830,6 @@ class RoleController extends AdminController
 
     /**
      * 用户可拥有标签配置
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function configUserTag()
     {
@@ -898,7 +872,6 @@ class RoleController extends AdminController
 
     /**
      * 身份扩展资料配置 及 注册时要填写的资料配置
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function configField()
     {
@@ -966,7 +939,6 @@ class RoleController extends AdminController
      * 获取扩展字段列表
      * @param string $in
      * @return mixed
-     * @author 郑钟良<zzl@ourstu.com>
      */
     private function getExpendField($in = '')
     {
@@ -1045,7 +1017,6 @@ class RoleController extends AdminController
 
     /**
      * 初始化没身份的用户
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function initUnhaveUser()
     {

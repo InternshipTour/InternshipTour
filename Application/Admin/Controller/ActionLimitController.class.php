@@ -1,20 +1,15 @@
 <?php
 
 namespace Admin\Controller;
-
-
 use Admin\Builder\AdminConfigBuilder;
 use Admin\Builder\AdminListBuilder;
 
 /**
  * Class ActionLimitController  后台行为限制控制器
  * @package Admin\Controller
- * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
  */
 class ActionLimitController extends AdminController
 {
-
-
     public function limitList()
     {
         $action_name = I('get.action','','op_t') ;

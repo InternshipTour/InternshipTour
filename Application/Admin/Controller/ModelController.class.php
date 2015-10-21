@@ -2,17 +2,12 @@
 // +----------------------------------------------------------------------
 // | OneThink [ WE CAN DO IT JUST THINK IT ]
 // +----------------------------------------------------------------------
-// | Copyright (c) 2013 http://www.onethink.cn All rights reserved.
-// +----------------------------------------------------------------------
-// | Author: huajie <banhuajie@163.com>
-// +----------------------------------------------------------------------
 
 namespace Admin\Controller;
 use Admin\Model\AuthGroupModel;
 
 /**
  * 模型管理控制器
- * @author huajie <banhuajie@163.com>
  */
 class ModelController extends AdminController {
 
@@ -22,7 +17,6 @@ class ModelController extends AdminController {
     }
     /**
      * 显示左边菜单，进行权限控制
-     * @author huajie <banhuajie@163.com>
      */
     protected function getMenu()
     {
@@ -143,7 +137,6 @@ class ModelController extends AdminController {
 
     /**
      * 模型管理首页
-     * @author huajie <banhuajie@163.com>
      */
     public function index(){
 
@@ -161,7 +154,6 @@ class ModelController extends AdminController {
 
     /**
      * 新增页面初始化
-     * @author huajie <banhuajie@163.com>
      */
     public function add(){
         //获取所有的模型
@@ -174,7 +166,6 @@ class ModelController extends AdminController {
 
     /**
      * 编辑页面初始化
-     * @author huajie <banhuajie@163.com>
      */
     public function edit(){
         $id = I('get.id','');
@@ -233,7 +224,6 @@ class ModelController extends AdminController {
 
     /**
      * 删除一条数据
-     * @author huajie <banhuajie@163.com>
      */
     public function del(){
         $ids = I('get.ids');
@@ -254,7 +244,6 @@ class ModelController extends AdminController {
 
     /**
      * 更新一条数据
-     * @author huajie <banhuajie@163.com>
      */
     public function update(){
         $res = D('Model')->update();
@@ -268,7 +257,6 @@ class ModelController extends AdminController {
 
     /**
      * 生成一个模型
-     * @author huajie <banhuajie@163.com>
      */
     public function generate(){
         if(!IS_POST){

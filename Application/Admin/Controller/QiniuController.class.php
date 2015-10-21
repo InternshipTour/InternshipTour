@@ -2,17 +2,12 @@
 // +----------------------------------------------------------------------
 // | OneThink [ WE CAN DO IT JUST THINK IT ]
 // +----------------------------------------------------------------------
-// | Copyright (c) 2013 http://www.onethink.cn All rights reserved.
-// +----------------------------------------------------------------------
-// | Author: huajie <yangweijiester@gmail.com>
-// +----------------------------------------------------------------------
 
 namespace Admin\Controller;
 use Think\Upload\Driver\Qiniu\QiniuStorage;
 
 /**
  * 七牛扩展类测试控制器
- * @author yangweijie <yangweijiester@gmail.com>
  */
 class QiniuController extends AdminController {
 

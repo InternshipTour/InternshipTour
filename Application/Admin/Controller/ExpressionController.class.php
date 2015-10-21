@@ -8,7 +8,6 @@ use Admin\Builder\AdminConfigBuilder;
 /**
  * Class ConfigController   后台表情管理
  * @package Admin\Controller
- * @author:xjw129xjt xjt@ourstu.com
  */
 class ExpressionController extends AdminController
 {

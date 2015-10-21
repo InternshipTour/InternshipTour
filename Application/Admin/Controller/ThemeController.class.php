@@ -1,19 +1,9 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Administrator
- * Date: 15-5-18
- * Time: 下午1:51
- * @author 郑钟良<zzl@ourstu.com>
- */
-
 namespace Admin\Controller;
-
 class ThemeController extends AdminController{
 
     /**
      * 模版列表页
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function tpls()
     {
@@ -48,7 +38,6 @@ class ThemeController extends AdminController{
 
     /**
      * 打包
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function packageDownload()
     {
@@ -73,7 +62,6 @@ class ThemeController extends AdminController{
      * 下载
      * @param $get_url
      * @param $file_name
-     * @author 郑钟良<zzl@ourstu.com>
      */
     private function _download($get_url,$file_name)
     {
@@ -110,7 +98,6 @@ class ThemeController extends AdminController{
 
     /**
      * 设置网站使用主题
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function setTheme()
     {
@@ -129,7 +116,6 @@ class ThemeController extends AdminController{
 
     /**
      * 临时查看主题（管理员预览用）
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function lookTheme()
     {

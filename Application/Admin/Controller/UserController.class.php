@@ -2,10 +2,6 @@
 // +----------------------------------------------------------------------
 // | OneThink [ WE CAN DO IT JUST THINK IT ]
 // +----------------------------------------------------------------------
-// | Copyright (c) 2013 http://www.onethink.cn All rights reserved.
-// +----------------------------------------------------------------------
-// | Author: 麦当苗儿 <zuojiazi@vip.qq.com> <http://www.zjzit.cn>
-// +----------------------------------------------------------------------
 
 namespace Admin\Controller;
 
@@ -17,14 +13,12 @@ use User\Api\UserApi;
 
 /**
  * 后台用户控制器
- * @author 麦当苗儿 <zuojiazi@vip.qq.com>
  */
 class UserController extends AdminController
 {
 
     /**
      * 用户管理首页
-     * @author 麦当苗儿 <zuojiazi@vip.qq.com>
      */
     public function index()
     {
@@ -46,7 +40,6 @@ class UserController extends AdminController
 
     /**
      * 重置用户密码
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function initPass()
     {
@@ -113,7 +106,6 @@ class UserController extends AdminController
 
     /**用户扩展资料信息页
      * @param null $uid
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function expandinfo_select($page = 1, $r = 20)
     {
@@ -164,12 +156,11 @@ class UserController extends AdminController
 
     /**用户扩展资料详情
      * @param string $uid
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function expandinfo_details($uid = 0)
     {
         if (IS_POST) {
-            /* 修改积分 xjw129xjt(肖骏涛)*/
+            /* 修改积分*/
             $data = I('post.');
             foreach ($data as $key => $val) {
                 if (substr($key, 0, 5) == 'score') {
@@ -188,7 +179,7 @@ class UserController extends AdminController
             }
             unset($key, $val);
             /* 修改积分 end*/
-            /*身份设置 zzl(郑钟良)*/
+            /*身份设置*/
             $data_role = array();
             foreach ($data as $key => $val) {
                 if ($key == 'role') {
@@ -235,7 +226,7 @@ class UserController extends AdminController
                 $builder->keyReadOnly($vt['field_name'], $vt['field_name']);
             }
 
-            /* 积分设置 xjw129xjt(肖骏涛)*/
+            /* 积分设置 */
             $field = D('Ucenter/Score')->getTypeList(array('status' => 1));
             $score_key = array();
             foreach ($field as $vf) {
@@ -247,7 +238,7 @@ class UserController extends AdminController
             /*积分设置end*/
             $builder->data($member);
 
-            /*身份设置 zzl(郑钟良)*/
+            /*身份设置 */
             $already_role = D('UserRole')->where(array('uid' => $uid, 'status' => 1))->field('role_id')->select();
             if (count($already_role)) {
                 $already_role = array_column($already_role, 'role_id');
@@ -303,7 +294,6 @@ class UserController extends AdminController
      * @param int $uid
      * @param array $haveRole
      * @return bool
-     * @author 郑钟良<zzl@ourstu.com>
      */
     private function _resetUserRole($uid = 0, $haveRole = array())
     {
@@ -346,7 +336,6 @@ class UserController extends AdminController
     }
 
     /**扩展用户信息分组列表
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function profile($page = 1, $r = 20)
     {
@@ -365,7 +354,6 @@ class UserController extends AdminController
     }
 
     /**扩展分组排序
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function sortProfile($ids = null)
     {
@@ -388,7 +376,6 @@ class UserController extends AdminController
 
     /**扩展字段列表
      * @param $id
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function field($id, $page = 1, $r = 20)
     {
@@ -429,7 +416,6 @@ class UserController extends AdminController
 
     /**分组排序
      * @param $id
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function sortField($id = '', $ids = null)
     {
@@ -463,7 +449,6 @@ class UserController extends AdminController
      * @param $form_default_value
      * @param $validation
      * @param $input_tips
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function editFieldSetting($id = 0, $profile_group_id = 0, $field_name = '', $child_form_type = 0, $visiable = 0, $required = 0, $form_type = 0, $form_default_value = '', $validation = 0, $input_tips = '')
     {

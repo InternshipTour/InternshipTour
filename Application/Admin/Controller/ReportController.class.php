@@ -1,13 +1,8 @@
 <?php
-
 namespace Admin\Controller;
-
 use Admin\Builder\AdminConfigBuilder;
 use Admin\Builder\AdminListBuilder;
-
 require_once(ONETHINK_ADDON_PATH . 'Report/Common/function.php');
-
-
 class ReportController extends AdminController
 {
 

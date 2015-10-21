@@ -1,14 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Administrator
- * Date: 15-3-7
- * Time: 下午1:25
- * @author 郑钟良<zzl@ourstu.com>
- */
-
 namespace Admin\Controller;
-
 use Admin\Builder\AdminListBuilder;
 use Admin\Builder\AdminConfigBuilder;
 
@@ -16,7 +7,6 @@ use Admin\Builder\AdminConfigBuilder;
  * 后台头衔控制器
  * Class RankController
  * @package Admin\Controller
- * @郑钟良
  */
 class RankController extends AdminController
 {
@@ -25,7 +15,6 @@ class RankController extends AdminController
      * 头衔管理首页
      * @param int $page
      * @param int $r
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function index($page = 1, $r = 20)
     {
@@ -55,7 +44,6 @@ class RankController extends AdminController
     /**
      * 设置头衔前台是否可申请
      * @param null $id
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function changeTypes($id = null)
     {
@@ -75,7 +63,6 @@ class RankController extends AdminController
     /**
      * 删除头衔
      * @param null $id
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function deleteRank($id = null)
     {
@@ -94,7 +81,6 @@ class RankController extends AdminController
     /**
      * 编辑头衔
      * @param null $id
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function editRank($id = null)
     {
@@ -159,7 +145,6 @@ class RankController extends AdminController
 
     /**
      * 用户列表
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function userList()
     {
@@ -182,7 +167,6 @@ class RankController extends AdminController
      * 用户头衔列表
      * @param null $id
      * @param int $page
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function userRankList($id = null, $page = 1)
     {
@@ -214,7 +198,6 @@ class RankController extends AdminController
      * @param string $reason
      * @param string $is_show
      * @param string $rank_id
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function userAddRank($id = null, $uid = '', $reason = '', $is_show = '', $rank_id = '')
     {
@@ -290,7 +273,6 @@ class RankController extends AdminController
      * @param string $reason
      * @param string $is_show
      * @param string $rank_id
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function userChangeRank($id = null, $uid = '', $reason = '', $is_show = '', $rank_id = '')
     {
@@ -362,7 +344,6 @@ class RankController extends AdminController
     /**
      * 删除用户头衔管理
      * @param null $id
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function deleteUserRank($id = null)
     {
@@ -385,7 +366,6 @@ class RankController extends AdminController
     /**
      * 待审核
      * @param int $page
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function rankVerify($page = 1)
     {
@@ -413,7 +393,6 @@ class RankController extends AdminController
     /**
      * 审核不通过
      * @param int $page
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function rankVerifyFailure($page = 1)
     {

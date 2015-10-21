@@ -2,10 +2,6 @@
 // +----------------------------------------------------------------------
 // | OneThink [ WE CAN DO IT JUST THINK IT ]
 // +----------------------------------------------------------------------
-// | Copyright (c) 2013 http://www.onethink.cn All rights reserved.
-// +----------------------------------------------------------------------
-// | Author: 麦当苗儿 <zuojiazi@vip.qq.com> <http://www.zjzit.cn>
-// +----------------------------------------------------------------------
 
 namespace Admin\Controller;
 
@@ -13,14 +9,12 @@ use Admin\Builder\AdminConfigBuilder;
 
 /**
  * 后台配置控制器
- * @author 麦当苗儿 <zuojiazi@vip.qq.com>
  */
 class ConfigController extends AdminController
 {
 
     /**
      * 配置管理
-     * @author 麦当苗儿 <zuojiazi@vip.qq.com>
      */
     public function index()
     {
@@ -47,7 +41,6 @@ class ConfigController extends AdminController
 
     /**
      * 新增配置
-     * @author 麦当苗儿 <zuojiazi@vip.qq.com>
      */
     public function add()
     {
@@ -73,7 +66,6 @@ class ConfigController extends AdminController
 
     /**
      * 编辑配置
-     * @author 麦当苗儿 <zuojiazi@vip.qq.com>
      */
     public function edit($id = 0)
     {
@@ -108,7 +100,6 @@ class ConfigController extends AdminController
 
     /**
      * 批量保存配置
-     * @author 麦当苗儿 <zuojiazi@vip.qq.com>
      */
     public function save($config)
     {
@@ -125,7 +116,6 @@ class ConfigController extends AdminController
 
     /**
      * 删除配置
-     * @author 麦当苗儿 <zuojiazi@vip.qq.com>
      */
     public function del()
     {
@@ -163,7 +153,6 @@ class ConfigController extends AdminController
 
     /**
      * 配置排序
-     * @author huajie <banhuajie@163.com>
      */
     public function sort()
     {
@@ -199,7 +188,6 @@ class ConfigController extends AdminController
     }
 
     /**网站信息设置
-     * @auth 陈一枭
      */
     public function website()
     {

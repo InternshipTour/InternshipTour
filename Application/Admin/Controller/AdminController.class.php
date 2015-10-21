@@ -2,10 +2,6 @@
 // +----------------------------------------------------------------------
 // | OneThink [ WE CAN DO IT JUST THINK IT ]
 // +----------------------------------------------------------------------
-// | Copyright (c) 2013 http://www.onethink.cn All rights reserved.
-// +----------------------------------------------------------------------
-// | Author: 麦当苗儿 <zuojiazi@vip.qq.com> <http://www.zjzit.cn>
-// +----------------------------------------------------------------------
 namespace Admin\Controller;
 
 use Think\Controller;
@@ -14,11 +10,9 @@ use Admin\Model\AuthGroupModel;
 use Vendor\requester;
 /**
  * 后台首页控制器
- * @author 麦当苗儿 <zuojiazi@vip.qq.com>
  */
 class AdminController extends Controller
 {
-
     /**
      * 后台控制器初始化
      */
@@ -75,7 +69,6 @@ class AdminController extends Controller
      * @param string $rule 检测的规则
      * @param string $mode check模式
      * @return boolean
-     * @author 朱亚杰  <xcoolcc@gmail.com>
      */
     final protected function checkRule($rule, $type = AuthRuleModel::RULE_URL, $mode = 'url')
     {
@@ -99,7 +92,6 @@ class AdminController extends Controller
      *      返回false则表示当前访问无权限
      *      返回null，则会进入checkRule根据节点授权判断权限
      *
-     * @author 朱亚杰  <xcoolcc@gmail.com>
      */
     protected function checkDynamic()
     {
@@ -118,7 +110,6 @@ class AdminController extends Controller
      *   返回 **false**, 不允许任何人访问(超管除外)
      *   返回 **true**, 允许任何管理员访问,无需执行节点权限检测
      *   返回 **null**, 需要继续执行节点权限检测决定是否允许访问
-     * @author 朱亚杰  <xcoolcc@gmail.com>
      */
     final protected function accessControl()
     {
@@ -146,7 +137,6 @@ class AdminController extends Controller
      * @param array  $msg 执行正确和错误的消息 array('success'=>'','error'=>'', 'url'=>'','ajax'=>false)
      *                     url为跳转页面,ajax是否ajax方式(数字则为倒数计时秒数)
      *
-     * @author 朱亚杰  <zhuyajie@topthink.net>
      */
     final protected function editRow($model, $data, $where, $msg)
     {
@@ -168,7 +158,6 @@ class AdminController extends Controller
      * @param array  $msg 执行正确和错误的消息,可以设置四个元素 array('success'=>'','error'=>'', 'url'=>'','ajax'=>false)
      *                     url为跳转页面,ajax是否ajax方式(数字则为倒数计时秒数)
      *
-     * @author 朱亚杰  <zhuyajie@topthink.net>
      */
     protected function forbid($model, $where = array(), $msg = array('success' => '状态禁用成功！', 'error' => '状态禁用失败！'))
     {
@@ -183,7 +172,6 @@ class AdminController extends Controller
      * @param array  $msg 执行正确和错误的消息 array('success'=>'','error'=>'', 'url'=>'','ajax'=>false)
      *                     url为跳转页面,ajax是否ajax方式(数字则为倒数计时秒数)
      *
-     * @author 朱亚杰  <zhuyajie@topthink.net>
      */
     protected function resume($model, $where = array(), $msg = array('success' => '状态恢复成功！', 'error' => '状态恢复失败！'))
     {
@@ -197,7 +185,6 @@ class AdminController extends Controller
      * @param array  $where 查询时的where()方法的参数
      * @param array  $msg 执行正确和错误的消息 array('success'=>'','error'=>'', 'url'=>'','ajax'=>false)
      *                     url为跳转页面,ajax是否ajax方式(数字则为倒数计时秒数)
-     * @author huajie  <banhuajie@163.com>
      */
     protected function restore($model, $where = array(), $msg = array('success' => '状态还原成功！', 'error' => '状态还原失败！'))
     {
@@ -213,7 +200,6 @@ class AdminController extends Controller
      * @param array  $msg 执行正确和错误的消息 array('success'=>'','error'=>'', 'url'=>'','ajax'=>false)
      *                     url为跳转页面,ajax是否ajax方式(数字则为倒数计时秒数)
      *
-     * @author 朱亚杰  <zhuyajie@topthink.net>
      */
     protected function delete($model, $where = array(), $msg = array('success' => '删除成功！', 'error' => '删除失败！'))
     {
@@ -252,7 +238,6 @@ class AdminController extends Controller
     }
 
     /**获取模块列表，用于显示在左侧
-     * @auth 陈一枭 <yixiao2020@qq.com>
      */
     public function getModules()
     {
@@ -270,7 +255,6 @@ class AdminController extends Controller
 
     /**
      * 获取控制器菜单数组,二级菜单元素位于一级菜单的'_child'元素中
-     * @author 朱亚杰  <xcoolcc@gmail.com>
      */
     final public function getMenus($controller = CONTROLLER_NAME)
     {

@@ -2,16 +2,11 @@
 // +----------------------------------------------------------------------
 // | OneThink [ WE CAN DO IT JUST THINK IT ]
 // +----------------------------------------------------------------------
-// | Copyright (c) 2013 http://www.onethink.cn All rights reserved.
-// +----------------------------------------------------------------------
-// | Author: yangweijie <yangweijiester@gmail.com> <http://www.zjzit.cn>
-// +----------------------------------------------------------------------
 
 namespace Admin\Controller;
 
 /**
  * 后台配置控制器
- * @author yangweijie <yangweijiester@gmail.com>
  */
 class MenuController extends AdminController {
 
@@ -50,7 +45,6 @@ class MenuController extends AdminController {
 
     /**
      * 新增菜单
-     * @author yangweijie <yangweijiester@gmail.com>
      */
     public function add(){
         if(IS_POST){
@@ -83,7 +77,6 @@ class MenuController extends AdminController {
 
     /**
      * 编辑配置
-     * @author yangweijie <yangweijiester@gmail.com>
      */
     public function edit($id = 0){
         if(IS_POST){
@@ -122,7 +115,6 @@ class MenuController extends AdminController {
 
     /**
      * 删除后台菜单
-     * @author yangweijie <yangweijiester@gmail.com>
      */
     public function del(){
         $id = array_unique((array)I('id',0));
@@ -211,7 +203,6 @@ class MenuController extends AdminController {
 
     /**
      * 菜单排序
-     * @author huajie <banhuajie@163.com>
      */
     public function sort(){
         if(IS_GET){

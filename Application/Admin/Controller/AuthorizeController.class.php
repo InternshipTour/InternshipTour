@@ -10,7 +10,6 @@ use Vendor\requester;
 /**
  * Class AuthorizeController  后台授权控制器
  * @package Admin\Controller
- * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
  */
 class AuthorizeController extends AdminController
 {
