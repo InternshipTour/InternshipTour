@@ -13,7 +13,6 @@ class ThinkController extends AdminController {
     /**
      * 显示指定模型列表数据
      * @param  String $model 模型标识
-     * @author 麦当苗儿 <zuojiazi@vip.qq.com>
      */
     public function lists($model = null, $p = 0){
         $model || $this->error('模型名标识必须！');

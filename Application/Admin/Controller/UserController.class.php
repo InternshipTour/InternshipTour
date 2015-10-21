@@ -548,7 +548,6 @@ class UserController extends AdminController
     /**设置字段状态：删除=-1，禁用=0，启用=1
      * @param $ids
      * @param $status
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function setFieldSettingStatus($ids, $status)
     {
@@ -558,7 +557,6 @@ class UserController extends AdminController
 
     /**设置分组状态：删除=-1，禁用=0，启用=1
      * @param $status
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function changeProfileStatus($status)
     {
@@ -581,7 +579,6 @@ class UserController extends AdminController
     /**添加、编辑分组信息
      * @param $id
      * * @param $profile_name
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function editProfile($id = 0, $profile_name = '', $visiable = 1)
     {
@@ -628,7 +625,6 @@ class UserController extends AdminController
 
     /**
      * 修改昵称初始化
-     * @author huajie <banhuajie@163.com>
      */
     public function updateNickname()
     {
@@ -640,7 +636,6 @@ class UserController extends AdminController
 
     /**
      * 修改昵称提交
-     * @author huajie <banhuajie@163.com>
      */
     public function submitNickname()
     {
@@ -676,7 +671,6 @@ class UserController extends AdminController
 
     /**
      * 修改密码初始化
-     * @author huajie <banhuajie@163.com>
      */
     public function updatePassword()
     {
@@ -686,7 +680,6 @@ class UserController extends AdminController
 
     /**
      * 修改密码提交
-     * @author huajie <banhuajie@163.com>
      */
     public function submitPassword()
     {
@@ -713,7 +706,6 @@ class UserController extends AdminController
 
     /**
      * 用户行为列表
-     * @author huajie <banhuajie@163.com>
      */
     public function action()
     {
@@ -770,7 +762,6 @@ class UserController extends AdminController
 
     /**
      * 新增行为
-     * @author huajie <banhuajie@163.com>
      */
     public function addAction()
     {
@@ -785,7 +776,6 @@ class UserController extends AdminController
 
     /**
      * 编辑行为
-     * @author huajie <banhuajie@163.com>
      */
     public function editAction()
     {
@@ -802,7 +792,6 @@ class UserController extends AdminController
 
     /**
      * 更新行为
-     * @author huajie <banhuajie@163.com>
      */
     public function saveAction()
     {
@@ -816,7 +805,6 @@ class UserController extends AdminController
 
     /**
      * 会员状态修改
-     * @author 朱亚杰 <zhuyajie@topthink.net>
      */
     public function changeStatus($method = null)
     {
@@ -1009,7 +997,6 @@ class UserController extends AdminController
      * @param $add_id 新增字段时字段id
      * @param $edit_id 编辑字段时字段id
      * @return bool
-     * @author 郑钟良<zzl@ourstu.com>
      */
     private function _setFieldRole($role_ids, $add_id, $edit_id)
     {

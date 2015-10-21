@@ -361,7 +361,6 @@ class AdminController extends Controller
      *
      * 注意,返回的主菜单节点数组中有'controller'元素,以供区分子节点和主节点
      *
-     * @author 朱亚杰 <xcoolcc@gmail.com>
      */
     final protected function returnNodes($tree = true)
     {
@@ -411,7 +410,6 @@ class AdminController extends Controller
      *
      * @param array        $base 基本的查询条件
      * @param boolean      $field 单表模型用不到该参数,要用在多表join时为field()方法指定参数
-     * @author 朱亚杰 <xcoolcc@gmail.com>
      *
      * @return array|false
      * 返回数据集
