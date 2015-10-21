@@ -1,15 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Administrator
- * Date: 15-4-27
- * Time: 上午10:47
- * @author 郑钟良<zzl@ourstu.com>
- */
-
 namespace News\Model;
-
-
 use Think\Model;
 
 class NewsCategoryModel extends Model{
@@ -23,7 +13,6 @@ class NewsCategoryModel extends Model{
      * @param int $id
      * @param bool $field
      * @return array
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function getTree($id = 0, $field = true,$map=array('status' => array('gt', -1))){
         /* 获取当前分类信息 */

@@ -1,15 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Administrator
- * Date: 15-4-27
- * Time: 下午1:22
- * @author 郑钟良<zzl@ourstu.com>
- */
-
 namespace News\Model;
-
-
 use Think\Model;
 
 class NewsModel extends Model{
@@ -81,7 +71,6 @@ class NewsModel extends Model{
      * @param $limit
      * @param bool $field
      * @return mixed
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function position($pos, $category = null, $limit = 5, $field = true,$order='sort desc,view desc'){
         $map = $this->listMap($category, 1, $pos);

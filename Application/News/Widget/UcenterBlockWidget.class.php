@@ -1,14 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Administrator
- * Date: 15-4-4
- * Time: 下午5:09
- * @author 郑钟良<zzl@ourstu.com>
- */
-
 namespace News\Widget;
-
 use News\Model\NewsModel;
 use Think\Action;
 

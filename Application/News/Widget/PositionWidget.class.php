@@ -1,5 +1,4 @@
 <?php
-
 namespace News\Widget;
 use Think\Controller;
 

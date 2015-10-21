@@ -1,15 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Administrator
- * Date: 15-4-29
- * Time: 上午9:16
- * @author 郑钟良<zzl@ourstu.com>
- */
-
 namespace News\Widget;
-
-
 use Think\Controller;
 
 class HotWidget extends Controller{
