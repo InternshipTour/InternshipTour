@@ -12,7 +12,7 @@ use Think\Controller;
  */
 class IndexController extends Controller {
 	
-	// 系统首页
+	//网站首页
 	public function index() {
 		if (is_login ()) {
 		}

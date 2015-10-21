@@ -135,13 +135,13 @@ function send_mail_local($to = '', $subject = '', $body = '', $name = '', $attac
 		$to = C ( 'MAIL_SMTP_CE' ); // 邮件地址为空时，默认使用后台默认邮件测试地址
 	}
 	if ($name == '') {
-		$name = modC ( 'WEB_SITE_NAME', 'OpenSNS开源社交系统', 'Config' ); // 发送者名称为空时，默认使用网站名称
+		$name = modC ( 'WEB_SITE_NAME', '英腾世途', 'Config' ); // 发送者名称为空时，默认使用网站名称
 	}
 	if ($subject == '') {
-		$subject = modC ( 'WEB_SITE_NAME', 'OpenSNS开源社交系统', 'Config' ); // 邮件主题为空时，默认使用网站标题
+		$subject = modC ( 'WEB_SITE_NAME', '英腾世途', 'Config' ); // 邮件主题为空时，默认使用网站标题
 	}
 	if ($body == '') {
-		$body = modC ( 'WEB_SITE_NAME', 'OpenSNS开源社交系统', 'Config' ); // 邮件内容为空时，默认使用网站描述
+		$body = modC ( 'WEB_SITE_NAME', '英腾世途', 'Config' ); // 邮件内容为空时，默认使用网站描述
 	}
 	$mail->AddReplyTo ( $replyEmail, $replyName );
 	$mail->Subject = $subject;
