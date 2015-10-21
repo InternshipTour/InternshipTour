@@ -1,13 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: caipeichao
- * Date: 14-3-12
- * Time: AM10:08
- */
-
 namespace Admin\Builder;
-
 class AdminConfigBuilder extends AdminBuilder
 {
     private $_title;
@@ -30,7 +22,6 @@ class AdminConfigBuilder extends AdminBuilder
      * suggest  页面标题边上的提示信息
      * @param $suggest
      * @return $this
-     * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
      */
     public function suggest($suggest)
     {
@@ -51,7 +42,6 @@ class AdminConfigBuilder extends AdminBuilder
      * @param      $type
      * @param null $opt
      * @return $this
-     * @auth 陈一枭
      */
     public function key($name, $title, $subtitle = null, $type, $opt = null)
     {
@@ -60,12 +50,11 @@ class AdminConfigBuilder extends AdminBuilder
         return $this;
     }
 
-    /**只读文本
+    /**隐藏文本
      * @param      $name
      * @param      $title
      * @param null $subtitle
      * @return AdminConfigBuilder
-     * @auth 陈一枭
      */
     public function keyHidden($name, $title, $subtitle = null)
     {
@@ -77,7 +66,6 @@ class AdminConfigBuilder extends AdminBuilder
      * @param      $title
      * @param null $subtitle
      * @return AdminConfigBuilder
-     * @auth 陈一枭
      */
     public function keyReadOnly($name, $title, $subtitle = null)
     {
@@ -89,7 +77,6 @@ class AdminConfigBuilder extends AdminBuilder
      * @param      $title
      * @param null $subtitle
      * @return AdminConfigBuilder
-     * @auth 陈一枭
      */
     public function keyText($name, $title, $subtitle = null)
     {
@@ -101,7 +88,6 @@ class AdminConfigBuilder extends AdminBuilder
      * @param $title
      * @param null $subtitle
      * @return $this
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function keyColor($name, $title, $subtitle = null)
     {
@@ -175,7 +161,6 @@ class AdminConfigBuilder extends AdminBuilder
      * @param null $subtitle
      * @param string $type 类型：支持（time）（datetime，默认）(date)
      * @return $this
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function keyTime($name, $title, $subtitle = null,$type='datetime')
     {
@@ -244,8 +229,6 @@ class AdminConfigBuilder extends AdminBuilder
         return   $this->key($name,$title,$subtitle,'multiFile');
     }
 
-
-
     public function keySingleImage($name, $title, $subtitle = null)
     {
         return $this->key($name, $title, $subtitle, 'singleImage');
@@ -268,7 +251,6 @@ class AdminConfigBuilder extends AdminBuilder
      * @param  $subtitle
      * @return hook ChinaCity
      * @author LaoYang
-     * @author @MingYangliu <xint5288@126.com>
      */
     public function keyCity($title, $subtitle)
     {
@@ -284,7 +266,6 @@ class AdminConfigBuilder extends AdminBuilder
      * @param  string $subtitle 副标题（说明）
      * @param  unknown $url 选择数据的列表页地址，U方法地址'index/index'
      * @return $this
-     * @author @MingYangliu <xint5288@126.com>
      */
     public function keyDataSelect($name, $title, $subtitle = null, $url)
     {
@@ -382,7 +363,6 @@ class AdminConfigBuilder extends AdminBuilder
      * @param null $subtitle
      * @param $options
      * @return $this
-     * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
      */
     public function keyChosen($name, $title, $subtitle = null, $options)
     {
@@ -417,7 +397,6 @@ class AdminConfigBuilder extends AdminBuilder
      * @param $config
      * @param null $style
      * @return $this
-     * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
      */
     public function keyMultiInput($name, $title, $subtitle, $config, $style = null)
     {
@@ -431,7 +410,6 @@ class AdminConfigBuilder extends AdminBuilder
      * @param       $name 组名
      * @param array $list 组内字段列表
      * @return $this
-     * @auth 肖骏涛
      */
     public function group($name, $list = array())
     {
@@ -450,7 +428,6 @@ class AdminConfigBuilder extends AdminBuilder
 
 
     /**自动处理配置存储事件，配置项必须全大写
-     * @auth 陈一枭
      */
     public function handleConfig()
     {
@@ -515,7 +492,6 @@ class AdminConfigBuilder extends AdminBuilder
      * @param array $item
      * @param array $default
      * @return array|mixed
-     * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
      */
     public function parseKanbanArray($data, $item = array(), $default = array())
     {
@@ -600,7 +576,6 @@ class AdminConfigBuilder extends AdminBuilder
      * @param $group_name    组名
      * @param $mod    mod名。path的第二个参数。
      * @return $this
-     * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
      */
     public function groupLocalComment($group_name,$mod){
         $mod = strtoupper($mod);
@@ -613,8 +588,6 @@ class AdminConfigBuilder extends AdminBuilder
         $this->group($group_name, $mod.'_LOCAL_COMMENT_CAN_GUEST,'.$mod.'_LOCAL_COMMENT_ORDER,'.$mod.'_LOCAL_COMMENT_COUNT');
         return $this;
     }
-
-
 
     public function keyUserDefined($name,$title,$subtitle,$display='',$param=''){
         $this->assign('param',$param);

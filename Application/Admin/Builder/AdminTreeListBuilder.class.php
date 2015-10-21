@@ -1,11 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: caipeichao
- * Date: 14-3-12
- * Time: AM10:08
- */
-
 namespace Admin\Builder;
 
 class AdminTreeListBuilder extends AdminBuilder
@@ -34,7 +27,6 @@ class AdminTreeListBuilder extends AdminBuilder
      * suggest  页面标题边上的提示信息
      * @param $suggest
      * @return $this
-     * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
      */
     public function suggest($suggest){
         $this->_suggest = $suggest;
@@ -368,7 +360,6 @@ class AdminTreeListBuilder extends AdminBuilder
     /**
      * 显示分类树，仅支持内部调
      * @param  array $tree 分类树
-     * @author 麦当苗儿 <zuojiazi@vip.qq.com>
      */
     public function tree($tree = null)
     {
@@ -439,7 +430,6 @@ class AdminTreeListBuilder extends AdminBuilder
     }
 
     /**设置层级
-     * @auth 陈一枭
      */
     public function setLevel($level = 2)
     {
@@ -450,7 +440,6 @@ class AdminTreeListBuilder extends AdminBuilder
     /**设置当前页面的模型
      * @param string $model
      * @return $this
-     * @auth 陈一枭
      */
     public function setModel($model = '')
     {

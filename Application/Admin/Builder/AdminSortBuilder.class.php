@@ -1,13 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: caipeichao
- * Date: 14-3-13
- * Time: PM4:54
- */
-
 namespace Admin\Builder;
-
 class AdminSortBuilder extends AdminBuilder {
     private $_title;
     private $_list;

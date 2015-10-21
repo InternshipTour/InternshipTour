@@ -22,7 +22,6 @@ class AdminListBuilder extends AdminBuilder
     /**设置页面标题
      * @param $title 标题文本
      * @return $this
-     * @auth 陈一枭
      */
     public function title($title)
     {
@@ -35,7 +34,6 @@ class AdminListBuilder extends AdminBuilder
      * suggest  页面标题边上的提示信息
      * @param $suggest
      * @return $this
-     * @author:xjw129xjt(肖骏涛) xjt@ourstu.com
      */
     public function suggest($suggest)
     {
@@ -56,7 +54,6 @@ class AdminListBuilder extends AdminBuilder
     /**设置回收站根据ids彻底删除的URL
      * @param $url
      * @return $this
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function setDeleteTrueUrl($url)
     {
@@ -68,7 +65,6 @@ class AdminListBuilder extends AdminBuilder
      * 筛选下拉选择url
      * @param $url string 已被U函数解析的地址
      * @return $this
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function setSelectPostUrl($url)
     {
@@ -79,9 +75,8 @@ class AdminListBuilder extends AdminBuilder
     /**设置搜索提交表单的URL
      * @param $url
      * @return $this
-     * @auth 陈一枭
      */
-    /**原@auth 陈一枭
+    /**
      *public function setSearchPostUrl($url)
      *{
      *  $this->_searchPostUrl = $url;
@@ -101,7 +96,6 @@ class AdminListBuilder extends AdminBuilder
      * @param $title
      * @param $attr
      * @return $this
-     * @auth 陈一枭
      */
 
     public function button($title, $attr)
@@ -115,7 +109,6 @@ class AdminListBuilder extends AdminBuilder
      * @param string $title
      * @param array $attr
      * @return AdminListBuilder
-     * @auth 陈一枭
      */
     public function buttonNew($href, $title = '新增', $attr = array())
 {
@@ -137,7 +130,6 @@ class AdminListBuilder extends AdminBuilder
      * @param $title
      * @param array $attr
      * @return $this
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function buttonModalPopup($url, $params, $title, $attr = array())
     {
@@ -185,7 +177,6 @@ class AdminListBuilder extends AdminBuilder
     /**清空回收站
      * @param null $model
      * @return $this
-     * @author 陈一枭
      */
     public function buttonClear($model = null)
     {
@@ -195,7 +186,6 @@ class AdminListBuilder extends AdminBuilder
     /**彻底删除
      * @param null $url
      * @return $this
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function buttonDeleteTrue($url = null)
     {
@@ -220,9 +210,8 @@ class AdminListBuilder extends AdminBuilder
      * @param string $des 描述
      * @param        $attr 标签文本
      * @return $this
-     * @auth 陈一枭
      */
-    /**原@auth 陈一枭
+    /**
      * public function search($title = '搜索', $name = 'key', $type = 'text', $des = '', $attr )
      * {
      * $this->_search[] = array('title' => $title, 'name' => $name, 'type' => $type, 'des' => $des, 'attr' => $attr);
@@ -239,7 +228,6 @@ class AdminListBuilder extends AdminBuilder
      * @param string $arrdb 择筛选项数据来源
      * @param string $arrvalue 筛选数据（包含ID 和value的数组:array(array('id'=>1,'value'=>'系统'),array('id'=>2,'value'=>'项目'),array('id'=>3,'value'=>'机构'));）
      * @return $this
-     * @auth MingYang <xint5288@126.com>
      */
     public function search($title = '搜索', $name = 'key', $type = 'text', $des = '', $attr, $arrdb = '', $arrvalue = null)
     {
@@ -268,7 +256,6 @@ class AdminListBuilder extends AdminBuilder
      * @param string $arrdb 择筛选项数据来源
      * @param string $arrvalue 筛选数据（包含ID 和value的数组:array(array('id'=>1,'value'=>'系统'),array('id'=>2,'value'=>'项目'),array('id'=>3,'value'=>'机构'));）
      * @return $this
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function select($title = '筛选', $name = 'key', $type = 'select', $des = '', $attr, $arrdb = '', $arrvalue = null)
     {
@@ -291,7 +278,6 @@ class AdminListBuilder extends AdminBuilder
      * @param $name 键名
      * @param $title 标题
      * @return AdminListBuilder
-     * @auth 陈一枭
      */
     public function keyText($name, $title)
     {
@@ -302,7 +288,6 @@ class AdminListBuilder extends AdminBuilder
      * @param $name 键名
      * @param $title 标题
      * @return AdminListBuilder
-     * @auth 陈一枭
      */
     public function keyHtml($name, $title)
     {
@@ -324,7 +309,6 @@ class AdminListBuilder extends AdminBuilder
      * @param string $name
      * @param string $title
      * @return $this
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function keyIcon($name = 'icon', $title = '图标')
     {
@@ -421,7 +405,6 @@ class AdminListBuilder extends AdminBuilder
      * @param $title
      * @param array $attr
      * @return $this
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function keyDoActionModalPopup($getUrl, $text, $title, $attr = array())
     {
@@ -786,7 +769,6 @@ class AdminListBuilder extends AdminBuilder
 
     /**自动处理清空回收站
      * @param string $model 要清空的模型
-     * @auth 陈一枭
      */
     public function clearTrash($model = '')
     {
@@ -813,7 +795,6 @@ class AdminListBuilder extends AdminBuilder
     /**执行彻底删除数据，只适用于无关联的数据表
      * @param $model
      * @param $ids
-     * @author 郑钟良<zzl@ourstu.com>
      */
     public function doDeleteTrue($model, $ids)
     {
@@ -829,7 +810,6 @@ class AdminListBuilder extends AdminBuilder
      * @param        $getUrl
      * @param string $flag
      * @return $this
-     * @author:xjw129xjt xjt@ourstu.com
      */
     public function keyLinkByFlag($name, $title, $getUrl, $flag = 'id')
     {
@@ -847,7 +827,6 @@ class AdminListBuilder extends AdminBuilder
      * @param $pattern URL文本
      * @param $flag
      * @return callable
-     * @auth 陈一枭
      */
     private function ParseUrl($pattern, $flag)
     {
