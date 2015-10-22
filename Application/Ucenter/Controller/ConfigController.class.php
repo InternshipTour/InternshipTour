@@ -16,7 +16,6 @@ class ConfigController extends BaseController
     }
 
     /**关联自己的信息
-     * @auth 陈一枭
      */
     private function _assignSelf()
     {
@@ -61,7 +60,7 @@ class ConfigController extends BaseController
                 $have = 1;
             }
         }
-        $this->assign('can_show_role', $have);
+        $this->assign('can_show_role', 0);
     }
 
     private function _setTab($name)

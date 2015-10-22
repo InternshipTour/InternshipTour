@@ -39,6 +39,7 @@ class IndexController extends Controller {
 		
 		$this->display ();
 	}
+	
 	protected function _initialize() {
 		
 		/* 读取站点配置 */

@@ -28,7 +28,7 @@ function get_city_by_ip($ip) {
 
 /**
  * 系统邮件发送函数
- * 
+ *
  * @param string $to
  *        	接收邮件者邮箱
  * @param string $name
@@ -57,7 +57,7 @@ function send_mail($to = '', $subject = '', $body = '', $name = '', $attachment 
 
 /**
  * SAE邮件发送函数
- * 
+ *
  * @param string $to
  *        	接收邮件者邮箱
  * @param string $name
@@ -166,7 +166,7 @@ function thinkox_hash($message, $salt = "Internship Tour") {
 
 /**
  * 获取模块的后台设置
- * 
+ *
  * @param $key 获取模块的配置        	
  * @param string $default
  *        	默认值
@@ -196,7 +196,7 @@ function modC($key, $default = '', $module = '') {
 
 /**
  * 发送短消息
- * 
+ *
  * @param $mobile 手机号码        	
  * @param $content 内容        	
  * @return string
@@ -215,7 +215,7 @@ function sendSMS($mobile, $content) {
 
 /**
  * get_kanban_config 获取看板配置
- * 
+ *
  * @param
  *        	$key
  * @param
@@ -243,6 +243,7 @@ function get_kanban_config($key, $kanban, $default = '', $module = '') {
 /**
  *
  *
+ *
  * function qrcode(){
  * $filename='qrcode.png';
  * $logo=SITE_PATH."\\Public\\Home\\images\\logo_80.png";
@@ -267,10 +268,10 @@ function get_kanban_config($key, $kanban, $default = '', $module = '') {
  */
 function qrcode($data, $filename, $picPath = false, $logo = false, $size = '4', $level = 'L', $padding = 2, $saveandprint = false) {
 	vendor ( "phpqrcode.phpqrcode" ); // 引入工具包
-	                               // 下面注释了把二维码图片保存到本地的代码,如果要保存图片,用$fileName替换第二个参数false
+	                                  // 下面注释了把二维码图片保存到本地的代码,如果要保存图片,用$fileName替换第二个参数false
 	$path = $picPath ? $picPath : __ROOT__ . "\\Uploads\\Picture\\QRcode"; // 图片输出路径
 	mkdir ( $path ); // dump($path);exit;
-	              // 在二维码上面添加LOGO
+	                 // 在二维码上面添加LOGO
 	if (empty ( $logo ) || $logo === false) { // 不包含LOGO
 		if ($filename == false) {
 			QRcode::png ( $data, false, $level, $size, $padding, $saveandprint ); // 直接输出到浏览器，不含LOGO

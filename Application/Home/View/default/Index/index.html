@@ -101,12 +101,11 @@
 				</div>
 			</div>
 		</div>
-		<php>}else{</php> {:W($v.'/HomeBlock/render')} <php>}</php> </volist>
+		<php>}</php></volist>
+		{:W('Event/HomeBlock/render')}
+		{:W('Weibo/HomeBlock/render')}
+		{:W('News/HomeBlock/render')}
 	</div>
-	<!-- /头部 -->
-	<!-- 主体 -->
-	<!-- /主体 -->
-	<!-- 底部 -->
 	<include file="Public/footer" />
 	<!-- /底部 -->
 </body>
