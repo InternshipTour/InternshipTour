@@ -1,3 +1,0 @@
-<?php
-//000000000600a:1:{i:0;a:18:{s:2:"id";s:1:"1";s:3:"uid";s:1:"1";s:5:"title";s:18:"此为测试文章";s:11:"description";s:48:"此为测试文章，请不必过多留意！...";s:8:"category";s:1:"1";s:6:"status";s:1:"1";s:6:"reason";s:0:"";s:4:"sort";s:1:"0";s:8:"position";s:1:"0";s:5:"cover";s:1:"1";s:4:"view";s:2:"22";s:7:"comment";s:1:"2";s:10:"collection";s:1:"0";s:9:"dead_line";s:10:"2147483640";s:6:"source";s:0:"";s:11:"create_time";s:10:"1445235850";s:11:"update_time";s:10:"1445235850";s:4:"user";a:3:{s:9:"space_url";s:60:"/internship-tour/index.php?s=/ucenter/index/index/uid/1.html";s:8:"nickname";s:5:"admin";s:13:"real_nickname";s:5:"admin";}}}
-?>

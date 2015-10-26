@@ -1,1 +1,0 @@
-<?php if (!defined('THINK_PATH')) exit();?>Announcement://admin/setEnd?ids=1
