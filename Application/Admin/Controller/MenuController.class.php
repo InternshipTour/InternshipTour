@@ -112,7 +112,7 @@ class MenuController extends AdminController {
             $this->display();
         }
     }
-
+    
     /**
      * 删除后台菜单
      */
