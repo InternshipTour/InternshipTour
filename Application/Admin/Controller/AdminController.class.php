@@ -29,7 +29,7 @@ class AdminController extends Controller {
 			S ( 'DB_CONFIG_DATA', $config );
 		}
 		C ( $config ); // 添加配置
-		            
+		               
 		// 是否是超级管理员
 		define ( 'IS_ROOT', is_administrator () );
 		if (! IS_ROOT && C ( 'ADMIN_ALLOW_IP' )) {
@@ -71,7 +71,7 @@ class AdminController extends Controller {
 	
 	/**
 	 * 权限检测
-	 * 
+	 *
 	 * @param string $rule
 	 *        	检测的规则
 	 * @param string $mode
@@ -94,7 +94,7 @@ class AdminController extends Controller {
 	
 	/**
 	 * 检测是否是需要动态判断的权限
-	 * 
+	 *
 	 * @return boolean null 返回false则表示当前访问无权限
 	 *         返回null，则会进入checkRule根据节点授权判断权限
 	 *        
@@ -169,7 +169,7 @@ class AdminController extends Controller {
 	
 	/**
 	 * 禁用条目
-	 * 
+	 *
 	 * @param string $model
 	 *        	模型名称,供D函数使用的参数
 	 * @param array $where
@@ -188,7 +188,7 @@ class AdminController extends Controller {
 	
 	/**
 	 * 恢复条目
-	 * 
+	 *
 	 * @param string $model
 	 *        	模型名称,供D函数使用的参数
 	 * @param array $where
@@ -207,7 +207,7 @@ class AdminController extends Controller {
 	
 	/**
 	 * 还原条目
-	 * 
+	 *
 	 * @param string $model
 	 *        	模型名称,供D函数使用的参数
 	 * @param array $where
@@ -228,7 +228,7 @@ class AdminController extends Controller {
 	
 	/**
 	 * 条目假删除
-	 * 
+	 *
 	 * @param string $model
 	 *        	模型名称,供D函数使用的参数
 	 * @param array $where
@@ -312,9 +312,9 @@ class AdminController extends Controller {
 			$menus ['main'] = M ( 'Menu' )->where ( $where )->order ( 'sort asc' )->select ();
 			
 			$menus ['child'] = array (); // 设置子节点
-			                           
+			                             
 			// 高亮主菜单
-			                           // $current = M('Menu')->where("url like '%{$controller}/" . ACTION_NAME . "%'")->field('id')->find();
+			                             // $current = M('Menu')->where("url like '%{$controller}/" . ACTION_NAME . "%'")->field('id')->find();
 			$current = M ( 'Menu' )->where ( "url like '{$controller}/" . ACTION_NAME . "%' OR url like '%/{$controller}/" . ACTION_NAME . "%'  " )->field ( 'id' )->find ();
 			if ($current) {
 				$nav = D ( 'Menu' )->getPath ( $current ['id'] );
@@ -403,7 +403,7 @@ class AdminController extends Controller {
 	
 	/**
 	 * 返回后台节点数据
-	 * 
+	 *
 	 * @param boolean $tree
 	 *        	是否返回多维数组结构(生成菜单时用到),为false返回一维数组(生成权限节点时用到)
 	 *        	@retrun array

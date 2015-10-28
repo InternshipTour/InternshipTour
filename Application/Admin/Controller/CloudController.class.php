@@ -10,7 +10,7 @@ class CloudController extends AdminController
 
     public function index()
     {
-        $this->display();
+        $this->redirect("Addons/index");
     }
 
     public function getVersionList()
