@@ -20,7 +20,7 @@
             <div class="container-fluid">
                 <block name="body">
                     <div class="common-block-lg">
-                        <header>{:L('recommend_post')}</header>
+                        <header>{:L('_RECOMMEND_POST_')}</header>
 
                         <div class="suggestion clearfix">
                             <div class="col-xs-6">
@@ -90,7 +90,7 @@
                         <if condition="$list_top">
                             <div class=" fourm-posts common_block_border">
                                 <div class="row common_block_title">
-                                    {:L('top_post')}
+                                    {:L('_TOP_POST_')}
                                 </div>
                                 <div class="col-xs-12">
                                     <section id="contents">
@@ -112,7 +112,7 @@
                             <div class="clearfix  margin-bottom-15">
                                 <div class="col-xs-6">
                                     <ul class="nav nav-secondary">
-                                        <li class="active"><a href="{:U('index')}">{:L('all_post')}</a></li>
+                                        <li class="active"><a href="{:U('index')}">{:L('_ALL_POST_')}</a></li>
                                         <!--<li><a href="{:U('my')}">我的版块</a></li>-->
                                     </ul>
                                 </div>
@@ -122,18 +122,18 @@
                                         <div class="btn-group forum_order">
                                             <button type="button" class="btn btn-primary dropdown-toggle"
                                                     data-toggle="dropdown">
-                                                <eq name="order" value="0">{:L('reply_time')}
+                                                <eq name="order" value="0">{:L('_REPLY_TIME_')}
                                                     <else/>
-                                                    {:L('publish_time')}
+                                                    {:L('_PUBLISH_TIME_')}
                                                 </eq>
                                                 <span class="caret"></span>
                                             </button>
                                             <ul class="dropdown-menu text-left" role="menu">
                                                 <li>
-                                                    <a href="{:U('forum',array('id'=>$forum_id,'order'=>'ctime'))}">{:L('publish_time')}</a>
+                                                    <a href="{:U('forum',array('id'=>$forum_id,'order'=>'ctime'))}">{:L('_PUBLISH_TIME_')}</a>
                                                 </li>
                                                 <li>
-                                                    <a href="{:U('forum',array('id'=>$forum_id,'order'=>'reply'))}">{:L('reply_time')}</a>
+                                                    <a href="{:U('forum',array('id'=>$forum_id,'order'=>'reply'))}">{:L('_REPLY_TIME_')}</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -151,7 +151,7 @@
                                             <div class="col-xs-12">
                                                 <p class="text-muted" style="text-align: center; font-size: 3em;">
                                                     <br/><br/>
-                                                    {:L('not_found')}
+                                                    {:L('_NOT_FOUND_')}
                                                     <br/><br/><br/>
                                                 </p>
                                             </div>
@@ -185,7 +185,7 @@
         </div>
         <div class="col-xs-3">
             <div>
-                <h2 class="article-title">{:L('hot_section')}</h2>
+                <h2 class="article-title">{:L('_HOT_SECTION_')}</h2>
 
                 <div class="clearfix position-forums">
                     <volist name="forums_hot" id="vo">
@@ -200,7 +200,7 @@
                                 </a>
 
                                 <div class="text-muted">
-                                    {:L('post')}：{$vo.post_count}
+                                    {:L('_POST_')}：{$vo.post_count}
                                 </div>
 
                             </div>
@@ -208,10 +208,10 @@
                                 <eq name="vo.hasFollowed" value="1">
                                     <a class="follow-simple" data-role="followingSimple"
                                        onclick="forum.following_simple(this)"
-                                       data-id="{$vo.id}"><span>- {:L('followed')}</span> </a>
+                                       data-id="{$vo.id}"><span>- {:L('_FOLLOWED_')}</span> </a>
                                     <else/>
                                     <a class="follow-simple" data-role="followingSimple"
-                                       data-id="{$vo.id}"><span>+ {:L('followers')}</span> </a>
+                                       data-id="{$vo.id}"><span>+ {:L('_FOLLOWERS_')}</span> </a>
                                 </eq>
                             </div>
                         </div>
@@ -219,7 +219,7 @@
                 </div>
             </div>
             <div>
-                <h2 class="article-title">{:L('recommend_section')}</h2>
+                <h2 class="article-title">{:L('_RECOMMEND_SECTION_')}</h2>
 
                 <div class="clearfix position-forums">
                     <volist name="forums_recommand" id="vo">
@@ -234,17 +234,17 @@
                                 </a>
 
                                 <div class="text-muted">
-                                    {:L('post')}：{$vo.post_count}
+                                    {:L('_POST_')}：{$vo.post_count}
                                 </div>
 
                             </div>
                             <div class="col-xs-4">
                                 <eq name="vo.hasFollowed" value="1">
                                     <a class="follow-simple" data-role="followingSimple"
-                                       data-id="{$vo.id}"><span>- {:L('followed')}</span> </a>
+                                       data-id="{$vo.id}"><span>- {:L('_FOLLOWED_')}</span> </a>
                                     <else/>
                                     <a class="follow-simple" data-role="followingSimple"
-                                       data-id="{$vo.id}"><span>+ {:L('followers')}</span> </a>
+                                       data-id="{$vo.id}"><span>+ {:L('_FOLLOWERS_')}</span> </a>
                                 </eq>
                             </div>
                         </div>
@@ -252,7 +252,7 @@
                 </div>
             </div>
             <div>
-                <h2 class="article-title">{:L('active_user')}</h2>
+                <h2 class="article-title">{:L('_ACTIVE_USER_')}</h2>
 
                 <div class="clearfix position-users">
                     <volist name="active_user" id="vo">

@@ -20,9 +20,9 @@
                          style="padding: 15px 20px;margin: -15px;margin-top: 0;margin-bottom: 15px">
                         <h4>
                             <if condition="$isEdit">
-                                {:L('post_edit')}
+                                {:L('_POST_EDIT_')}
                                 <else/>
-                                {:L('post_publish')}
+                                {:L('_POST_PUBLISH_')}
                             </if>
                         </h4>
                         <hr/>
@@ -51,7 +51,7 @@
                                     </div>
                                     <div class="col-xs-9">
                                         <p>
-                                            <input id="title" type="text" name="title" placeholder="{:L('title')}"
+                                            <input id="title" type="text" name="title" placeholder="{:L('_TITLE_')}"
                                                    value="{$post.title}"
                                                    class="form-control"/>
                                         </p>
@@ -72,9 +72,9 @@
                                         <span class="glyphicon glyphicon-edit"></span>
                     <span id="submit-content">
                         <if condition="$isEdit">
-                            {:L('post_edit')} Ctrl+Enter
+                            {:L('_POST_EDIT_')} Ctrl+Enter
                             <else/>
-                            {:L('post_publish')} Ctrl+Enter
+                            {:L('_POST_PUBLISH_')} Ctrl+Enter
                         </if>
                     </span>
                                     </button>
@@ -84,7 +84,7 @@
                                     <php>$hasWeibo=D('Module')->checkInstalled('Weibo');</php>
                                     <eq name="hasWeibo" value="1">
                                         <label>
-                                            <input type="checkbox" name="sendWeibo" value="1" checked> {:L('syn_to_twitter')}
+                                            <input type="checkbox" name="sendWeibo" value="1" checked> {:L('_SYN_TO_TWITTER_')}
                                         </label>
                                     </eq>
 
@@ -108,10 +108,10 @@
             <block name="side"></block>
             <block name="side">
                 <div>
-                    <h1>{:L('post_publish_knowledge')}</h1>
+                    <h1>{:L('_POST_PUBLISH_KNOWLEDGE_')}</h1>
 
                     <p>
-                        {:L('post_publish_knowledge_content')}
+                        {:L('_POST_PUBLISH_KNOWLEDGE_CONTENT_')}
                     </p>
 
                 </div>
@@ -197,16 +197,16 @@
                 var isEdit = $('#isEdit').val();
                 var text = '';
                 if (isEdit) {
-                    text = "{:L('post_edit')}";
+                    text = "{:L('_POST_EDIT_')}";
                 } else {
-                    text ="{:L('post_publish')}";
+                    text ="{:L('_POST_PUBLISH_')}";
                 }
                 $('#submit-content').text(text);
-                toast.error(message, "{:L('error')}");
+                toast.error(message, "{:L('_ERROR_')}");
             }
 
             function showSubmitSuccess(message, url) {
-                toast.success(message, "{:L('tip_sweet')}");
+                toast.success(message, "{:L('_TIP_SWEET_')}");
                 setTimeout(function () {
                     location.href = url;
                 }, 1500);
@@ -214,7 +214,7 @@
 
             function showSubmitting() {
                 $('#submit-button').attr('class', 'btn btn-primary disabled');
-                $('#submit-content').text("{:L('submitting')}");
+                $('#submit-content').text("{:L('_SUBMITTING_')}");
             }
         })
     </script>

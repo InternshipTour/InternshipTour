@@ -1,11 +1,19 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: caipeichao
+ * Date: 14-3-8
+ * Time: PM4:14
+ */
+
 namespace Forum\Model;
+
 use Think\Model;
 
 class ForumPostReplyModel extends Model
 {
     protected $_validate = array(
-        array('content', '1,40000', '内容长度不合法', self::EXISTS_VALIDATE, 'length'),
+              array('content', '1,40000', '内容长度不合法', self::EXISTS_VALIDATE, 'length'),
     );
 
     protected $_auto = array(
@@ -55,6 +63,7 @@ class ForumPostReplyModel extends Model
      * @param $content
      * @param $reply_id
      * @return string
+     * @auth 陈一枭
      */
     private function sendReplyMessage($uid, $post_id, $content, $reply_id)
     {
@@ -66,8 +75,8 @@ class ForumPostReplyModel extends Model
         //增加微博的评论数量
         $user = query_user(array('nickname', 'space_url'), $uid);
         $post = D('ForumPost')->find($post_id);
-        $title = $user['nickname'] . '回复了您的帖子。';
-        $content = '回复内容：' . mb_substr(op_t($content), 0, 20);
+        $title = $user['nickname'] . L('_REPLY_TO_YOUR_POST_WITH_PERIOD_');
+        $content = L('_REPLY_CONTENT_WITH_COLON_') . mb_substr(op_t($content), 0, 20);
         D('Message')->sendMessage($post['uid'], $title, $content, 'Forum/Index/detail#'.$reply_id, array('id' => $post_id, 'page' => $pageCount) , $uid, 2);
         return $pageCount;
     }

@@ -15,13 +15,13 @@
                 <div class="text-right btn-toolbar " role="toolbar">
                     <div class="btn-group btn-group-vertical">
                         <if condition="check_auth('Forum/Index/editPost',get_expect_ids(0,0,$post['id'],0,1)) && $allow_publish">
-                            <a class="btn" title="{:L('edit')}"
+                            <a class="btn" title="{:L('_EDIT_')}"
                                href="{:U('Index/edit',array('post_id'=>$post['id']))}">
                                 <i class="forum_edit"></i>
                             </a>
                         </if>
                         <if condition="check_auth('Forum/Index/doReply',get_expect_ids(0,0,$post['id'],0,0))">
-                            <a class="btn" title="{:L('comment')}" href="#reply_form">
+                            <a class="btn" title="{:L('_COMMENT_')}" href="#reply_form">
                                 <i class="forum_reply"></i>
                             </a>
                         </if>
@@ -36,11 +36,11 @@
                             $bookmarkStyle = $isBookmark ? $hideStyle : '';
                             $unbookmarkStyle = $isBookmark ? '' : $hideStyle;
                         </php>
-                        <a title="{:L('favorites_cancel')}" id="unbookmark_button" class="btn " style="{$unbookmarkStyle} padding-bottom: 2px"
+                        <a title="{:L('_FAVORITES_CANCEL_')}" id="unbookmark_button" class="btn " style="{$unbookmarkStyle} padding-bottom: 2px"
                            href="{:U('Index/doBookmark?add=0',array('post_id'=>$post['id']))}">
                             <i class="forum_uncollect"></i></a>
 
-                        <a title="{:L('favorites_do')}" id="bookmark_button" class="btn " style="{$bookmarkStyle} padding-bottom: 2px"
+                        <a title="{:L('_FAVORITES_DO_')}" id="bookmark_button" class="btn " style="{$bookmarkStyle} padding-bottom: 2px"
                            href="{:U('Index/doBookmark',array('post_id'=>$post['id']))}"><i
                                 class="forum_collect" ></i></a>
 
@@ -64,7 +64,7 @@
             <div class="col-xs-10 ">
                 <div class="row">
                     <div style="position: relative">
-                        <a class="ribbion-green">{:L('lz')}</a>
+                        <a class="ribbion-green">{:L('_LZ_')}</a>
 
                         <div style="padding: 10px"></div>
                         <div class="col-xs-12 post_title">
@@ -73,7 +73,7 @@
 
                             <div class="small sub_title">   <br/>
                                 <a href="{$user.space_url}" ucard="{$user.uid}"
-                                   class="text-primary">{$user.nickname}</a>  {$post.create_time|time_format} {:L('publish_in')}<a
+                                   class="text-primary">{$user.nickname}</a>  {$post.create_time|time_format} {:L('_PUBLISH_IN_')}<a
                                     href="{:U('Forum/Index/forum',array('id'=>$post['forum_id']))}">【{$post.forum.title}】</a>  {:Hook('support',array('app'=>'Forum',table=>'post','row'=>$post['id'],'uid'=>$post['uid'],'jump'=>'forum/index/detail'))}
                             </div>
                         </div>
@@ -90,13 +90,16 @@
                     <br/>
                     <if condition="$post['create_time'] != $post['update_time']">
                         <p class="text-muted">
-                            [{:L('edit_last_time_in')} {$post['update_time']|time_format} ]
+                            [{:L('_EDIT_LAST_TIME_IN_')} {$post['update_time']|time_format} ]
                         </p>
                     </if>
                 </div>
+
                 <div>
                     {:W('Common/Share/detailShare')}
+
                 </div>
+                {:hook('Advs',array('pos'=>'forum_below_post_content','type'=>1,'width'=>'680px','height'=>'100px','title'=>'论坛帖子主题下方广告'))}
 
             </div>
         </div>
@@ -108,7 +111,7 @@
         <div class="row" style="position: relative">
             <a id="{$reply.id}" style="margin-top: -100px;position: absolute;"></a>
             <eq name="reply.uid" value="$post['uid']">
-                <a class="ribbion-green">{:L('lz')}</a>
+                <a class="ribbion-green">{:L('_LZ_')}</a>
             </eq>
 
             <div class="col-xs-2">
@@ -134,17 +137,17 @@
                 <p class="pull-right text-muted">
                     {:getLou( $limit*($page-1)+$k+1)}
 
-                    {:L('publish_in')} {$reply.create_time|time_format}
+                    {:L('_PUBLISH_IN_')} {$reply.create_time|time_format}
                     <if condition="check_auth('Forum/Index/delPostReply',get_expect_ids(0,$reply['id'],0,1))">
-                        <a href="javascript:" class="del_reply_btn" args="reply_id={$reply['id']}">{:L('delete')}</a>
+                        <a href="javascript:" class="del_reply_btn" args="reply_id={$reply['id']}">{:L('_DELETE_')}</a>
                     </if>
                     <if condition="check_auth('Forum/Index/doReplyEdit',get_expect_ids(0,$reply['id'],0,1))">
-                        <a href="{:U('Index/editReply',array('reply_id'=>$reply['id']))}">{:L('edit')}</a>
+                        <a href="{:U('Index/editReply',array('reply_id'=>$reply['id']))}">{:L('_EDIT_')}</a>
                     </if>
                     <if condition="check_auth('Forum/Lzl/doSendLZLReply',get_expect_ids(0,$reply['id'],0,1))">
-                        <a href="javascript:" class="reply_btn" args="{$reply['id']}" id="reply_btn_{$reply['id']}">{:L('reply')}({$reply.lzl_count})</a>
+                        <a href="javascript:" class="reply_btn" args="{$reply['id']}" id="reply_btn_{$reply['id']}">{:L('_REPLY_')}({$reply.lzl_count})</a>
                         <else/>
-                        <a href="javascript:" onclick=" if(is_login()){toast.error({:L('error_please_login')});}else{toast.error({:L('error_no_authority')});}">{:L('reply')}({$reply.lzl_count})</a>
+                        <a href="javascript:" onclick=" if(is_login()){toast.error({:L('_ERROR_PLEASE_LOGIN_')});}else{toast.error({:L('_ERROR_NO_AUTHORITY_')});}">{:L('_REPLY_')}({$reply.lzl_count})</a>
                     </if>
 
                 </p>
@@ -186,7 +189,7 @@
                     <div id="reply_block">
                         <form id="reply_form" action="{:U('doReply',array('post_id'=>$post['id']))}" method="post"
                               class="ajax-form">
-                            <h4>{:L('comment_publish')}</h4>
+                            <h4>{:L('_COMMENT_PUBLISH_')}</h4>
                             <p>
                                 <php>$config='';</php>
 
@@ -194,18 +197,18 @@
                             {:W('Common/Ueditor/editor',array('content','content','','100%','350px',$config))}
 
                             <p class="pull-right" style="margin-top: 10px;">
-                                <input type="submit" id="reply_button" class="btn btn-primary" value="{:L('publish')} Ctrl+Enter"/>
+                                <input type="submit" id="reply_button" class="btn btn-primary" value="{:L('_PUBLISH_')} Ctrl+Enter"/>
                             </p>
                         </form>
                     </div>
                 </div>
             </div>
             <else/>
-            <p class="text-center text-muted" style="font-size: 3em; padding-top: 2em; padding-bottom: 2em;">{:L('error_no_comment_authority')}~</p>
+            <p class="text-center text-muted" style="font-size: 3em; padding-top: 2em; padding-bottom: 2em;">{:L('_ERROR_NO_COMMENT_AUTHORITY_')}~</p>
         </if>
         <else/>
-        <p class="text-center text-muted" style="font-size: 3em; padding-top: 2em; padding-bottom: 2em;">{:L('please')}<a
-                href="{:U('Ucenter/Member/login')}">{:L('login')}</a>{:L('tip_comment_after')}</p>
+        <p class="text-center text-muted" style="font-size: 3em; padding-top: 2em; padding-bottom: 2em;">{:L('_PLEASE_')}<a
+                href="{:U('Ucenter/Member/login')}">{:L('_LOGIN_')}</a>{:L('_TIP_COMMENT_AFTER_')}</p>
     </if>
 </div>
 </div>

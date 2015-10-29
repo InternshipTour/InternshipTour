@@ -1,5 +1,14 @@
 <?php
+/**
+ * 所属项目 OpenSNS
+ * 开发者: 陈一枭
+ * 创建日期: 2014-12-01
+ * 创建时间: 15:55
+ */
+
 namespace Forum\Model;
+
+
 use Think\Model;
 
 class ForumTypeModel extends Model
@@ -10,6 +19,7 @@ class ForumTypeModel extends Model
      * @param int  $id
      * @param bool $field
      * @return array
+     * @auth 陈一枭
      */
     public function getTree($id = 0, $field = true)
     {
@@ -40,6 +50,7 @@ class ForumTypeModel extends Model
      * @param  milit   $id 分类ID或标识
      * @param  boolean $field 查询字段
      * @return array     分类信息
+     * @author 麦当苗儿 <zuojiazi@vip.qq.com>
      */
     public function info($id, $field = true)
     {

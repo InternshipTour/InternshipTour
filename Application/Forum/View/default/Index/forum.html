@@ -4,7 +4,7 @@
         <if condition="$list_top">
             <div class=" fourm-posts common_block_border">
                 <div class="row common_block_title">
-                    {:L('top_post')}
+                    {:L('_TOP_POST_')}
                 </div>
                 <div class="col-xs-12">
                     <section id="contents">
@@ -24,15 +24,15 @@
         <div class="clearfix fourm-posts common_block_border">
 
         <div class="row common_block_title">
-            {:L('post_list')}
+            {:L('_POST_LIST_')}
             <div class="pull-right text-right" style="margin-right: 15px">
                 <div class="btn-group forum_order">
                     <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-                        <eq name="order" value="0">{:L('reply_time')}<else/>{:L('deliver_time')}</eq> <span class="caret"></span>
+                        <eq name="order" value="0">{:L('_REPLY_TIME_')}<else/>{:L('_DELIVER_TIME_')}</eq> <span class="caret"></span>
                     </button>
                     <ul class="dropdown-menu text-left" role="menu">
-                        <li><a href="{:U('forum',array('id'=>$forum_id,'order'=>'ctime'))}">{:L('deliver_time')}</a></li>
-                        <li><a href="{:U('forum',array('id'=>$forum_id,'order'=>'reply'))}">{:L('reply_time')}</a></li>
+                        <li><a href="{:U('forum',array('id'=>$forum_id,'order'=>'ctime'))}">{:L('_DELIVER_TIME_')}</a></li>
+                        <li><a href="{:U('forum',array('id'=>$forum_id,'order'=>'reply'))}">{:L('_REPLY_TIME_')}</a></li>
                     </ul>
                 </div>
             </div>
@@ -46,7 +46,7 @@
                         <div class="col-xs-12">
                             <p class="text-muted" style="text-align: center; font-size: 3em;">
                                 <br/><br/>
-                                {:L('tip_not_post_now')}
+                                {:L('_TIP_NOT_POST_NOW_')}
                                 <br/><br/><br/>
                             </p>
                         </div>

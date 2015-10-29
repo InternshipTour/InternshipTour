@@ -1,5 +1,13 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: caipeichao
+ * Date: 14-3-11
+ * Time: PM5:41
+ */
+
 namespace Admin\Controller;
+
 use Admin\Builder\AdminListBuilder;
 use Admin\Builder\AdminConfigBuilder;
 use Admin\Builder\AdminSortBuilder;
@@ -29,32 +37,32 @@ class ForumController extends AdminController
             $data['CACHE_TIME'] = 300;
         }
 
-        $admin_config->title(L('forum_settings'))
+        $admin_config->title(L('_FORUM_SETTINGS_'))
             ->data($data)
-            ->keyInteger('LIMIT_IMAGE', L('post_parse_number'), L('post_parse_number_vice'))
+            ->keyInteger('LIMIT_IMAGE', L('_POST_PARSE_NUMBER_'), L('_POST_PARSE_NUMBER_VICE_'))
             //->keyInteger('FORUM_BLOCK_SIZE', '论坛板块列表板块所占尺寸', '默认为4,，值可填1到12,共12块，数值代表每个板块所占块数，一行放3个板块则为4，一行放4个板块则为3')
-            ->keyInteger('CACHE_TIME', L('block_data_cache_time'), L('block_data_cache_time_default'))
-            ->keyText('SUGGESTION_POSTS', L('home_recommend_post'))
-            ->keyText('HOT_FORUM', L('block_hot'), L('divide_comma'))->keyDefault('HOT_FORUM', '1,2,3')
-            ->keyText('RECOMMAND_FORUM', L('block_recommend'), L('divide_comma'))->keyDefault('RECOMMAND_FORUM', '1,2,3')
-            ->keyInteger('FORM_POST_SHOW_NUM_INDEX', L('forum_home_per_page_count'), '')->keyDefault('FORM_POST_SHOW_NUM_INDEX', '5')
-            ->keyInteger('FORM_POST_SHOW_NUM_PAGE', L('per_page_count'), L('per_page_count_vice').L('comma'))->keyDefault('FORM_POST_SHOW_NUM_PAGE', '10')
+            ->keyInteger('CACHE_TIME', L('_BLOCK_DATA_CACHE_TIME_'), L('_BLOCK_DATA_CACHE_TIME_DEFAULT_'))
+            ->keyText('SUGGESTION_POSTS', L('_HOME_RECOMMEND_POST_'))
+            ->keyText('HOT_FORUM', L('_BLOCK_HOT_'), L('_DIVIDE_COMMA_'))->keyDefault('HOT_FORUM', '1,2,3')
+            ->keyText('RECOMMAND_FORUM', L('_BLOCK_RECOMMEND_'), L('_DIVIDE_COMMA_'))->keyDefault('RECOMMAND_FORUM', '1,2,3')
+            ->keyInteger('FORM_POST_SHOW_NUM_INDEX', L('_FORUM_HOME_PER_PAGE_COUNT_'), '')->keyDefault('FORM_POST_SHOW_NUM_INDEX', '5')
+            ->keyInteger('FORM_POST_SHOW_NUM_PAGE', L('_PER_PAGE_COUNT_'), L('_PER_PAGE_COUNT_VICE_').L('_COMMA_'))->keyDefault('FORM_POST_SHOW_NUM_PAGE', '10')
 
-            ->keyText('FORUM_SHOW_TITLE', L('title_name'), L('home_block_title'))->keyDefault('FORUM_SHOW_TITLE',L('block_forum'))
-            ->keyText('FORUM_SHOW',L('block_show'),L('block_show_tip'))
-            ->keyText('FORUM_SHOW_CACHE_TIME', L('cache_time'), L('cache_time_tip'))->keyDefault('FORUM_SHOW_CACHE_TIME','600')
+            ->keyText('FORUM_SHOW_TITLE', L('_TITLE_NAME_'), L('_HOME_BLOCK_TITLE_'))->keyDefault('FORUM_SHOW_TITLE',L('_BLOCK_FORUM_'))
+            ->keyText('FORUM_SHOW',L('_BLOCK_SHOW_'),L('_BLOCK_SHOW_TIP_'))
+            ->keyText('FORUM_SHOW_CACHE_TIME', L('_CACHE_TIME_'), L('_BLOCK_DATA_CACHE_TIME_DEFAULT_'))->keyDefault('FORUM_SHOW_CACHE_TIME','600')
 
-            ->keyText('FORUM_POST_SHOW_TITLE', L('title_name'), L('home_block_title'))->keyDefault('FORUM_POST_SHOW_TITLE',L('post_hot'))
-            ->keyText('FORUM_POST_SHOW_NUM',L('post_shows'))->keyDefault('FORUM_POST_SHOW_NUM',5)
-            ->keyRadio('FORUM_POST_ORDER',L('post_sort_field'),'',array('update_time'=>L('update_time'),'last_reply_time'=>L('last_reply_time'),'view_count'=>L('views'),'reply_count'=>L('replies')))->keyDefault('FORUM_POST_ORDER','last_reply_time')
-            ->keyRadio('FORUM_POST_TYPE',L('post_sort_mode'),'',array('asc'=>L('asc'),'desc'=>L('desc')))->keyDefault('FORUM_POST_TYPE','desc')
-            ->keyText('FORUM_POST_CACHE_TIME', L('block_show'),L('block_show_tip'))->keyDefault('FORUM_POST_CACHE_TIME','600')
+            ->keyText('FORUM_POST_SHOW_TITLE', L('_TITLE_NAME_'), L('_HOME_BLOCK_TITLE_'))->keyDefault('FORUM_POST_SHOW_TITLE',L('_POST_HOT_'))
+            ->keyText('FORUM_POST_SHOW_NUM',L('_POST_SHOWS_'))->keyDefault('FORUM_POST_SHOW_NUM',5)
+            ->keyRadio('FORUM_POST_ORDER',L('_POST_SORT_FIELD_'),'',array('update_time'=>L('_UPDATE_TIME_'),'last_reply_time'=>L('_LAST_REPLY_TIME_'),'view_count'=>L('_VIEWS_'),'reply_count'=>L('_REPLIES_')))->keyDefault('FORUM_POST_ORDER','last_reply_time')
+            ->keyRadio('FORUM_POST_TYPE',L('_POST_SORT_MODE_'),'',array('asc'=>L('_ASC_'),'desc'=>L('_DESC_')))->keyDefault('FORUM_POST_TYPE','desc')
+            ->keyText('FORUM_POST_CACHE_TIME', L('_BLOCK_SHOW_'),L('_BLOCK_SHOW_TIP_'))->keyDefault('FORUM_POST_CACHE_TIME','600')
 
-            ->group(L('settings_basic'), 'LIMIT_IMAGE,FORUM_BLOCK_SIZE,CACHE_TIME,SUGGESTION_POSTS,HOT_FORUM,RECOMMAND_FORUM,FORM_POST_SHOW_NUM_INDEX,FORM_POST_SHOW_NUM_PAGE')
-            ->group(L('home_display_board_setting'), 'FORUM_SHOW_TITLE,FORUM_SHOW,FORUM_SHOW_CACHE_TIME')
-            ->group(L('home_display_post_settings'), 'FORUM_POST_SHOW_TITLE,FORUM_POST_SHOW_NUM,FORUM_POST_ORDER,FORUM_POST_TYPE,NEWS_SHOW_CACHE_TIME');
+            ->group(L('_SETTINGS_BASIC_'), 'LIMIT_IMAGE,FORUM_BLOCK_SIZE,CACHE_TIME,SUGGESTION_POSTS,HOT_FORUM,RECOMMAND_FORUM,FORM_POST_SHOW_NUM_INDEX,FORM_POST_SHOW_NUM_PAGE')
+            ->group(L('_HOME_DISPLAY_BOARD_SETTING_'), 'FORUM_SHOW_TITLE,FORUM_SHOW,FORUM_SHOW_CACHE_TIME')
+            ->group(L('_HOME_DISPLAY_POST_SETTINGS_'), 'FORUM_POST_SHOW_TITLE,FORUM_POST_SHOW_NUM,FORUM_POST_ORDER,FORUM_POST_TYPE,NEWS_SHOW_CACHE_TIME');
 
-        $admin_config->buttonSubmit('', L('save'))->display();
+        $admin_config->buttonSubmit('', L('_SAVE_'))->display();
     }
 
     public function forum($page = 1, $r = 20)
@@ -72,12 +80,12 @@ class ForumController extends AdminController
         //显示页面
         $builder = new AdminListBuilder();
         $builder
-            ->title(L('block_manage'))
+            ->title(L('_BLOCK_MANAGE_'))
             ->buttonNew(U('Forum/editForum'))
             ->setStatusUrl(U('Forum/setForumStatus'))->buttonEnable()->buttonDisable()->buttonDelete()
             ->buttonSort(U('Forum/sortForum'))
-            ->keyId()->keyLink('title', L('title'), 'Forum/post?forum_id=###')
-            ->keyCreateTime()->keyText('post_count', L('theme_count'))->keyStatus()->keyDoActionEdit('editForum?id=###')
+            ->keyId()->keyLink('title', L('_TITLE_'), 'Forum/post?forum_id=###')
+            ->keyCreateTime()->keyText('post_count', L('_THEME_COUNT_'))->keyStatus()->keyDoActionEdit('editForum?id=###')
             ->data($list)
             ->pagination($totalCount, $r)
             ->display();
@@ -102,7 +110,7 @@ class ForumController extends AdminController
             $map['id'] = $ids;
         }
         $result = D('Forum/ForumType')->where($map)->setField('status', $status);
-        $this->success(L('success_setting').L('period') . L('success_effect') . $result . L('success_record').L('period'));
+        $this->success(L('_SUCCESS_SETTING_').L('_PERIOD_') . L('_SUCCESS_EFFECT_') . $result . L('_SUCCESS_RECORD_').L('_PERIOD_'));
     }
 
 
@@ -128,9 +136,9 @@ class ForumController extends AdminController
                 $result = M('ForumType')->add($type);
             }
             if ($result) {
-                $this->success(L('success_operate').L('exclamation'));
+                $this->success(L('_SUCCESS_OPERATE_').L('_EXCLAMATION_'));
             } else {
-                $this->error(L('fail_operate').L('exclamation'));
+                $this->error(L('_FAIL_OPERATE_').L('_EXCLAMATION_'));
             }
 
 
@@ -143,10 +151,10 @@ class ForumController extends AdminController
             $type['sort'] = 1;
         }
         $configBuilder = new AdminConfigBuilder();
-        $configBuilder->title(L('category_edit'));
+        $configBuilder->title(L('_CATEGORY_EDIT_'));
         $configBuilder->keyId()
-            ->keyText('title', L('category_name'))
-            ->keyInteger('sort', L('sort'))
+            ->keyText('title', L('_CATEGORY_NAME_'))
+            ->keyInteger('sort', L('_SORT_'))
             ->keyStatus()
             ->buttonSubmit()
             ->buttonBack();
@@ -170,10 +178,10 @@ class ForumController extends AdminController
         //显示页面
 
         $builder
-            ->title(L('block_trash'))
+            ->title(L('_BLOCK_TRASH_'))
             ->setStatusUrl(U('Forum/setForumStatus'))->buttonRestore()->buttonClear('forum')
-            ->keyId()->keyLink('title', L('title'), 'Forum/post?forum_id=###')
-            ->keyCreateTime()->keyText('post_count', L('post_number'))
+            ->keyId()->keyLink('title', L('_TITLE_'), 'Forum/post?forum_id=###')
+            ->keyCreateTime()->keyText('post_count', L('_POST_NUMBER_'))
             ->data($list)
             ->pagination($totalCount, $r)
             ->display();
@@ -186,7 +194,7 @@ class ForumController extends AdminController
 
         //显示页面
         $builder = new AdminSortBuilder();
-        $builder->title(L('post_bar_sort'))
+        $builder->title(L('_POST_BAR_SORT_'))
             ->data($list)
             ->buttonSubmit(U('doSortForum'))->buttonBack()
             ->display();
@@ -219,7 +227,7 @@ class ForumController extends AdminController
                 //写入数据库
                 $result = $model->where(array('id' => $id))->save($data);
                 if ($result===false) {
-                    $this->error(L('fail_edit'));
+                    $this->error(L('_FAIL_EDIT_'));
                 }
             }else{
                 //生成数据
@@ -232,20 +240,20 @@ class ForumController extends AdminController
                     $data = $model->create($data);
                     $result = $model->where(array('id' => $id))->save($data);
                     if ($result===false) {
-                        $this->error(L('fail_edit'));
+                        $this->error(L('_FAIL_EDIT_'));
                     }
                 } else {
                     $data = $model->create($data);
                     $result = $model->add($data);
                     if (!$result) {
-                        $this->error(L('error_create_fail'));
+                        $this->error(L('_ERROR_CREATE_FAIL_'));
                     }
                 }
             }
             S('forum_list', null);
             D('Forum/Forum')->cleanAllForumsCache();
             //返回成功信息
-            $this->success($isEdit ? L('success_edit') : L('success_save'));
+            $this->success($isEdit ? L('_SUCCESS_EDIT_') : L('_SUCCESS_SAVE_'));
         } else {
             //判断是否为编辑模式
             $isEdit = $id ? true : false;
@@ -257,22 +265,22 @@ class ForumController extends AdminController
                 $forum = array('create_time' => time(), 'post_count' => 0, 'status' => 1,'type_id'=>$type_id);
             }
             $types = M('ForumType')->where(array('status' => 1))->select();
-            $type_id_array[0]=L('no_category');
+            $type_id_array[0]=L('_NO_CATEGORY_');
             foreach ($types as $t) {
                 $type_id_array[$t['id']] = $t['title'];
             }
             //显示页面
             $builder = new AdminConfigBuilder();
             $builder
-                ->title($isEdit ? L('post_bar_edit') : L('post_bar_add'))
+                ->title($isEdit ? L('_POST_BAR_EDIT_') : L('_POST_BAR_ADD_'))
                 ->data($forum)
                 ->keyId()->keyTitle()
-                ->keyText('admin', L('board_master'), L('board_master_vice'))
-                ->keyTextArea('description', L('board_desc'), L('board_desc_vice'))
-                ->keySelect('type_id', L('board_category'), L('board_category_vice'), $type_id_array)
-                ->keyMultiUserGroup('allow_user_group', L('user_group_to_post'))
-                ->keySingleImage('logo', L('board_icon'), L('board_icon_vice'))
-                ->keySingleImage('background', L('board_bg'), L('board_bg_vice'))
+                ->keyText('admin', L('_BOARD_MASTER_'), L('_BOARD_MASTER_VICE_'))
+                ->keyTextArea('description', L('_BOARD_DESC_'), L('_BOARD_DESC_VICE_'))
+                ->keySelect('type_id', L('_BOARD_CATEGORY_'), L('_BOARD_CATEGORY_VICE_'), $type_id_array)
+                ->keyMultiUserGroup('allow_user_group', L('_USER_GROUP_TO_POST_'))
+                ->keySingleImage('logo', L('_BOARD_ICON_'), L('_BOARD_ICON_VICE_'))
+                ->keySingleImage('background', L('_BOARD_BG_'), L('_BOARD_BG_VICE_'))
                 ->keyStatus()
                 ->keyCreateTime()
                 ->buttonSubmit(U('editForum'))->buttonBack()
@@ -299,11 +307,11 @@ class ForumController extends AdminController
 
         foreach ($list as &$v) {
             if ($v['is_top'] == 1) {
-                $v['top'] = L('stick_in_block');
+                $v['top'] = L('_STICK_IN_BLOCK_');
             } else if ($v['is_top'] == 2) {
-                $v['top'] = L('stick_global');
+                $v['top'] = L('_STICK_GLOBAL_');
             } else {
-                $v['top'] = L('stick_not');
+                $v['top'] = L('_STICK_NOT_');
             }
         }
         //读取板块基本信息
@@ -316,11 +324,11 @@ class ForumController extends AdminController
 
         //显示页面
         $builder = new AdminListBuilder();
-        $builder->title(L('post_manage') . $forumTitle)
+        $builder->title(L('_POST_MANAGE_') . $forumTitle)
             ->setStatusUrl(U('Forum/setPostStatus'))->buttonEnable()->buttonDisable()->buttonDelete()
-            ->keyId()->keyLink('title', L('title'), 'Forum/reply?post_id=###')
-            ->keyCreateTime()->keyUpdateTime()->keyTime('last_reply_time', L('last_reply_time'))->key('top', L('stick_yes_or_not'), 'text')->keyStatus()->keyDoActionEdit('editPost?id=###')
-            ->setSearchPostUrl(U('Admin/Forum/post'))->search(L('title'), 'title')->search(L('content'), 'content')
+            ->keyId()->keyLink('title', L('_TITLE_'), 'Forum/reply?post_id=###')
+            ->keyCreateTime()->keyUpdateTime()->keyTime('last_reply_time', L('_LAST_REPLY_TIME_'))->key('top', L('_STICK_YES_OR_NOT_'), 'text')->keyStatus()->keyDoActionEdit('editPost?id=###')
+            ->setSearchPostUrl(U('Admin/Forum/post'))->search(L('_TITLE_'), 'title')->search(L('_CONTENT_'), 'content')
             ->data($list)
             ->pagination($totalCount, $r)
             ->display();
@@ -338,10 +346,10 @@ class ForumController extends AdminController
         $totalCount = $model->where($map)->count();
 
 
-        $builder->title(L('reply_view_more'))
+        $builder->title(L('_REPLY_VIEW_MORE_'))
             ->setStatusUrl(U('Forum/setPostStatus'))->buttonRestore()->buttonClear('ForumPost')
-            ->keyId()->keyLink('title', L('title'), 'Forum/reply?post_id=###')
-            ->keyCreateTime()->keyUpdateTime()->keyTime('last_reply_time', L('last_reply_time'))->keyBool('is_top', L('stick_yes_or_not'))
+            ->keyId()->keyLink('title', L('_TITLE_'), 'Forum/reply?post_id=###')
+            ->keyCreateTime()->keyUpdateTime()->keyTime('last_reply_time', L('_LAST_REPLY_TIME_'))->keyBool('is_top', L('_STICK_YES_OR_NOT_'))
             ->data($list)
             ->pagination($totalCount, $r)
             ->display();
@@ -363,10 +371,10 @@ class ForumController extends AdminController
             }
             //如果写入不成功，则报错
             if ($result===false) {
-                $this->error($isEdit ? L('fail_edit') : L('tip_create_success'));
+                $this->error($isEdit ? L('_FAIL_EDIT_') : L('_TIP_CREATE_SUCCESS_'));
             }
             //返回成功信息
-            $this->success($isEdit ? L('success_edit') : L('tip_create_success'));
+            $this->success($isEdit ? L('_SUCCESS_EDIT_') : L('_TIP_CREATE_SUCCESS_'));
         } else {
             //判断是否在编辑模式
             $isEdit = $id ? true : false;
@@ -380,9 +388,9 @@ class ForumController extends AdminController
 
             //显示页面
             $builder = new AdminConfigBuilder();
-            $builder->title($isEdit ? L('post_edit') : L('post_add'))
-                ->keyId()->keyTitle()->keyEditor('content', L('content'))->keyRadio('is_top', L('stick'), L('stick_style_select'), array(0 => L('stick_not'), 1 => L('stick_in_block'), 2 => L('stick_global')))->keyCreateTime()->keyUpdateTime()
-                ->keyTime('last_reply_time', L('last_reply_time'))
+            $builder->title($isEdit ? L('_POST_EDIT_') : L('_POST_ADD_'))
+                ->keyId()->keyTitle()->keyEditor('content', L('_CONTENT_'))->keyRadio('is_top', L('_STICK_'), L('_STICK_STYLE_SELECT_'), array(0 => L('_STICK_NOT_'), 1 => L('_STICK_IN_BLOCK_'), 2 => L('_STICK_GLOBAL_')))->keyCreateTime()->keyUpdateTime()
+                ->keyTime('last_reply_time', L('_LAST_REPLY_TIME_'))
                 ->buttonSubmit(U('editPost'))->buttonBack()
                 ->data($post)
                 ->display();
@@ -413,9 +421,9 @@ class ForumController extends AdminController
         unset($reply);
         //显示页面
 
-        $builder->title(L('reply_manager'))
+        $builder->title(L('_REPLY_MANAGER_'))
             ->setStatusUrl(U('setReplyStatus'))->buttonEnable()->buttonDisable()->buttonDelete()
-            ->keyId()->keyTruncText('content', L('content'), 50)->keyCreateTime()->keyUpdateTime()->keyStatus()->keyDoActionEdit('editReply?id=###')
+            ->keyId()->keyTruncText('content', L('_CONTENT_'), 50)->keyCreateTime()->keyUpdateTime()->keyStatus()->keyDoActionEdit('editReply?id=###')
             ->data($list)
             ->pagination($totalCount, $r)
             ->display();
@@ -437,9 +445,9 @@ class ForumController extends AdminController
 
         //显示页面
 
-        $builder->title(L('reply_trash'))
+        $builder->title(L('_REPLY_TRASH_'))
             ->setStatusUrl(U('setReplyStatus'))->buttonRestore()->buttonClear('ForumPostReply')
-            ->keyId()->keyTruncText('content', L('content'), 50)->keyCreateTime()->keyUpdateTime()->keyStatus()
+            ->keyId()->keyTruncText('content', L('_CONTENT_'), 50)->keyCreateTime()->keyUpdateTime()->keyStatus()
             ->data($list)
             ->pagination($totalCount, $r)
             ->display();
@@ -468,10 +476,10 @@ class ForumController extends AdminController
 
             //如果写入出错，则显示错误消息
             if ($result===false) {
-                $this->error($isEdit ? L('fail_edit') : L('tip_create_success'));
+                $this->error($isEdit ? L('_FAIL_EDIT_') : L('_TIP_CREATE_SUCCESS_'));
             }
             //返回成功信息
-            $this->success($isEdit ? L('success_edit') : L('tip_create_success'), U('reply'));
+            $this->success($isEdit ? L('_SUCCESS_EDIT_') : L('_TIP_CREATE_SUCCESS_'), U('reply'));
 
         } else {
             //判断是否为编辑模式
@@ -487,8 +495,8 @@ class ForumController extends AdminController
 
             //显示页面
             $builder = new AdminConfigBuilder();
-            $builder->title($isEdit ? L('reply_edit') : L('reply_create'))
-                ->keyId()->keyEditor('content', L('content'))->keyCreateTime()->keyUpdateTime()->keyStatus()
+            $builder->title($isEdit ? L('_REPLY_EDIT_') : L('_REPLY_CREATE_'))
+                ->keyId()->keyEditor('content', L('_CONTENT_'))->keyCreateTime()->keyUpdateTime()->keyStatus()
                 ->data($reply)
                 ->buttonSubmit(U('editReply'))->buttonBack()
                 ->display();

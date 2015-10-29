@@ -5,10 +5,11 @@
                 <div style="margin:0 -10px;">
                     <div class="col-xs-9">
                         <div>
-							<h2>热门帖子
-							</h2>
+                            <h2>
+                                {:modC('FORUM_POST_SHOW_TITLE', L('_POST_HOT_'), 'Forum')}
+                            </h2>
 
-							<div>
+                            <div>
                                 <volist name="forum_post_list" id="vo">
                                     <php>
                                         $user = query_user(array('avatar128','avatar64','nickname','uid','space_url'),$vo['uid']);
@@ -27,22 +28,22 @@
                                                 <a class="forum-list-title-link" title="{$vo.title|text}"
                                                    href="{:U('Forum/Index/detail',array('id'=>$vo['id']))}">{$vo.title|htmlspecialchars|mb_substr=0,30,'utf-8'}
                                                 </a>
-                                                <eq name="document.is_top" value="2"><span class="label label-badge label-danger">{:L('all_site')}</span>
+                                                <eq name="document.is_top" value="2"><span class="label label-badge label-danger">{:L('_ALL_SITE_')}</span>
                                                     <else/>
-                                                    <eq name="document.is_top" value="1"><span class="label label-badge label-info">{:L('block')}</span></eq>
+                                                    <eq name="document.is_top" value="1"><span class="label label-badge label-info">{:L('')}</span></eq>
                                                 </eq>
                                             </p>
 
                                             <p class="pull-right text-muted">
-                                                <span>{:L('read')}（{$vo.view_count}）</span>
+                                                <span>{:L('_READ_')}（{$vo.view_count}）</span>
                                                 <span style="width: 1em; display: inline-block;">&nbsp;</span>
-                                                <span>{:L('reply')}（{$vo.reply_count}）</span>
+                                                <span>{:L('_REPLY_')}（{$vo.reply_count}）</span>
                                             </p>
 
                                             <p class="text-muted author">
                                                 <a href="{$user.space_url}" ucard="{$user.uid}">{$user.nickname|op_t}</a>
-                                                {:L('publish')}{:L('colon')}{$vo.create_time|friendlyDate} |
-                                                {:L('last_reply_time')}{:L('colon')}{$vo.last_reply_time|friendlyDate}
+                                                {:L('_PUBLISH_')}{:L('_COLON_')}{$vo.create_time|friendlyDate} |
+                                                {:L('_LAST_REPLY_TIME_')}{:L('_COLON_')}{$vo.last_reply_time|friendlyDate}
                                             </p>
                                         </div>
                                     </div>
@@ -58,7 +59,8 @@
                     </div>
                     <div class="col-xs-3">
                         <div>
-                            <h2>贴吧</h2>
+                            <h2>{:modC('FORUM_SHOW_TITLE', L(''), 'Forum')}</h2>
+
                             <div class="clearfix position-forums">
                                 <volist name="forum_show" id="vo">
                                     <div class="clearfix">
@@ -72,7 +74,7 @@
                                             </a>
 
                                             <div class="text-muted">
-                                                {:L('post')}{:L('colon')}{$vo.post_count}
+                                                {:L('_POST_')}{:L('_COLON_')}{$vo.post_count}
                                             </div>
 
                                         </div>
@@ -80,10 +82,10 @@
                                             <eq name="vo.hasFollowed" value="1">
                                                 <a class="follow-simple" data-role="followingSimple"
                                                    onclick="forum.following_simple(this)"
-                                                   data-id="{$vo.id}"><span>{:L('minus')} {:L('followed')}</span> </a>
+                                                   data-id="{$vo.id}"><span>{:L('_MINUS_')} {:L('_FOLLOWED_')}</span> </a>
                                                 <else/>
                                                 <a class="follow-simple" onclick="forum.following_simple(this)" data-role="followingSimple"
-                                                   data-id="{$vo.id}"><span>{:L('plus')} {:L('followers')}</span> </a>
+                                                   data-id="{$vo.id}"><span>{:L('_PLUS_')} {:L('_FOLLOWERS_')}</span> </a>
                                             </eq>
                                         </div>
                                     </div>
@@ -131,11 +133,11 @@
                 if (msg.status == 1) {
                     if(msg.follow==0){
                         $obj.each(function(){
-                            $(this).find('span').text("{:L('plus')} {:L('followers')}");
+                            $(this).find('span').text("{:L('_PLUS_')} {:L('_FOLLOWERS_')}");
                         })
                     }else{
                         $obj.each(function(){
-                            $(this).find('span').text("{:L('minus')} {:L('followed')}");
+                            $(this).find('span').text("{:L('_MINUS_')} {:L('_FOLLOWED_')}");
                         })
                     }
                 }

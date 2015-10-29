@@ -16,14 +16,14 @@
                 <if condition="check_auth('Forum/Lzl/doSendLZLReply',get_expect_ids($vo['id'],0,0,0,0))">
                     <a class="pull-right reply_lzl_btn"
                        args="to_f_reply_id={$to_f_reply_id}&uid={:is_login()}&to_uid={$vo.userInfo.uid}&to_reply_id={$vo.id}&to_nickname={$vo.userInfo.nickname}&p={$p}"
-                       href="javascript:">{:L('reply')}</a>
+                       href="javascript:">{:L('_REPLY_')}</a>
                     <else/>
-                    <a class="pull-right" href="javascript:" onclick=" if(is_login()){toast.error('{:L('')}');}else{toast.error('你无回复权限！');}">{:L('reply')}</a>
+                    <a class="pull-right" href="javascript:" onclick=" if(is_login()){toast.error('{:L('')}');}else{toast.error('你无回复权限！');}">{:L('_REPLY_')}</a>
                 </if>
                 <if condition="check_auth('Forum/Lzl/delLZLReply',get_expect_ids($vo['id']))">
                     <b class="pull-right">&nbsp;|&nbsp;</b>
                     <a class="pull-right del_lzl_reply" args="lzl_reply_id={$vo.id}&to_f_reply_id={$to_f_reply_id}"
-                       href="javascript:">{:L('delete')}</a>
+                       href="javascript:">{:L('_DELETE_')}</a>
                 </if>
 
             </p>

@@ -18,15 +18,15 @@
                 <div class="col-xs-8">
                     <div class="summary">{$forum.description}</div>
                     <div class="count">
-                        {:L('subject_count')}{:L('colon')}{$forum.topic_count} &nbsp;&nbsp;&nbsp;
-                        {:L('post_count')}{:L('colon')}{$forum.total_count}
+                        {:L('_SUBJECT_COUNT_')}{:L('_COLON_')}{$forum.topic_count} &nbsp;&nbsp;&nbsp;
+                        {:L('_POST_COUNT_')}{:L('_COLON_')}{$forum.total_count}
                     </div>
                 </div>
                 <div class="col-xs-3  text-right">
                     <eq name="hasFollowed" value="0">
-                        <button class="btn btn-primary btn-lg" onclick="forum.following(this)" data-id="{$forum.id}"><i class="icon-heart-empty"></i> <span>{:L('followers')}</span></button>
+                        <button class="btn btn-primary btn-lg" onclick="forum.following(this)" data-id="{$forum.id}"><i class="icon-heart-empty"></i> <span>{:L('_FOLLOWERS_')}</span></button>
                         <else/>
-                        <button class="btn btn-default btn-lg" onclick="forum.following(this)" data-id="{$forum.id}" ><i class="icon-heart"></i> <span>{:L('followed')}</span></button>
+                        <button class="btn btn-default btn-lg" onclick="forum.following(this)" data-id="{$forum.id}" ><i class="icon-heart"></i> <span>{:L('_FOLLOWED_')}</span></button>
                     </eq>
 
                 </div>

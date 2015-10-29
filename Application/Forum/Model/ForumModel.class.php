@@ -1,10 +1,19 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: caipeichao
+ * Date: 14-3-8
+ * Time: PM4:14
+ */
+
 namespace Forum\Model;
+
 use Think\Model;
+
 class ForumModel extends Model
 {
     protected $_validate = array(
-        array('title', '1,99999', '标题不能为空', self::EXISTS_VALIDATE, 'length'),
+           array('title', '1,99999', '标题不能为空', self::EXISTS_VALIDATE, 'length'),
         array('title', '0,100', '标题太长', self::EXISTS_VALIDATE, 'length'),
     );
 
@@ -102,13 +111,13 @@ class ForumModel extends Model
     {
 
         if (empty($id)) {
-            $this->error = '关注的版块ID不合法。';
+            $this->error = L('_ID_IS_NOT_LEGAL_WITH_PERIOD_');
             return false;
         }
         $data['forum_id'] = $id;
         $data['uid'] = empty($uid) ? is_login() : $uid;
         if ($data['uid'] == 0) {
-            $this->error = '关注者UID错误。';
+            $this->error = L('_UID_ERROR_WITH_PERIOD_');
             return false;
         }
         $had = M('ForumFollow')->where($data)->find();
@@ -120,7 +129,7 @@ class ForumModel extends Model
             $follow = 1;
         }
         if ($rs === false) {
-            $this->error = '数据库写入错误。';
+            $this->error = L('_DATABASE_WRITE_ERROR_WITH_PERIOD_');
             return false;
         } else {
             return array(true, $follow);

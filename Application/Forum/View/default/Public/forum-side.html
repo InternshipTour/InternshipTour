@@ -2,14 +2,14 @@
 <nav class="menu" data-toggle="menu">
     <if condition="check_auth('Forum/Index/addPost',get_expect_ids(0,0,0,forum_id,0))&&forumAllowCurrentUserGroup($forum_id)">
         <a class="btn btn-primary btn-md" href="{:U('Index/edit',array('forum_id'=>$forum_id))}"><i
-                class="icon-edit"></i> {:L('publish_post')}</a>
+                class="icon-edit"></i> {:L('_PUBLISH_POST_')}</a>
     </if>
 
     <php>$myForums=D('Forum')->getFollowForums(is_login());</php>
 
     <ul class="nav nav-primary" style="background: #ffffff">
         <li class="show">
-            <a href="#"><i class="icon-heart"></i> {:L('my_follow')}</a>
+            <a href="#"><i class="icon-heart"></i> {:L('_MY_FOLLOW_')}</a>
             <ul class="nav">
                 <volist name="myForums" id="each_forum">
                     <li  class=""><a

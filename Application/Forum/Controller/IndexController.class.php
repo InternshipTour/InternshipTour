@@ -1,5 +1,13 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: caipeichao
+ * Date: 14-3-8
+ * Time: PM4:30
+ */
+
 namespace Forum\Controller;
+
 use Think\Controller;
 use Think\View;
 use Weibo\Api\WeiboApi;
@@ -191,7 +199,7 @@ class IndexController extends Controller
             $hasFollowed = D('Forum')->checkFollowed($forum['id'], is_login());
             $this->assign('hasFollowed', $hasFollowed);
         } else {
-            $forum = array('title' => L('title_forum'));
+            $forum = array('title' => L('_TITLE_FORUM_'));
         }
         $this->assign('forum', $forum);
         return $forum;
@@ -201,6 +209,7 @@ class IndexController extends Controller
      * @param int $aId 版块ID
      * @param int $aPage 分页
      * @param string $aOrder 回复排序方式
+     * @auth 陈一枭
      */
     public function forum()
     {
@@ -287,7 +296,7 @@ class IndexController extends Controller
         list ($result, $follow) = D('Forum')->following($aId);
         if ($result) {
             action_log('forum_follow','forum',$aId,get_uid());
-            $this->ajaxReturn(array('status' => 1, 'info' => $follow == 1 ? L('success_follow').L('period') : L('success_follow_cancel').L('period') , 'follow' => $follow));
+            $this->ajaxReturn(array('status' => 1, 'info' => $follow == 1 ? L('_SUCCESS_FOLLOW_').L('_PERIOD_') : L('_SUCCESS_FOLLOW_CANCEL_').L('_PERIOD_') , 'follow' => $follow));
         } else {
             $this->error($forumModel->getError());
         }
@@ -306,9 +315,11 @@ class IndexController extends Controller
      * @param int $page
      * @param null $sr 楼中楼回复消息中某楼层的ID
      * @param int $sp 楼中楼回复消息中的分页ID
+     * @auth 陈一枭
      */
     public function detail($id, $page = 1, $sr = null, $sp = 1)
     {
+
         $id = intval($id);
         $page = intval($page);
         $sr = intval($sr);
@@ -319,11 +330,11 @@ class IndexController extends Controller
         $post = D('ForumPost')->where(array('id' => $id, 'status' => 1))->find();
 
         if (!$post) {
-            $this->error(L('error_post_not_found'));
+            $this->error(L('_ERROR_POST_NOT_FOUND_'));
         }
         $post['forum'] = D('Forum')->find($post['forum_id']);
 
-        $post['content'] = op_h($post['content'], 'html');
+        $post['content'] =D('Common/ContentHandler')->displayHtmlContent($post['content']);
         //增加浏览次数
         D('ForumPost')->where(array('id' => $id))->setInc('view_count');
         //读取回复列表
@@ -339,7 +350,7 @@ class IndexController extends Controller
         }
 
         foreach ($replyList as &$reply) {
-            $reply['content'] = op_h($reply['content'], 'html');
+            $reply['content'] =D('Common/ContentHandler')->displayHtmlContent($reply['content']);
         }
 
         unset($reply);
@@ -352,7 +363,7 @@ class IndexController extends Controller
         $this->assignAllowPublish();
         $this->assign('isBookmark', $isBookmark);
         $this->assign('post', $post);
-        $this->setTitle('{$post.title|op_t} '.L('dash').' '.L('module'));
+        $this->setTitle('{$post.title|op_t} '.L('_DASH_').' '.L('_MODULE_'));
 
         $this->assign('limit', $limit);
         $this->assign('sr', $sr);
@@ -368,6 +379,7 @@ class IndexController extends Controller
     /**
      * 删除贴子
      * @param $id
+     * @author 郑钟良<zzl@ourstu.com>
      */
     public function delPost($id)
     {
@@ -375,23 +387,24 @@ class IndexController extends Controller
         $post=D('ForumPost')->where(array('id' => $id, 'status' => 1))->find();
         $forum_id=$post['forum_id'];
 
-        $this->checkAuth('Forum/Index/delPost',get_expect_ids(0,0,0,$forum_id,0),L('info_authority_post_Delete_none').L('exclamation'));
+        $this->checkAuth('Forum/Index/delPost',get_expect_ids(0,0,0,$forum_id,0),L('info_authority_post_Delete_none').L('_EXCLAMATION_'));
         $this->checkActionLimit('forum_del_post','Forum',null,get_uid());
         $res = M('ForumPost')->where(array('id'=>$id))->setField('status',-1);
         if($res){
             action_log('forum_del_post','Forum',$id,get_uid());
-            $this->success(L('success_operate').L('exclamation'),U('Forum/Index/forum',array('id'=>$forum_id)));
+            $this->success(L('_SUCCESS_OPERATE_').L('_EXCLAMATION_'),U('Forum/Index/forum',array('id'=>$forum_id)));
         }else{
-            $this->error(L('fail_operate').L('exclamation'));
+            $this->error(L('_FAIL_OPERATE_').L('_EXCLAMATION_'));
         }
     }
 
     public function delPostReply($id)
     {
+
         $id = intval($id);
 
         $this->requireLogin();
-        $this->checkAuth('Forum/Index/delPostReply',get_expect_ids(0,$id,0,0,1),L('info_authority_post_Delete_none').L('exclamation'));
+        $this->checkAuth('Forum/Index/delPostReply',get_expect_ids(0,$id,0,0,1),L('info_authority_post_Delete_none').L('_EXCLAMATION_'));
         $res = D('ForumPostReply')->delPostReply($id);
         $res && $this->success($res);
         !$res && $this->error('');
@@ -402,15 +415,15 @@ class IndexController extends Controller
     {
         $reply_id = intval($reply_id);
 
-        $this->checkAuth('Forum/Index/doReplyEdit',get_expect_ids(0,$reply_id,0,0,1),L('info_authority_reply_edit').L('exclamation'));
+        $this->checkAuth('Forum/Index/doReplyEdit',get_expect_ids(0,$reply_id,0,0,1),L('_INFO_AUTHORITY_REPLY_EDIT_').L('_EXCLAMATION_'));
 
         if ($reply_id) {
             $reply = D('forum_post_reply')->where(array('id' => $reply_id, 'status' => 1))->find();
         } else {
-            $this->error(L('error_param').L('exclamation'));
+            $this->error(L('_ERROR_PARAM_').L('_EXCLAMATION_'));
         }
 
-        $this->setTitle(L('comment_edit').' '.L('dash').L('module'));
+        $this->setTitle(L('_COMMENT_EDIT_').' '.L('_DASH_').L('_MODULE_'));
         //显示页面
         $this->assign('reply', $reply);
         $this->display();
@@ -425,10 +438,10 @@ class IndexController extends Controller
         $content = filter_content($content);
 
 
-        $this->checkAuth('Forum/Index/doReplyEdit',get_expect_ids(0,$reply_id,0,0,1),L('info_authority_reply_edit').L('exclamation'));
+        $this->checkAuth('Forum/Index/doReplyEdit',get_expect_ids(0,$reply_id,0,0,1),L('_INFO_AUTHORITY_REPLY_EDIT_').L('_EXCLAMATION_'));
 
         if (!$content) {
-            $this->error(L('error_comment_cannot_empty').L('exclamation'));
+            $this->error(L('_ERROR_COMMENT_CANNOT_EMPTY_').L('_EXCLAMATION_'));
         }
         $data['content'] = $content;
         $data['update_time'] = time();
@@ -455,7 +468,7 @@ class IndexController extends Controller
             $this->requireAllowEditPost($post_id);
         } else {
             $post = array('forum_id' => $forum_id);
-            $this->checkAuth('Forum/Index/addPost',get_expect_ids(0,0,0,$forum_id,0),L('info_authority_post').L('exclamation'));
+            $this->checkAuth('Forum/Index/addPost',get_expect_ids(0,0,0,$forum_id,0),L('_INFO_AUTHORITY_POST_').L('_EXCLAMATION_'));
         }
         //获取论坛编号
         $forum_id = $forum_id ? intval($forum_id) : $post['forum_id'];
@@ -490,7 +503,7 @@ class IndexController extends Controller
         if ($isEdit) {
             $this->requireAllowEditPost($post_id);
         }else{
-            $this->checkAuth('Forum/Index/addPost',-1,L('info_authority_post').L('exclamation'));
+            $this->checkAuth('Forum/Index/addPost',-1,L('_INFO_AUTHORITY_POST_').L('_EXCLAMATION_'));
             $this->checkActionLimit('forum_add_post','Forum',null,get_uid());
         }
 
@@ -499,13 +512,13 @@ class IndexController extends Controller
 
 
         if ($title == '') {
-            $this->error(L('error_title'));
+            $this->error(L('_ERROR_TITLE_'));
         }
         if ($forum_id == 0) {
-            $this->error(L('error_block'));
+            $this->error(L('_ERROR_BLOCK_'));
         }
         if (strlen($content) < 20) {
-            $this->error(L('error_content_length'));
+            $this->error(L('_ERROR_CONTENT_LENGTH_'));
         }
 
 
@@ -519,7 +532,7 @@ class IndexController extends Controller
             $data = array('id' => intval($post_id), 'title' => $title, 'content' => $content, 'parse' => 0, 'forum_id' => intval($forum_id));
             $result = $model->editPost($data);
             if (!$result) {
-                $this->error(L('fail_edit').L('colon') . $model->getError());
+                $this->error(L('_FAIL_EDIT_').L('_COLON_') . $model->getError());
             }
             action_log('forum_edit_post','Forum',$post_id,get_uid());
         } else {
@@ -529,7 +542,7 @@ class IndexController extends Controller
             $result = $model->createPost($data);
             $after = getMyScore();
             if (!$result) {
-                $this->error(L('fail_post').L('colon') . $model->getError());
+                $this->error(L('_FAIL_POST_').L('_COLON_') . $model->getError());
             }
             action_log('forum_add_post','Forum',$result,get_uid());
             $post_id = $result;
@@ -590,14 +603,14 @@ class IndexController extends Controller
             if ($aSendWeibo) {
                 //开始发布微博
                 if ($isEdit) {
-                    D('Weibo/Weibo')->addWeibo(is_login(), L('post_updated')."【" . $title . "】：" . U('detail', array('id' => $post_id), null, true), $type, $feed_data);
+                    D('Weibo/Weibo')->addWeibo(is_login(), L('_POST_UPDATED_')."【" . $title . "】：" . U('detail', array('id' => $post_id), null, true), $type, $feed_data);
                 } else {
-                    D('Weibo/Weibo')->addWeibo(is_login(), L('post_posted')."【" . $title . "】：" . U('detail', array('id' => $post_id), null, true), $type, $feed_data);
+                    D('Weibo/Weibo')->addWeibo(is_login(), L('_POST_POSTED_')."【" . $title . "】：" . U('detail', array('id' => $post_id), null, true), $type, $feed_data);
                 }
             }
         }
         //显示成功消息
-        $message = $isEdit ? L('success_edit') : L('success_post') . getScoreTip($before, $after);
+        $message = $isEdit ? L('_SUCCESS_EDIT_') : L('_SUCCESS_POST_') . getScoreTip($before, $after);
         $this->success($message, U('Forum/Index/detail', array('id' => $post_id)));
     }
 
@@ -612,10 +625,10 @@ class IndexController extends Controller
         $post_id = intval($post_id);
         $post = D('ForumPost')->where(array('id' => $post_id))->find();
         if (!$post) {
-            $this->error(L('post_inexistent'));
+            $this->error(L('_POST_INEXISTENT_'));
         }
         $this->requireLogin();
-        $this->checkAuth('Forum/Index/doReply',$post['uid'],L('info_authority_comment').L('exclamation'));
+        $this->checkAuth('Forum/Index/doReply',$post['uid'],L('_INFO_AUTHORITY_COMMENT_').L('_EXCLAMATION_'));
         //确认有权限评论 end
 
         $this->checkActionLimit('forum_post_reply','Forum',null,get_uid());
@@ -626,11 +639,11 @@ class IndexController extends Controller
         $result = $model->addReply($post_id, $content);
         $after = getMyScore();
         if (!$result) {
-            $this->error(L('fail_comment').L('colon') . $model->getError());
+            $this->error(L('_FAIL_COMMENT_').L('_COLON_') . $model->getError());
         }
         //显示成功消息
         action_log('forum_post_reply','Forum',$result,get_uid());
-        $this->success(L('success_reply').L('period') . getScoreTip($before, $after), 'refresh');
+        $this->success(L('_SUCCESS_REPLY_').L('_PERIOD_') . getScoreTip($before, $after), 'refresh');
     }
 
     public function doBookmark($post_id, $add = true)
@@ -644,20 +657,20 @@ class IndexController extends Controller
         if ($add) {
             $result = D('ForumBookmark')->addBookmark(is_login(), $post_id);
             if (!$result) {
-                $this->error(L('fail_favorite'));
+                $this->error(L('_FAIL_FAVORITE_'));
             }
         } else {
             $result = D('ForumBookmark')->removeBookmark(is_login(), $post_id);
             if (!$result) {
-                $this->error(L('fail_cancel'));
+                $this->error(L('_FAIL_CANCEL_'));
             }
         }
 
         //返回成功消息
         if ($add) {
-            $this->success(L('success_favorite'));
+            $this->success(L('_SUCCESS_FAVORITE_'));
         } else {
-            $this->success(L('success_cancel'));
+            $this->success(L('_SUCCESS_CANCEL_'));
         }
     }
 
@@ -692,7 +705,7 @@ class IndexController extends Controller
     private function requireLogin()
     {
         if (!$this->isLogin()) {
-            $this->error(L('error_need_login'));
+            $this->error(L('_ERROR_NEED_LOGIN_'));
         }
     }
 
@@ -726,7 +739,7 @@ class IndexController extends Controller
     {
         $this->requirePostExists($post_id);
         $this->requireLogin();
-        $this->checkAuth('Forum/Index/editPost',get_expect_ids(0,0,$post_id,0,1),L('info_authority_edit').L('exclamation'));
+        $this->checkAuth('Forum/Index/editPost',get_expect_ids(0,0,$post_id,0,1),L('_INFO_AUTHORITY_EDIT_').L('_EXCLAMATION_'));
         $this->checkActionLimit('forum_edit_post','Forum',$post_id,get_uid());
     }
 
@@ -738,7 +751,7 @@ class IndexController extends Controller
     private function requireForumExists($forum_id)
     {
         if (!$this->isForumExists($forum_id)) {
-            $this->error(L('error_forum_inexistent'));
+            $this->error(L('_ERROR_FORUM_INEXISTENT_'));
         }
     }
 
@@ -754,7 +767,7 @@ class IndexController extends Controller
         $post_id = intval($post_id);
         $post = D('ForumPost')->where(array('id' => $post_id))->find();
         if (!$post) {
-            $this->error(L('post_inexistent'));
+            $this->error(L('_POST_INEXISTENT_'));
         }
     }
 
@@ -762,7 +775,7 @@ class IndexController extends Controller
     {
         $forum_id = intval($forum_id);
         if (!$this->isForumAllowCurrentUserGroup($forum_id)) {
-            $this->error(L('error_block_cannot_post'));
+            $this->error(L('_ERROR_BLOCK_CANNOT_POST_'));
         }
     }
 
@@ -856,7 +869,7 @@ class IndexController extends Controller
         $content = preg_replace($imageRegex, "{$beginMark}$1{$endMark}", $content, $maxImageCount);
 
         //替换多余的图片
-        $content = preg_replace($imageRegex, "[".L('picture')."]", $content);
+        $content = preg_replace($imageRegex, "[".L('_PICTURE_')."]", $content);
 
         //将替换的东西替换回来
         $content = preg_replace($reverseRegex, "<img$1>", $content);
@@ -868,6 +881,7 @@ class IndexController extends Controller
     /**过滤输出，临时解决方案
      * @param $content
      * @return mixed|string
+     * @auth 陈一枭
      */
     private function filterPostContent($content)
     {

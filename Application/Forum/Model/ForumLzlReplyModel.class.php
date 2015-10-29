@@ -1,10 +1,19 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: caipeichao
+ * Date: 14-3-8
+ * Time: PM4:14
+ */
+
 namespace Forum\Model;
+
 use Think\Model;
+
 class ForumLzlReplyModel extends Model
 {
     protected $_validate = array(
-        array('content', '1,999999', '内容太短', self::EXISTS_VALIDATE, 'length'),
+         array('content', '1,999999', '内容太短', self::EXISTS_VALIDATE, 'length'),
         array('content', '0,40000', '内容太长', self::EXISTS_VALIDATE, 'length'),
     );
 
@@ -61,8 +70,8 @@ class ForumLzlReplyModel extends Model
 
         //增加微博的评论数量
         $user = query_user(array('nickname', 'space_url'), $uid);
-        $title = $user['nickname'] . '回复了您的评论。';
-        $content = '回复内容：' . mb_substr($content, 0, 20);
+        $title = $user['nickname'] . L('_REPLY_TO_YOUR_COMMENTS_WITH_PERIOD_');
+        $content = L('_REPLY_CONTENT_WITH_COLON_') . mb_substr($content, 0, 20);
 
         D('Message')->sendMessage($to_uid,$title,  $content, 'Forum/Index/detail#'.$to_f_reply_id,array('id' => $post_id,'page'=>$p,'sr'=>$to_f_reply_id,'sp'=>$pageCount), $uid, 2);
 

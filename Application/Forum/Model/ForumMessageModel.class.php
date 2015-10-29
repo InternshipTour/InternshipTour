@@ -1,7 +1,17 @@
 <?php
+/**
+ * 所属项目 OnePlus.
+ * 开发者: 想天
+ * 创建日期: 3/16/14
+ * 创建时间: 10:56 PM
+ * 版权所有 想天工作室(www.ourstu.com)
+ */
+
 namespace Forum\Model;
+
 use Common\Model\IMessage;
 use Think\Model;
+
 class ForumMessageModel extends Model implements IMessage
 {
     /**获取聊天源，一般用于创建聊天时对顶部来源进行赋值
@@ -15,13 +25,13 @@ class ForumMessageModel extends Model implements IMessage
             $source['source_title'] = $post['title'];
             $source['source_content'] = $post['content'];
             $source['source_url'] = U('Forum/Index/detail', array('id' => $post['id']));
-            $source['title'] = '基于' . $post['title'] . '的贴内对话';
+            $source['title'] = L('_BASED_ON_') . $post['title'] . L('_THE_PASTE_INSIDE_DIALOGUE_');
         }elseif($message['apptype'] == 'lzlreply'){
             $post = D('ForumLzlReply')->find($message['find_id']);
-            $source['source_title'] = '楼中楼回复';
+            $source['source_title'] = L('_THE_REPLY_');
             $source['source_content'] = $post['content'];
             $source['source_url'] = U('Forum/Index/detail', array('id' => $post['id']));
-            $source['title'] = '基于' . $post['title'] . '的楼中楼对话';
+            $source['title'] = L('_BASED_ON_') . $post['title'] . L('_DIALOGUE_');
 
         }
 
@@ -54,7 +64,7 @@ class ForumMessageModel extends Model implements IMessage
         foreach ($uids as $uid) {
             if ($uid != is_login()) {
                 $user = query_user(array('username'), $uid);
-                $lzlReplys[] = D('Forum/ForumLzlReply')->addLZLReply($source_message['source_id'], $source_message['find_id'], $source_message['find_id'], $uid, '回复 ' . $user['username'] . '： ' . $content, false);
+                $lzlReplys[] = D('Forum/ForumLzlReply')->addLZLReply($source_message['source_id'], $source_message['find_id'], $source_message['find_id'], $uid, L('_REPLY_') . $user['username'] . '： ' . $content, false);
             }
 
         }
