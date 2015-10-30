@@ -1,0 +1,109 @@
+<extend name="Public/base" />
+<block name="body">
+<div class="main-title">
+	<h2>实习秀管理</h2>
+</div>
+
+<div class="clearfix with-padding row">
+	<div class="col-xs-10">
+		<a class="btn" href="{:U('edit')}">新 增</a> <a title="将状态改为未审核，不会删除"
+			class="btn ajax-post confirm" url="{:U('del')}" target-form="ids">删
+			除</a>
+		<!-- 高级搜索 -->
+	</div>
+	<div class="col-xs-2">
+		<div class="search-form fr cf">
+			<div class="sleft">
+				<div class="input-group">
+					<input type="text" name="title" class="form-control" value="{:I('"
+						title"')}" placeholder="请输入实习秀名称"> <span
+						class="input-group-btn"> <a class="btn btn-default"
+						href="javascript:;" id="search" url="{:U('shixixiu/index')}"><i
+							class="icon-search"></i></a>
+					</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="with-padding">
+	<table class="table table-bordered table-striped ">
+		<thead>
+			<tr>
+			<tr>
+				<th class="row-selected"><input class="checkbox check-all"
+					type="checkbox"></th>
+				<th>ID</th>
+				<th>标题</th>
+				<th>所属行业</th>
+				<th>所属类型</th>
+				<th>视频简介</th>
+				<th>所属会员</th>
+				<th>状态</th>
+				<th>操作</th>
+			</tr>
+			</tr>
+		</thead>
+		<tbody>
+			<notempty name="list"> <volist name="list" id="shixixiu">
+			<tr>
+				<td><input class="ids row-selected" type="checkbox" name="id[]"
+					value="{$shixixiu.id}"></td>
+				<td>{$shixixiu.id}</td>
+				<td>{$shixixiu.title}</td>
+				<td>{$shixixiu.i_class}</td>
+				<td>{$shixixiu.v_class}</td>
+				<td>{$shixixiu.description}</td>
+				<td>{$shixixiu.uid}</td>
+				<td><if condition="$shixixiu.status eq 0">
+					<font color="red">待审核</font> <else />
+					<font color="green">已审核</font></if></td>
+				<td><a title="基础信息编辑" href="{:U('edit?id='.$shixixiu['id'])}">基础信息</a>
+					<a title="封面/视频信息编辑" href="{:U('media?id='.$shixixiu['id'])}">封面/视频信息</a>
+					<notempty name="shixixiu.url">
+					<a class="" title="播放实习秀" target="_blank"
+						href="{:U('play?u='.$shixixiu['url'])}">播放</a></notempty> <if
+						condition="$shixixiu.status eq 0"> <a
+						class="confirm ajax-get" title="禁用"
+						href="{:U('forbidden?p=1&id='.$shixixiu['id'])}">启用</a> <else />
+					<a class="confirm ajax-get" title="禁用"
+						href="{:U('forbidden?p=0&id='.$shixixiu['id'])}">禁用</a></if></td>
+			</tr>
+			</volist> <else />
+			<td colspan="7" class="text-center">aOh! 暂时还没有内容!</td>
+			</notempty>
+		</tbody>
+	</table>
+	<div class="">{$_page}</div>
+</div>
+
+
+</block>
+
+<block name="script"> <script type="text/javascript">
+	$(function() {
+		//搜索功能
+		$("#search").click(
+				function() {
+					var url = $(this).attr('url');
+					var query = $('.search-form').find('input').serialize();
+					query = query.replace(
+							/(&|^)(\w*?\d*?\-*?_*?)*?=?((?=&)|(?=$))/g, '');
+					query = query.replace(/^&/g, '');
+					if (url.indexOf('?') > 0) {
+						url += '&' + query;
+					} else {
+						url += '?' + query;
+					}
+					window.location.href = url;
+				});
+		//回车搜索
+		$(".search-input").keyup(function(e) {
+			if (e.keyCode === 13) {
+				$("#search").click();
+				return false;
+			}
+		});
+	});
+</script> </block>
