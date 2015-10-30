@@ -63,6 +63,7 @@ class ShixixiuController extends AdminController {
 			$data ['detail'] = I ( 'post.detail' );
 			$data ['author'] = get_uid ();
 			$data ['origin'] = I ( 'post.origin' );
+			$data ['is_company'] = I ( 'post.is_company' );
 			$data ['recommend'] = I ( 'post.recommend' );
 			$data ['update_time'] = time ();
 			if ($is_edit) {
@@ -112,6 +113,7 @@ class ShixixiuController extends AdminController {
 			->keySelect('industry_classify', '行业分类','',$tem )
 			->keySelect('video_classify', '视频分类','',$tem1)
 			->keySelect('uid', '实习秀所属人','',$tem2)
+			->keyRadio("is_company","个人/企业微视频",'',array("1"=>"企业","0"=>"实习生"))
 			->keyText('keyword', '标签','各标签用【,】分隔')
 			->keyTextArea('description', '实习秀简介')
 			->keyEditor('detail','实习秀详细描述','','all',array('width' => '700px', 'height' => '400px'))
