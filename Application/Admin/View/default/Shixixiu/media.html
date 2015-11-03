@@ -15,18 +15,18 @@
 		<input type="hidden" value="{$id}" name="aid" />
 		封面(仅限jpg,jpeg,png,gif)： <input type="file" name="pic" />
 		<if condition="$data.pic neq null"> <img
-			src="Uploads/shixixiu/pic/{$data.pic}" width="50%" /> </if>
+			src="__PICURL__{$data.pic}" width="50%" /> </if>
 		<br>
 		<br>
 		<br> 视频(mp4)：
 		<input type="file" name="url" />
 		<if condition="$data.pic neq null"> <video width="600"
 			height="400" controls>
-			<source src="Uploads/shixixiu/video/{$data.url}" type="video/mp4">
-  <source src="Uploads/shixixiu/video/{$data.url}" type="video/ogg">
-  <source src="Uploads/shixixiu/video/{$data.url}" type="video/webm">
-  <object data="Uploads/shixixiu/video/{$data.url}" width="600" height="400">
-    <embed src="Uploads/shixixiu/video/{$data.url}" width="600" height="400"></object>
+			<source src="__VIDEOURL__{$data.url}" type="video/mp4">
+  <source src="__VIDEOURL__{$data.url}" type="video/ogg">
+  <source src="__VIDEOURL__{$data.url}" type="video/webm">
+  <object data="__VIDEOURL__{$data.url}" width="600" height="400">
+    <embed src="__VIDEOURL__{$data.url}" width="600" height="400"></object>
 		</video> 
 		</if>
 		<br>

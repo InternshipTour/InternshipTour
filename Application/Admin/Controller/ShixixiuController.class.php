@@ -175,42 +175,44 @@ class ShixixiuController extends AdminController {
 		$upload->thumbRemoveOrigin = true;
 		$media=M("shixixiu");
 		$aid=intval($_POST['aid']);
+		$pic=C('PIC_URL');
+		$video=C('VIDEO_URL');
 		if(!empty($_FILES['pic']["name"])){
 			//设置上传文件大小
 			$upload->maxSize = 1024*1024*2;
 			//设置上传文件类型
 			$upload->allowExts = array('jpg','gif','png','jpeg');
 			//设置附件上传目录
-			$upload->savePath = './Uploads/shixixiu/pic/';
+
+			$upload->savePath =$pic;
 			$mydata=$upload->uploadOne($_FILES['pic']);
 			if (!empty($mydata[0]["savename"])) {
 			$tem["pic"]=$mydata[0]["savename"];
 				//得到之前的文件名，如果再次上传成功，则删除之前的
 				$tem1=$media->where("id=$aid")->field("pic")->find();
 				if($media->where("id=$aid")->save($tem)){
-					unlink("Uploads/shixixiu/pic/".$tem1["pic"]);
+					unlink($pic.$tem1["pic"]);
 				}
 			}
 		}
-		
 		if(!empty($_FILES['url']["name"])){
 			//设置上传文件大小
-			$upload->maxSize = 1024*1024*200;
+			$upload->maxSize = 1024*1024*100;
 			//设置上传文件类型
 			$upload->allowExts = array('mp4');
 			//设置附件上传目录
-			$upload->savePath = './Uploads/shixixiu/video/';
+			$upload->savePath = $video;
 			$mydata=$upload->uploadOne($_FILES['url']);
 			if (!empty($mydata[0]["savename"])) {
 			$tem["url"]=$mydata[0]["savename"];
 				//得到之前的文件名，如果再次上传成功，则删除之前的
 				$tem1=$media->where("id=$aid")->field("url")->find();
 				if($media->where("id=$aid")->save($tem)){
-					unlink("Uploads/shixixiu/video/".$tem1["url"]);
+					unlink($video.$tem1["url"]);
 				}
 			}
 		}
-		$this->redirect("admin/shixixiu/media/id/$aid");
+		$this->redirect("admin/shixixiu/media/id/{$aid}");
 	}
 	
 	/**
