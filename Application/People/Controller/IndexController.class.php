@@ -12,7 +12,7 @@ class IndexController extends Controller
         $map['last_login_time'] = array('neq', 0);
         $peoples = S('People_peoples_'.I('page',0,'intval').'_' . serialize($map));
         if (empty($peoples)) {
-            $peoples = D('Member')->where($map)->field('uid', 'reg_time', 'last_login_time')->order('last_login_time desc')->findPage(20);
+            $peoples = D('Member')->where($map)->field('uid', 'reg_time', 'last_login_time')->order('last_login_time desc')->findPage(12);
 
             $userConfigModel = D('Ucenter/UserConfig');
             $titleModel = D('Ucenter/Title');
