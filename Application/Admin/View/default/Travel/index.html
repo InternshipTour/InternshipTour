@@ -1,0 +1,102 @@
+<extend name="Public/base" />
+<block name="body">
+<div class="main-title">
+	<h2>行程管理</h2>
+</div>
+
+<div class="clearfix with-padding row">
+	<div class="col-xs-10">
+		<a class="btn" href="{:U('edit')}">新 增</a> <a class="btn ajax-post confirm" url="{:U('del')}" target-form="ids">删
+			除</a>
+		<!-- 高级搜索 -->
+	</div>
+	<div class="col-xs-2">
+		<div class="search-form fr cf">
+			<div class="sleft">
+				<div class="input-group">
+					<input type="text" name="uid" class="form-control" value="{:I('"
+						uid"')}" placeholder="请输入用户id"> <span
+						class="input-group-btn"> <a class="btn btn-default"
+						href="javascript:;" id="search" url="{:U('travel/index')}"><i
+							class="icon-search"></i></a>
+					</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="with-padding">
+	<table class="table table-bordered table-striped ">
+		<thead>
+			<tr>
+			<tr>
+				<th class="row-selected"><input class="checkbox check-all"
+					type="checkbox"></th>
+				<th>ID</th>
+				<th>用户</th>
+				<th>路线名称</th>
+				<th>起点/终点</th>
+				<th>行程描述</th>
+				<th>状态</th>
+				<th>添加时间</th>
+				<th>操作</th>
+			</tr>
+			</tr>
+		</thead>
+		<tbody>
+			<notempty name="list"> <volist name="list" id="travel">
+			<tr>
+				<td><input class="ids row-selected" type="checkbox" name="id[]"
+					value="{$travel.id}"></td>
+				<td>{$travel.id}</td>
+				<td>{$travel.username.nickname}</td>
+				<td>{$travel.travelRoute.road_name}</td>
+				<td>{$travel.travelRoute.start}->{$travel.travelRoute.end}</td>
+				<td>{$travel.travelRoute.content}</td>
+				<td>
+				<if condition="$travel.travelRoute.status eq 0">启程
+				<elseif condition="$travel.travelRoute.status eq 1" />途中
+				<else/>抵达
+				</if>
+				</td>
+				<td>{$travel.travelRoute.add_time|time_format}</td>
+				<td><a href="{:U('edit?id='.$travel['id'])}" >修改</a></td>
+			</tr>
+			</volist> <else />
+			<td colspan="7" class="text-center">aOh! 暂时还没有内容!</td>
+			</notempty>
+		</tbody>
+	</table>
+	<div class="">{$_page}</div>
+</div>
+
+
+</block>
+
+<block name="script"> <script type="text/javascript">
+	$(function() {
+		//搜索功能
+		$("#search").click(
+				function() {
+					var url = $(this).attr('url');
+					var query = $('.search-form').find('input').serialize();
+					query = query.replace(
+							/(&|^)(\w*?\d*?\-*?_*?)*?=?((?=&)|(?=$))/g, '');
+					query = query.replace(/^&/g, '');
+					if (url.indexOf('?') > 0) {
+						url += '&' + query;
+					} else {
+						url += '?' + query;
+					}
+					window.location.href = url;
+				});
+		//回车搜索
+		$(".search-input").keyup(function(e) {
+			if (e.keyCode === 13) {
+				$("#search").click();
+				return false;
+			}
+		});
+	});
+</script> </block>
