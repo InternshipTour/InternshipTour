@@ -25,7 +25,7 @@ class PaperController extends AdminController{
 
         $list=$this->paperCategoryModel->getCategoryList(array('status'=>array('egt',0)));
 
-        $builder->title('文章Paper分类管理')
+        $builder->title('单页文章分类管理')
             ->suggest('删除分类时会将分类下的文章转移到默认分类(id为1)下')
             ->setStatusUrl(U('Paper/setCategoryStatus'))
             ->buttonNew(U('Paper/editCategory'))
@@ -91,7 +91,6 @@ class PaperController extends AdminController{
 
     /**
      * 单页配置
-     * @author 郑钟良<zzl@ourstu.com>\
      */
     public function config()
     {
@@ -137,7 +136,7 @@ class PaperController extends AdminController{
         unset($val);
 
         $builder=new AdminListBuilder();
-        $builder->title('文章文章列表')
+        $builder->title('单页文章列表')
             ->data($list)
             ->buttonNew(U('Paper/editPaper'))
             ->setStatusUrl(U('Paper/setPaperStatus'))
