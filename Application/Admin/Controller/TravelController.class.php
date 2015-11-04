@@ -23,7 +23,7 @@ class TravelController extends AdminController {
 			);
 		}
 		// $map=
-		$list = $this->lists ( 'TravelRouteList', $map, 'id desc' );
+		$list = $this->lists ( 'TravelRouteList', $map, 'uid,sort desc' );
 		// 因为用到了通用的分页方法，查询其他表的数据暂时用以下方式（常态应用：join）
 		$travelRoute=M("travel_route");
 		$member=M("member");
@@ -42,29 +42,65 @@ class TravelController extends AdminController {
 		$this->meta_title = '行程列表';
 		$this->display ();
 	}
-	
+
 	/**
-	 * 删除指定实习秀（包括里面的图片、视频资源）
+	 * 编辑行程（添加/修改）
 	 */
-	public function del() {
-		$id = array_unique ( ( array ) I ( 'id', 0 ) );
-		if (empty ( $id )) {
-			$this->error ( '请选择要操作的数据!' );
-		}
-		$map = array (
-				'id' => array (
-						'in',
-						$id 
-				) 
-		);
-		$data['status']=0;
-		if (M ( 'Shixixiu' )->where ( $map )->save ($data)) {
-			$this->success ( '删除成功' );
+	public function edit() {
+		$aId = I ( 'id', 0, 'intval' );
+		$is_edit = $aId ? 1 : 0;
+		$title = $is_edit ? "编辑行程" : "新增行程";
+		$road=D("TravelRouteList");
+		if (IS_POST) {
+			$data ['uid'] = I ( 'post.uid' );
+			$data ['road_id'] = I ( 'post.road_id' );
+			$data ['content'] = I ( 'post.content' );
+			$data ['sort'] = I ( 'post.sort' );
+			$data ['add_time'] = time();
+			$data ['status'] = I ( 'post.status' );
+			if ($is_edit) {
+				$data ['id'] = $aId;
+				$result = $road->update ( $data );
+			} else {
+				$result = $road->insert ( $data );
+			}
+			if ($result) {
+				$this->success ( $title . "成功", U ( 'Travel/index' ) );
+			} else {
+				$error_info = $road->getError ();
+				$this->error ( $title . "失败！" . $error_info );
+			}
 		} else {
-			$this->error ( '删除失败！' );
+			$member=M("member");
+			$roadList=M("TravelRoute");
+			$builder = new AdminConfigBuilder ();
+			$builder->meta_title = $title;
+			$data = $road->find ( $aId );
+			
+			$temp=$member->where("show_role=1")->field("uid,nickname")->select();
+			if(!empty($temp)){
+					$mOptions=array();
+					for ($i=0;$i<count($temp);$i++){
+						$mOptions[$temp[$i]['uid']]=$temp[$i]['nickname'];
+					}
+			}
+			$temp1=$roadList->where("status=1")->field("id,road_name")->select();
+			if(!empty($temp1)){
+					$rOptions=array();
+					for ($i=0;$i<count($temp1);$i++){
+						$rOptions[$temp1[$i]['id']]=$temp1[$i]['road_name'];
+					}
+			}
+			$builder->title ( $title )->keyId ()
+			->keySelect ( 'uid', '行程所属人', '不能为空',$mOptions )
+			->keySelect ( 'road_id', '路线名称', '不能为空',$rOptions )
+			->keyRadio("status","行程状态状态",'',array("0"=>"启程","1"=>"途中","2"=>"抵达	"))
+			->keyTextArea("content","行程简要描述")
+			->keySelect ( 'sort', '行程排序', '数字越大，级别越高',array("0"=>"级别1","1"=>"级别2","2"=>"级别3","3"=>"级别4","4"=>"级别5") )
+			->data ( $data )->buttonSubmit ( U ( 'edit' ) )->buttonBack ()->display ();
 		}
 	}
-
+	
 	/**
 	 * 删除指定路线
 	 */
@@ -81,6 +117,27 @@ class TravelController extends AdminController {
 		);
 		$data['status']=0;
 		if (M ( 'TravelRoute' )->where ( $map )->save ($data)) {
+			$this->success ( '删除成功' );
+		} else {
+			$this->error ( '删除失败！' );
+		}
+	}
+
+	/**
+	 * 删除指定行程
+	 */
+	public function del() {
+		$id = array_unique ( ( array ) I ( 'id', 0 ) );
+		if (empty ( $id )) {
+			$this->error ( '请选择要操作的数据!' );
+		}
+		$map = array (
+				'id' => array (
+						'in',
+						$id 
+				) 
+		);
+		if (M ( 'TravelRouteList' )->where ($map)->delete()) {
 			$this->success ( '删除成功' );
 		} else {
 			$this->error ( '删除失败！' );
