@@ -36,10 +36,10 @@ return array(
 
 /* 数据库配置 */
 'DB_TYPE'   => 'mysqli', // 数据库类型
-'DB_HOST'   => '127.0.0.1', // 服务器地址
-'DB_NAME'   => 'internshiptour', // 数据库名
-'DB_USER'   => 'root', // 用户名
-'DB_PWD'    => 'root',  // 密码
+'DB_HOST'   => '192.168.0.230', // 服务器地址
+'DB_NAME'   => 'ytst', // 数据库名
+'DB_USER'   => 'ytst', // 用户名
+'DB_PWD'    => '123456',  // 密码
 'DB_PORT'   => '3306', // 端口
 'DB_PREFIX' => 'ocenter_', // 数据库表前缀
 
