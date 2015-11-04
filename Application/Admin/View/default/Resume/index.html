@@ -1,0 +1,99 @@
+<extend name="Public/base" />
+
+<block name="body"> <!-- 标题栏 -->
+<div class="main-title">
+	<h2>简历库列表列表</h2>
+</div>
+<div class="clearfix">
+	<div class="col-xs-10">
+		<button class="btn ajax-post confirm"
+			url="{:U('Resume/changeStatus',array('method'=>'deleteResume'))}"
+			target-form="ids">删 除</button>
+	</div>
+	<!-- 高级搜索 -->
+	<div class="search-form  col-xs-2 text-right">
+		<div class="input-group">
+			<input type="text" name="name" class="search-input form-control"
+				value="{:I('name')}" placeholder="请输入用户姓名"> <span
+				class="input-group-btn"> <a class="btn btn-default"
+				href="javascript:;" id="search" url="{:U('index')}"><i
+					class="icon-search"></i></a></span>
+		</div>
+	</div>
+</div>
+<!-- 数据列表 -->
+<div class="data-table with-padding">
+	<table class="table table-bordered table-striped ">
+		<thead>
+			<tr>
+				<th class="row-selected row-selected"><input class="check-all"
+					type="checkbox" /></th>
+				<th class="">姓名</th>
+				<th class="">简历名称</th>
+				<th class="">手机号</th>
+				<th class="">邮箱</th>
+				<th class="">学历</th>
+				<th class="">工作经验</th>
+				<th class="">期望薪水</th>
+				<th class="">性别</th>
+				<th class="">操作</th>
+			</tr>
+		</thead>
+		<tbody>
+			<notempty name="_list"> <volist name="_list" id="vo">
+			<tr>
+				<td><input class="ids" type="checkbox" name="id[]"
+					value="{$vo.uid}" /></td>
+				<td>{$vo.name}</td>
+				<td>{$vo.resume_name}</td>
+				<td>{$vo.per_mbl}</td>
+				<td>{$vo.per_eml}</td>
+				<td>{$vo.per_edu}</td>
+				<td>{$vo.experience}</td>
+				<td>{$vo.wage}</td>
+				<td><if condition="$vo.sex eq 0">男<else />女</if></td>
+				<td><eq name="vo.status" value="0"> <a
+						href="{:U('Resume/changeStatus?method=forbidResume&id='.$vo['uid'])}"
+						class="ajax-get">注销</a> <else /> <a
+						href="{:U('Resume/changeStatus?method=resumeResume&id='.$vo['uid'])}"
+						class="ajax-get">正常</a> </eq><a
+					href="{:U('Resume/changeStatus?method=deleteResume&id='.$vo['uid'])}"
+					class="confirm ajax-get">删除</a></td>
+			</tr>
+			</volist> <else />
+			<td colspan="10" class="text-center">aOh! 暂时还没有内容!</td>
+			</notempty>
+		</tbody>
+	</table>
+</div>
+<div class="with-padding">{$_page}</div>
+</block>
+
+<block name="script"> <script
+	src="__STATIC__/thinkbox/jquery.thinkbox.js"></script> <script
+	type="text/javascript">
+		//搜索功能
+		$("#search").click(
+				function() {
+					var url = $(this).attr('url');
+					var query = $('.search-form').find('input').serialize();
+					query = query.replace(
+							/(&|^)(\w*?\d*?\-*?_*?)*?=?((?=&)|(?=$))/g, '');
+					query = query.replace(/^&/g, '');
+					if (url.indexOf('?') > 0) {
+						url += '&' + query;
+					} else {
+						url += '?' + query;
+					}
+					window.location.href = url;
+				});
+		//回车搜索
+		$(".search-input").keyup(function(e) {
+			if (e.keyCode === 13) {
+				$("#search").click();
+				return false;
+			}
+		});
+		//导航高亮
+		highlight_subnav("{:U('Resume/index')}");
+	</script> </block>
