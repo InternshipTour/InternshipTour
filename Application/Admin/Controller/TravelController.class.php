@@ -189,7 +189,7 @@ class TravelController extends AdminController {
 		Cookie ( '__forward__', $_SERVER ['REQUEST_URI'] );
 		$this->assign ( 'list', $list );
 		$this->meta_title = '路线列表';
-		$this->display ();
+		$this->display();
 	}
 
 
