@@ -56,7 +56,8 @@
 						href="{:U('Resume/changeStatus?method=forbidResume&id='.$vo['uid'])}"
 						class="ajax-get">注销</a> <else /> <a
 						href="{:U('Resume/changeStatus?method=resumeResume&id='.$vo['uid'])}"
-						class="ajax-get">正常</a> </eq><a
+						class="ajax-get">正常</a> </eq> <a
+					href="{:U('Resume/edit?id='.$vo['id'])}" class="">编辑</a> <a
 					href="{:U('Resume/changeStatus?method=deleteResume&id='.$vo['uid'])}"
 					class="confirm ajax-get">删除</a></td>
 			</tr>
